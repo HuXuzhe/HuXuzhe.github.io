@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Haley_Hu&#39;s Blog</title>
+  <icon>https://www.gravatar.com/avatar/b8576e4b37a4da1087bf97abdbd1ab99</icon>
+  <subtitle>Teaching is Learning,һ������</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-06-28T17:04:43.801Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>HuXuzhe</name>
+    <email>602798195@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一个测试博客</title>
+    <link href="http://yoursite.com/2018/06/29/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/06/29/第一个测试博客/</id>
+    <published>2018-06-28T17:03:43.000Z</published>
+    <updated>2018-06-28T17:04:43.801Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;测试用，请欢迎关注：huxuzhe.github.io&lt;br&gt;以后会慢慢补充！互相交流&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/06/29/hello-world/"/>
+    <id>http://yoursite.com/2018/06/29/hello-world/</id>
+    <published>2018-06-28T15:46:27.020Z</published>
+    <updated>2018-06-28T15:46:27.021Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
