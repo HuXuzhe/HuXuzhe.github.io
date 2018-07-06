@@ -2018,7 +2018,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5c5ed1;
+  background: #40fc1b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2940,7 +2940,7 @@ embed {
   color: #fff;
 }
 .footer {
-  line-height: 1.5;
+  line-height: 2;
   background-color: rgba(255,255,255,0.75);
   color: #333;
   border-top-width: 3px;
@@ -3405,11 +3405,11 @@ code.description {
 }
 .weixin-menu {
   position: relative;
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
-  background: url("http://m.qpic.cn/psb?/V101D1J33YZiRs/.IA.CL00CFktPBhYyKbeAp44SSLASc6JdsYgxgdlUh8!/b/dDEBAAAAAAAA&bo=AAXPAgAAAAARF.g!&rf=viewer_4");
-  background-size: 48px 48px;
+  background: url("http://m.qpic.cn/psb?/V101D1J33YZiRs/BdyJTmNOA2HoixYmy5EQca2xDCW9LXz7JBoPK4P8IBE!/b/dFoAAAAAAAAA&bo=4QDhAAAAAAARFyA!&rf=viewer_4");
+  background-size: 40px 40px;
 }
 .weixin-hover {
   position: absolute;
