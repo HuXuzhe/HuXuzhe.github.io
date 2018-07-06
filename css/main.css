@@ -2000,7 +2000,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7fffff;
+  background: #38060b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3019,6 +3019,10 @@ h6 {
 .post-gallery .post-gallery-img img {
   padding: 3px;
 }
+.posts-expand .post-body img {
+  border: none;
+  padding: 0px;
+}
 code {
   margin: 0px 4px;
 }
@@ -3092,6 +3096,22 @@ img:hover {
 }
 .site-author-name {
   display: none;
+}
+.sidebar-nav li {
+  font-size: 15px;
+  font-weight: bold;
+  color: #07b39b;
+}
+.sidebar-nav li:hover {
+  color: #a166ab;
+}
+.sidebar-nav .sidebar-nav-active {
+  color: #07b39b;
+  border-bottom-color: #a166ab;
+  border-bottom-width: 1.5px;
+}
+.sidebar-nav .sidebar-nav-active:hover {
+  color: #07b39b;
 }
 .site-description {
   letter-spacing: 5px;
