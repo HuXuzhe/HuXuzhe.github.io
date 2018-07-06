@@ -2012,7 +2012,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #887ae5;
+  background: #932dff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3451,13 +3451,6 @@ code.description {
 }
 .weixin-menu:hover .weixin-description {
   opacity: 1;
-}
-.site-title {
-  font-size: 50px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 80px;
-  letter-spacing: 3px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
