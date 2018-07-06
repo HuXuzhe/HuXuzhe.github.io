@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T02:03:43+09:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T01:03:43+08:00">
                 2018-06-29
               </time>
             
@@ -983,13 +983,22 @@ show_date_time();
 
 
 
-
-    //_config.yml文件若没有添加enable: true可删除该判断
-
-    
-
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
   
 
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '5c903c06687448de3006',
+          clientSecret: 'bb9ffab13c232c4d41d867981bd997617636329b',
+          repo: 'https://github.com/HuXuzhe/gitalk.git',
+          owner: '',
+          admin: ['HuXuzhe'],
+          id: location.pathname,
+          distractionFreeMode: 'false'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 .gt-container a{border-bottom: none;}
