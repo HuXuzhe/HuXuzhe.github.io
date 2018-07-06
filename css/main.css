@@ -2018,7 +2018,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2ed937;
+  background: #18ff1f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3395,6 +3395,56 @@ p.description {
 code.description {
   padding: 1px 1px 1px 1px;
   margin: 0px 1px 0px 4px;
+}
+.weixin-box {
+  position: absolute;
+  bottom: 43px;
+  left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+}
+.weixin-menu {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  background: url("http://m.qpic.cn/psb?/V101D1J33YZiRs/9zvoIX7nhaJ8IA2GBZHmoKo3n9BUAXRfyL9sjJmcPQE!/b/dDABAAAAAAAA&bo=OAQ4BAAAAAADByI!&rf=viewer_4");
+  background-size: 24px 24px;
+}
+.weixin-hover {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 0px;
+  width: 0px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background: url("http://m.qpic.cn/psb?/V101D1J33YZiRs/sIo*Cmyj4w4SwDZ30OJhyGs0xblwObFrSydWxmVhbdo!/b/dFoAAAAAAAAA&bo=7AHsAQAAAAADFzI!&rf=viewer_4");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+  transition: all 0.35s ease-in-out;
+  z-index: 1024;
+  opacity: 0;
+}
+.weixin-menu:hover .weixin-hover {
+  bottom: 24px;
+  left: 24px;
+  height: 170px;
+  width: 150px;
+  opacity: 1;
+}
+.weixin-description {
+  opacity: 0;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  right: 5%;
+  font-size: 12px;
+  transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+}
+.weixin-menu:hover .weixin-description {
+  opacity: 1;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
