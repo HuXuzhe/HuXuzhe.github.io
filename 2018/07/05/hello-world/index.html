@@ -600,7 +600,6 @@ var jiathis_config={
   
 
   
-
         </div>
         
           
@@ -1004,7 +1003,29 @@ show_date_time();
 
 
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'b5fe922eeab43f17f2bb',
+          clientSecret: '383275fec6e851936b9b3eea74ea69990416d9e4',
+          repo: 'git@github.com:HuXuzhe/gitalk.git',
+          owner: 'HuXuzhe',
+          admin: ['HuXuzhe'],
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        })
+
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
 
   
 
