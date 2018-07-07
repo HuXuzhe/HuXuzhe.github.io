@@ -97,12 +97,12 @@
 <meta property="og:description" content="Python概述 一种面向对象的解释型计算机程序设计语言 具有丰富且强大的内置库和第三方库 语法简洁灵活 开源、跨平台  应用场景： 数据分析 人工智能 网络爬虫 自动化运维 ·······  python的基础语法 交互模式    上图是在cmd环境中的运行模式  开发流程   创建以.py结尾的python文件 在python文件中输入打印’hello world’的代码（这里的标点可以是单">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/交互模式.png">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/3967942698434656A06235263DAABC2F/2968">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/4CAC5A78037A476E8E32609C85288804/2971">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/FC53F7091BFC4355A995CD43AF8B17ED/2969">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/6EE1BB7DF8464A3A83D0ADE03DED0007/2970">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/0A823E6CDDE142FD9431DF7E6C6E1760/2972">
-<meta property="og:updated_time" content="2018-07-07T05:56:42.864Z">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/数据类型.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/格式化符号.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/常用数据类型转换语句.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符优先级.png">
+<meta property="og:updated_time" content="2018-07-07T09:11:56.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础语法">
 <meta name="twitter:description" content="Python概述 一种面向对象的解释型计算机程序设计语言 具有丰富且强大的内置库和第三方库 语法简洁灵活 开源、跨平台  应用场景： 数据分析 人工智能 网络爬虫 自动化运维 ·······  python的基础语法 交互模式    上图是在cmd环境中的运行模式  开发流程   创建以.py结尾的python文件 在python文件中输入打印’hello world’的代码（这里的标点可以是单">
@@ -358,7 +358,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-07T14:56:42+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-07T18:11:56+09:00">
                 2018-07-07
               </time>
             
@@ -486,7 +486,7 @@
 <h3 id="python的基础语法"><a href="#python的基础语法" class="headerlink" title="python的基础语法"></a>python的基础语法</h3><ul>
 <li>交互模式</li>
 </ul>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/交互模式.png"> 
+<img title="交互模式" src="http://pbhfphh1b.bkt.clouddn.com/static/images/交互模式.png"> 
 <p>上图是在cmd环境中的运行模式</p>
 <ul>
 <li>开发流程</li>
@@ -512,6 +512,8 @@
 </li>
 </ul>
 <font color="blue">(诀窍，把多行代码选中，ctrl+/ 可以直接多行注释#)</font>
+
+
 
 <font color="red">实例2：</font>
 
@@ -551,7 +553,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打印个人信息</span></span><br><span class="line">name = <span class="string">'zhangsan'</span>    <span class="comment">#名字--字符串</span></span><br><span class="line">high = <span class="number">180</span>           <span class="comment">#身高--数值型</span></span><br><span class="line">weight = <span class="number">20.0</span>          <span class="comment">#体重--数值型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#输入数值并且输出类型</span></span><br><span class="line">print(name)</span><br><span class="line">print(type(name))</span><br><span class="line">print(high)</span><br><span class="line">print(type(high))</span><br><span class="line">print(weight)</span><br><span class="line">print(type(weight))</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">zhangsan</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class">180</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">int</span>'&gt;</span></span><br><span class="line"><span class="class">20.0</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">float</span>'&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">##更多的数据类型，见下图</span></span><br></pre></td></tr></table></figure>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><img src="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/3967942698434656A06235263DAABC2F/2968" alt="数据类型"></p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><img title="数据类型" src="http://pbhfphh1b.bkt.clouddn.com/static/images/数据类型.png"> 
 <h3 id="input输入、print输出"><a href="#input输入、print输出" class="headerlink" title="input输入、print输出"></a>input输入、print输出</h3><h4 id="Input-用于在程序中执行过程中接收用户输入的内容，默认接收的输入内容为字符串类型。"><a href="#Input-用于在程序中执行过程中接收用户输入的内容，默认接收的输入内容为字符串类型。" class="headerlink" title="Input()用于在程序中执行过程中接收用户输入的内容，默认接收的输入内容为字符串类型。"></a>Input()用于在程序中执行过程中接收用户输入的内容，默认接收的输入内容为字符串类型。</h4><font color="red">实例6：</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">card_id = input(<span class="string">"请输入卡号:"</span>)</span><br><span class="line">pwd = input(<span class="string">"请输入密码:"</span>)</span><br><span class="line"></span><br><span class="line">print(card_id)</span><br><span class="line">print(type(card_id))</span><br><span class="line">print(pwd)</span><br></pre></td></tr></table></figure>
@@ -568,7 +570,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = input()</span><br><span class="line">print(<span class="string">'你输入的名字是：%s'</span>%name)</span><br><span class="line">print(<span class="string">'你输入的名字是：&#123;&#125;。'</span>.format(name))</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">zhangsan </span><br><span class="line">你输入的名字是：zhangsan </span><br><span class="line">你输入的名字是：zhangsan 。</span><br><span class="line"></span><br><span class="line"><span class="comment">#常用的格式符号见下图</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/4CAC5A78037A476E8E32609C85288804/2971" alt="格式化符号"></p>
+<img title="格式化符号" src="http://pbhfphh1b.bkt.clouddn.com/static/images/格式化符号.png"> 
 <p>注意：常用的格式化符号有%d，%s，%f</p>
 <font color="red">实例8：</font>
 
@@ -595,7 +597,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#输出换行符</span></span><br><span class="line">print(<span class="string">"中国\n北京"</span>)</span><br><span class="line"><span class="comment">#转义字符\</span></span><br><span class="line">print(<span class="string">"中国\\n北京"</span>)</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">中国</span><br><span class="line">北京</span><br><span class="line">中国\n北京</span><br></pre></td></tr></table></figure>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="不同的类型之间进行转换"><a href="#不同的类型之间进行转换" class="headerlink" title="不同的类型之间进行转换"></a>不同的类型之间进行转换</h4><p><img src="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/FC53F7091BFC4355A995CD43AF8B17ED/2969" alt="图"></p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="不同的类型之间进行转换"><a href="#不同的类型之间进行转换" class="headerlink" title="不同的类型之间进行转换"></a>不同的类型之间进行转换</h4><img title="常用数据类型转换语句" src="http://pbhfphh1b.bkt.clouddn.com/static/images/常用数据类型转换语句.png"> 
 <font color="red">实例13：</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span></span><br><span class="line">print(a)</span><br><span class="line">print(type(a))</span><br><span class="line">print(<span class="string">'将int类型转换成字符型：'</span>)</span><br><span class="line">b = str(a)</span><br><span class="line">print(b)</span><br><span class="line">print(type(b))</span><br><span class="line"></span><br><span class="line">print(<span class="string">'将int类型装换成浮点型'</span>)</span><br><span class="line">c = float(a)</span><br><span class="line">print(c)</span><br><span class="line">print(type(c))</span><br></pre></td></tr></table></figure>
@@ -636,8 +638,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line"><span class="comment">#打印py3的关键字，命名是不能使用的</span></span><br><span class="line">print(keyword.kwlist)</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'False'</span>, <span class="string">'None'</span>, <span class="string">'True'</span>, <span class="string">'and'</span>, <span class="string">'as'</span>, <span class="string">'assert'</span>, <span class="string">'break'</span>, <span class="string">'class'</span>, <span class="string">'continue'</span>, <span class="string">'def'</span>, <span class="string">'del'</span>, <span class="string">'elif'</span>, <span class="string">'else'</span>, <span class="string">'except'</span>, <span class="string">'finally'</span>, <span class="string">'for'</span>, <span class="string">'from'</span>, <span class="string">'global'</span>, <span class="string">'if'</span>, <span class="string">'import'</span>, <span class="string">'in'</span>, <span class="string">'is'</span>, <span class="string">'lambda'</span>, <span class="string">'nonlocal'</span>, <span class="string">'not'</span>, <span class="string">'or'</span>, <span class="string">'pass'</span>, <span class="string">'raise'</span>, <span class="string">'return'</span>, <span class="string">'try'</span>, <span class="string">'while'</span>, <span class="string">'with'</span>, <span class="string">'yield'</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="运算符和优先级"><a href="#运算符和优先级" class="headerlink" title="运算符和优先级"></a>运算符和优先级</h3><h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p><img src="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/6EE1BB7DF8464A3A83D0ADE03DED0007/2970" alt="运算符"></p>
-<h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><p><img src="https://note.youdao.com/yws/public/resource/6ba936a8828c83c2940f8cb66c8405a1/xmlnote/0A823E6CDDE142FD9431DF7E6C6E1760/2972" alt="优先级"></p>
+<h3 id="运算符和优先级"><a href="#运算符和优先级" class="headerlink" title="运算符和优先级"></a>运算符和优先级</h3><h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><img title="运算符" src="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符.png"> 
+<h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><p>!<img title="运算符优先级" src="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符优先级.png"> </p>
 <h3 id="项目–计算器"><a href="#项目–计算器" class="headerlink" title="项目–计算器"></a>项目–计算器</h3><font color="red">实例18：</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">num1 = input(<span class="string">"请输入第一个数字："</span>)</span><br><span class="line">operator = input(<span class="string">"请输入运算符："</span>)</span><br><span class="line">num2 = input(<span class="string">"请输入第二个数字："</span>)</span><br><span class="line"></span><br><span class="line">num_1 = int(num1)</span><br><span class="line">num_2 = int(num2)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> operator == <span class="string">"+"</span>:</span><br><span class="line">    result = num_1 + num_2</span><br><span class="line">    print(<span class="string">"计算结果：&#123;&#125;"</span>.format(result))</span><br><span class="line"><span class="keyword">elif</span> operator == <span class="string">"%"</span>:</span><br><span class="line">    result = num_1 % num_2</span><br><span class="line">    print(<span class="string">"计算结果：&#123;&#125;"</span>.format(result))</span><br><span class="line"><span class="keyword">elif</span> operator == <span class="string">"**"</span>:</span><br><span class="line">    result = num_1 ** num_2</span><br><span class="line">    print(<span class="string">"计算结果：&#123;&#125;"</span>.format(result))</span><br><span class="line"><span class="keyword">elif</span> operator == <span class="string">"//"</span>:</span><br><span class="line">    result = num_1 // num_2</span><br><span class="line">    print(<span class="string">"计算结果：&#123;&#125;"</span>.format(result))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"正在开发.."</span>)</span><br></pre></td></tr></table></figure>
