@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-07-07T03:09:22.292Z</updated>
+  <updated>2018-07-07T03:34:43.216Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -21,11 +21,16 @@
     <link href="https://huxuzhe.github.io/2018/07/07/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     <id>https://huxuzhe.github.io/2018/07/07/python基础语法/</id>
     <published>2018-07-07T03:25:39.000Z</published>
-    <updated>2018-07-07T03:09:22.292Z</updated>
+    <updated>2018-07-07T03:34:43.216Z</updated>
     
     <summary type="html">
     
-      &lt;font size=&quot;4&quot;&gt;&lt;br&gt;&lt;br&gt;# 大纲&lt;br&gt;&lt;br&gt;## 一、python概述&lt;br&gt;&lt;br&gt;## 二、基础语法&lt;br&gt;&lt;br&gt;## 三、项目&lt;br&gt;&lt;br&gt;——&lt;br&gt;&lt;br&gt;
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;1-Python概述&quot;&gt;&lt;a href=&quot;#1-Python概述&quot; class=&quot;headerlink&quot; title=&quot;1. Python概述&quot;&gt;&lt;/a&gt;1. Python概述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一种面向对象的解释型计算
+      
     
     </summary>
     
