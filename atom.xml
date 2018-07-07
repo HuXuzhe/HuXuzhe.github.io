@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-07-07T09:11:56.930Z</updated>
+  <updated>2018-07-07T09:22:58.043Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -21,16 +21,24 @@
     <link href="https://huxuzhe.github.io/2018/07/07/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     <id>https://huxuzhe.github.io/2018/07/07/python基础语法/</id>
     <published>2018-07-07T03:25:39.000Z</published>
-    <updated>2018-07-07T09:11:56.930Z</updated>
+    <updated>2018-07-07T09:22:58.043Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;Python概述&quot;&gt;&lt;a href=&quot;#Python概述&quot; class=&quot;headerlink&quot; title=&quot;Python概述&quot;&gt;&lt;/a&gt;Python概述&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;一种面向对象的解释型计算机程序设计语言&lt;/l
-      
+      &lt;h3 id=&quot;Python概述&quot;&gt;&lt;a href=&quot;#Python概述&quot; class=&quot;headerlink&quot; title=&quot;Python概述&quot;&gt;&lt;/a&gt;Python概述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一种面向对象的解释型计算机程序设计语言&lt;/li&gt;
+&lt;li&gt;具有丰富且强大的内置库和第三方库&lt;/li&gt;
+&lt;li&gt;语法简洁灵活&lt;/li&gt;
+&lt;li&gt;开源、跨平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;应用场景：&quot;&gt;&lt;a href=&quot;#应用场景：&quot; class=&quot;headerlink&quot; title=&quot;应用场景：&quot;&gt;&lt;/a&gt;应用场景：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;数据分析&lt;/li&gt;
+&lt;li&gt;人工智能&lt;/li&gt;
+&lt;li&gt;网络爬虫&lt;/li&gt;
+&lt;li&gt;自动化运维&lt;/li&gt;
+&lt;li&gt;·······&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;python的基础语法&quot;&gt;&lt;a href=&quot;#python的基础语法&quot; class=&quot;headerlink&quot; title=&quot;python的基础语法&quot;&gt;&lt;/a&gt;python的基础语法&lt;/h3&gt;
     
     </summary>
     
