@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-07-07T09:28:45.659Z</updated>
+  <updated>2018-07-07T09:46:00.326Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -21,16 +21,23 @@
     <link href="https://huxuzhe.github.io/2018/07/07/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     <id>https://huxuzhe.github.io/2018/07/07/python基础语法/</id>
     <published>2018-07-07T03:25:39.000Z</published>
-    <updated>2018-07-07T09:28:45.659Z</updated>
+    <updated>2018-07-07T09:46:00.326Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;Python概述&quot;&gt;&lt;a href=&quot;#Python概述&quot; class=&quot;headerlink&quot; title=&quot;Python概述&quot;&gt;&lt;/a&gt;Python概述&lt;/h3&gt;&lt;ul&gt;
+      &lt;h3 id=&quot;Python概述&quot;&gt;&lt;a href=&quot;#Python概述&quot; class=&quot;headerlink&quot; title=&quot;Python概述&quot;&gt;&lt;/a&gt;Python概述&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;一种面向对象的解释型计算机程序设计语言&lt;/li&gt;
-&lt;li&gt;具有丰富且强大的内置库
-      
+&lt;li&gt;具有丰富且强大的内置库和第三方库&lt;/li&gt;
+&lt;li&gt;语法简洁灵活&lt;/li&gt;
+&lt;li&gt;开源、跨平台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;应用场景：&quot;&gt;&lt;a href=&quot;#应用场景：&quot; class=&quot;headerlink&quot; title=&quot;应用场景：&quot;&gt;&lt;/a&gt;应用场景：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;数据分析&lt;/li&gt;
+&lt;li&gt;人工智能&lt;/li&gt;
+&lt;li&gt;网络爬虫&lt;/li&gt;
+&lt;li&gt;自动化运维&lt;/li&gt;
+&lt;li&gt;·······&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -44,47 +51,6 @@
       <category term="命名规则" scheme="https://huxuzhe.github.io/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/"/>
     
       <category term="顺序语句" scheme="https://huxuzhe.github.io/tags/%E9%A1%BA%E5%BA%8F%E8%AF%AD%E5%8F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://huxuzhe.github.io/2018/07/07/hello-world/"/>
-    <id>https://huxuzhe.github.io/2018/07/07/hello-world/</id>
-    <published>2018-07-07T02:00:08.889Z</published>
-    <updated>2018-06-28T15:46:27.021Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一个测试博客</title>
-    <link href="https://huxuzhe.github.io/2018/06/29/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://huxuzhe.github.io/2018/06/29/第一个测试博客/</id>
-    <published>2018-06-28T17:03:43.000Z</published>
-    <updated>2018-06-28T17:04:43.801Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;测试用，请欢迎关注：huxuzhe.github.io&lt;br&gt;以后会慢慢补充！互相交流&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="https://huxuzhe.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
