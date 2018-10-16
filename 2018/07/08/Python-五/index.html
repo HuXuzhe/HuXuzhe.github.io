@@ -1,0 +1,1612 @@
+﻿<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="日期与时间,文件与文件夹操作,面对对象," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haley_Hu's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="日期和时间链接：日期与时间的教程 time模块 time()函数获取当前时间戳 localtime([seconds])格式化时间戳为本地时间，返回时间元组  链接：time模块  tm_isdst：是否为夏令默认为-1">
+<meta name="keywords" content="日期与时间,文件与文件夹操作,面对对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python(五)">
+<meta property="og:url" content="https://huxuzhe.github.io/2018/07/08/Python-五/index.html">
+<meta property="og:site_name" content="Haley_Hu&#39;s Blog">
+<meta property="og:description" content="日期和时间链接：日期与时间的教程 time模块 time()函数获取当前时间戳 localtime([seconds])格式化时间戳为本地时间，返回时间元组  链接：time模块  tm_isdst：是否为夏令默认为-1">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-2.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-3.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-4.png">
+<meta property="og:updated_time" content="2018-07-08T04:10:46.061Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python(五)">
+<meta name="twitter:description" content="日期和时间链接：日期与时间的教程 time模块 time()函数获取当前时间戳 localtime([seconds])格式化时间戳为本地时间，返回时间元组  链接：time模块  tm_isdst：是否为夏令默认为-1">
+<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huxuzhe.github.io/2018/07/08/Python-五/"/>
+
+
+
+
+
+  <title>Python(五) | Haley_Hu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <a href="https://github.com/HuXuzhe" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haley_Hu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Teaching is Learning,一起交流！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简介
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huxuzhe.github.io/2018/07/08/Python-五/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuXuzhe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haley_Hu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python(五)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T12:55:24+09:00">
+                2018-07-08
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-08T13:10:46+09:00">
+                2018-07-08
+              </time>
+            
+          </span>
+         
+        
+        <span id="busuanzi_container_page_pv">  |  阅读量 : <span id="busuanzi_value_page_pv"></span> 次</span>
+        
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Python基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,248字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  15 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h2><p>链接：<a href="http://www.runoob.com/python3/python3-date-time.html" target="_blank" rel="noopener">日期与时间的教程</a></p>
+<h3 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h3><ul>
+<li>time()函数获取当前时间戳</li>
+<li>localtime([seconds])格式化时间戳为本地时间，返回时间元组</li>
+</ul>
+<p>链接：<a href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener">time模块</a></p>
+<img title="日期和时间" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
+<p>tm_isdst：是否为夏令默认为-1</p>
+<a id="more"></a>
+<p>实例1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time;  <span class="comment"># 引入time模块</span></span><br><span class="line"></span><br><span class="line">ticks = time.time()</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"当前时间戳为:"</span>, ticks)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1523707408.4362438</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##时间间隔是以秒为单位的浮点小数。</span></span><br><span class="line"><span class="comment">##每个时间戳都以自从1970年1月1日午夜（历元）经过了多长时间来表示。</span></span><br><span class="line"><span class="comment">##时间戳单位最适于做日期运算。但是1970年之前的日期就无法以此表示了。太遥远的日期也不行，UNIX和Windows只支持到2038年。</span></span><br></pre></td></tr></table></figure>
+<p>实例2：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">print(time.localtime(time.time()))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time.struct_time(tm_year=<span class="number">2018</span>, tm_mon=<span class="number">4</span>, tm_mday=<span class="number">14</span>, tm_hour=<span class="number">21</span>, tm_min=<span class="number">13</span>, tm_sec=<span class="number">30</span>, tm_wday=<span class="number">5</span>, tm_yday=<span class="number">104</span>, tm_isdst=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>实例3：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取格式化时间</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">localtime = time.asctime( time.localtime(time.time()) )</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"本地时间为 :"</span>, localtime)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地时间为 : Sat Apr <span class="number">14</span> <span class="number">21</span>:<span class="number">22</span>:<span class="number">05</span> <span class="number">2018</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>time.strftime(format[,time_tuple])格式化日期函数</li>
+</ul>
+<img title="格式化符号" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-2.png">
+<ul>
+<li>time.strptime(string, format)将日期时间字符串转换为时间元组</li>
+<li>time.mktime(time_tuple)将时间元组转换成时间戳</li>
+</ul>
+<p>实例4：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 格式化成2018-04-14 21:46:50形式</span></span><br><span class="line"><span class="keyword">print</span> (time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime()))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化成Sat Apr 14 21:46:50 2018形式</span></span><br><span class="line"><span class="keyword">print</span> (time.strftime(<span class="string">"%a %b %d %H:%M:%S %Y"</span>, time.localtime()))</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 将格式字符串转换为时间戳</span></span><br><span class="line">a = <span class="string">"Sat Apr 14 21:46:50 2018"</span></span><br><span class="line"><span class="keyword">print</span> (time.mktime(time.strptime(a,<span class="string">"%a %b %d %H:%M:%S %Y"</span>)))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-14</span> <span class="number">21</span>:<span class="number">46</span>:<span class="number">50</span></span><br><span class="line">Sat Apr <span class="number">14</span> <span class="number">21</span>:<span class="number">46</span>:<span class="number">50</span> <span class="number">2018</span></span><br><span class="line"><span class="number">1459171464.0</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>time.sleep(seconds)将程序睡眠等待几秒钟</li>
+</ul>
+<p>实例5：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sleep(秒)程序睡眠时间</span></span><br><span class="line">start_time = time.time()</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">end_time = time.time()</span><br><span class="line">print(end_time - start_time)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5.0000221729278564</span></span><br></pre></td></tr></table></figure>
+<h3 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h3><p>链接：<a href="https://docs.python.org/3/library/datetime.html" target="_blank" rel="noopener">datatime模块</a></p>
+<ul>
+<li>datetime.datetime.now()获取当前日期和时间</li>
+</ul>
+<p>实例6：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取当前时间</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">print(datetime.datetime.now())</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-14</span> <span class="number">22</span>:<span class="number">08</span>:<span class="number">00.916396</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>strftime(format)日期时间格式化</li>
+<li>datetime.datetime.formtimestamp(timestamp)将时间戳转换为日期时间</li>
+<li>datetime.datetime.fromtimestamp(timestamp)将时间戳转换为日期时间</li>
+</ul>
+<p>实例7：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#日期时间格式化</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">print(datetime.datetime.now().strftime(<span class="string">"%Y/%m/%d %H:%M:%S"</span>))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span>/<span class="number">04</span>/<span class="number">14</span> <span class="number">22</span>:<span class="number">11</span>:<span class="number">13</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>datetime.timedelta(时间间隔)返回一个时间间隔对象，通过时间间隔可以对时间进行加减法得到新的时间</li>
+</ul>
+<p>实例8：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">start_time = datetime.datetime.now()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line">end_time = datetime.datetime.now()</span><br><span class="line">print(start_time) <span class="comment">#当前时间</span></span><br><span class="line">print(end_time)   <span class="comment">#结束时间</span></span><br><span class="line">print(end_time-start_time) <span class="comment">#时间间隔</span></span><br><span class="line">print((end_time-start_time).seconds) </span><br><span class="line">print(<span class="string">'=============='</span>)</span><br><span class="line">ts = time.time() <span class="comment">#当前时间戳</span></span><br><span class="line">print(ts)</span><br><span class="line">print(datetime.datetime.fromtimestamp(ts))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-15</span> <span class="number">01</span>:<span class="number">22</span>:<span class="number">34.713639</span></span><br><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-15</span> <span class="number">01</span>:<span class="number">22</span>:<span class="number">36.714288</span></span><br><span class="line"><span class="number">0</span>:<span class="number">00</span>:<span class="number">02.000649</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">==============</span><br><span class="line"><span class="number">1523722956.7303264</span></span><br><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-15</span> <span class="number">01</span>:<span class="number">22</span>:<span class="number">36.730326</span></span><br></pre></td></tr></table></figure>
+<p>实例9：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算昨天的日期</span></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">today = datetime.datetime.today()</span><br><span class="line">print(today.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>))</span><br><span class="line">timedelta = datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line">yesterday = today - timedelta</span><br><span class="line">print(yesterday.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-15</span> <span class="number">01</span>:<span class="number">23</span>:<span class="number">36</span></span><br><span class="line"><span class="number">2018</span><span class="number">-04</span><span class="number">-14</span> <span class="number">01</span>:<span class="number">23</span>:<span class="number">36</span></span><br></pre></td></tr></table></figure>
+<h2 id="文件与文件夹操作"><a href="#文件与文件夹操作" class="headerlink" title="文件与文件夹操作"></a>文件与文件夹操作</h2><p>链接：<a href="http://www.runoob.com/python/python-files-io.html" target="_blank" rel="noopener">python文件I/O</a></p>
+<p>链接：<a href="http://www.runoob.com/python/file-methods.html" target="_blank" rel="noopener">python 文件夹操作方法</a></p>
+<ul>
+<li>open(文件路径，访问模式，encoding = 编码格式)方法打开一个已存在的文件，或者创建新的文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">file object = open(file_name [, access_mode][, buffering])</span><br><span class="line"></span><br><span class="line">参数：ile_name：file_name变量是一个包含了你要访问的文件名称的字符串值。</span><br><span class="line"></span><br><span class="line">access_mode：access_mode决定了打开文件的模式：只读，写入，追加等。</span><br><span class="line">所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。</span><br><span class="line"></span><br><span class="line">buffering:如果buffering的值被设为<span class="number">0</span>，就不会有寄存。如果buffering的值取<span class="number">1</span>，访问文件时会寄存行。如果将buffering的值设为大于<span class="number">1</span>的整数，表明了这就是的寄存区的缓冲大小。</span><br><span class="line">如果取负值，寄存区的缓冲大小则为系统默认。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>close()方法关闭已打开的文件</li>
+</ul>
+<p>下表为access_mode不同参数打开文件的完全列表，取自菜鸟课程，点击上述链接可以获得。</p>
+<img title="文件操作" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-3.png">
+<font color="red">实例10：</font>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="comment">#文件不存在报错</span></span><br><span class="line"><span class="comment"># f = open("test.txt","r")</span></span><br><span class="line"><span class="comment"># f.close() #切结要关闭</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#文件不存在则创建</span></span><br><span class="line"><span class="comment">#覆盖已存在的内容,encoding="utf-8"解决中文乱码</span></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"w"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">f.write(<span class="string">"你好"</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>打开文件常用的三种访问模式</li>
+<li>r ：只读模式（默认）</li>
+<li>w ：只写模式</li>
+<li>a : 追加模式</li>
+<li>write（data）方法向文件中写入字符串</li>
+<li>read()方法读取文件全部内容</li>
+</ul>
+<p>实例11：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#read读文件</span></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"r"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你好</span><br><span class="line"></span><br><span class="line"><span class="comment">#txt文件中的‘你好’</span></span><br></pre></td></tr></table></figure>
+<p>实例12：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"a"</span>,encoding=<span class="string">"utf-8"</span>) <span class="comment">#覆盖已存在的内容,encoding="utf-8"解决中文乱码</span></span><br><span class="line">f.write(<span class="string">"\n大家好"</span>)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">你好</span><br><span class="line">大家好</span><br><span class="line"></span><br><span class="line"><span class="comment">##a是指追加，在原有的你好的基础上追加大家好的内容</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>readlines()方法读取文件全部内容，放回一个列表，每行数据是列表中的一个元素</li>
+</ul>
+<p>实例13：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#readlines按行全部读取文件数据，返回一个文件数据列表，每一行是列表的一个元素</span></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"r"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">data = f.readlines()</span><br><span class="line">print(data)</span><br><span class="line">print(<span class="string">"-----------"</span>)</span><br><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> data:</span><br><span class="line">    print(<span class="string">"第&#123;&#125;行：&#123;&#125;"</span>.format(i,line),end=<span class="string">""</span>)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'你好\n'</span>, <span class="string">'大家好'</span>]</span><br><span class="line">-----------</span><br><span class="line">第<span class="number">1</span>行：你好</span><br><span class="line">第<span class="number">2</span>行：大家好</span><br></pre></td></tr></table></figure>
+<ul>
+<li>readline()方法按行读取文件数据</li>
+</ul>
+<p>实例14：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#readline</span></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"r"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">line1 = f.readline()</span><br><span class="line">print(line1,end=<span class="string">""</span>)</span><br><span class="line">line2 = f.readline()</span><br><span class="line">print(line2,end=<span class="string">""</span>)</span><br><span class="line"><span class="comment">#line3 = f.readline()</span></span><br><span class="line"><span class="comment">#print(line3,end="")</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你好</span><br><span class="line">大家好</span><br></pre></td></tr></table></figure>
+<ul>
+<li>writelines(字符串序列)将一个字符串序列（如字符串列表等）的元素写入到文件</li>
+</ul>
+<p>实例15：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#writelines向文件写入一个字符串序列</span></span><br><span class="line"></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"w"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">f.writelines([<span class="string">"张三\n"</span>,<span class="string">"李四\n"</span>,<span class="string">"王五\n"</span>])</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">张三</span><br><span class="line">李四</span><br><span class="line">王五</span><br><span class="line"></span><br><span class="line"><span class="comment">##以上为文件中内容</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>os.rename(oldname,newname)文件重命名</li>
+<li>os.remove(filepath)删除文件</li>
+<li>安全的打开关闭文件的方式（自动调用close方法）：</li>
+</ul>
+<p>实例16：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用with open as f的语句</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://test.txt"</span>,<span class="string">"w"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hello python'</span>)</span><br></pre></td></tr></table></figure>
+<p>实例16：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重命名文件test1.txt到test2.txt。</span></span><br><span class="line">os.rename( <span class="string">"test.txt"</span>, <span class="string">"test2.txt"</span> )</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除一个已经存在的文件test2.txt</span></span><br><span class="line">os.remove(<span class="string">"test2.txt"</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>os.mkdir(path) 创建文件夹</li>
+<li>os.getcwd()获取程序运行的当前目录</li>
+<li>os.listdir(path)删除获取指定目录下的文件列表</li>
+<li>os.rmdir(path)删除空文件夹</li>
+<li>shutil.rmtree(path)删除非空文件夹</li>
+<li>os.chdir(path)切换目录</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">os.mkdir(<span class="string">"d://testdir123"</span>)</span><br><span class="line">print(os.getcwd())</span><br><span class="line">print(os.listdir(<span class="string">"d://"</span>))</span><br><span class="line">os.rmdir(<span class="string">"d://testdir123"</span>)</span><br><span class="line"></span><br><span class="line">shutil.rmtree(<span class="string">"d://testdir123"</span>)</span><br><span class="line"></span><br><span class="line">path = os.getcwd() <span class="comment">#程序运行的当前路径</span></span><br><span class="line">print(path)</span><br><span class="line">os.chdir(<span class="string">"../"</span>) <span class="comment">#切换到上一级目录</span></span><br><span class="line">path = os.getcwd()</span><br><span class="line">print(path)</span><br><span class="line">os.chdir(<span class="string">"d://"</span>) <span class="comment">#切换到上一级目录</span></span><br><span class="line">path = os.getcwd()</span><br><span class="line">print(path)</span><br></pre></td></tr></table></figure>
+<h2 id="JSON格式文件操作"><a href="#JSON格式文件操作" class="headerlink" title="JSON格式文件操作"></a>JSON格式文件操作</h2><ul>
+<li>引入json模块：import json</li>
+<li>dumps(python_data):将Python数据转换为JSON编码的字符串</li>
+<li>loads(json_data): 将json编码的字符串转换为python的数据结构</li>
+</ul>
+<p>实例17：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="comment">#dumps和loads</span></span><br><span class="line"></span><br><span class="line">json_dict = &#123;<span class="string">"name"</span>:<span class="string">"zhangsan"</span>,<span class="string">"age"</span>:<span class="number">20</span>,<span class="string">"language"</span>:[<span class="string">"python"</span>,<span class="string">"java"</span>],<span class="string">"study"</span>:&#123;<span class="string">"AI"</span>:<span class="string">"python"</span>,<span class="string">"bigdata"</span>:<span class="string">"hadoop"</span>&#125;,<span class="string">"if_vip"</span>:<span class="keyword">True</span>&#125;</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">json_str = json.dumps(json_dict)</span></span><br><span class="line"><span class="string">print(json_str)</span></span><br><span class="line"><span class="string">print(type(json_str))</span></span><br><span class="line"><span class="string">python_data = json.loads(json_str)</span></span><br><span class="line"><span class="string">print(python_data)</span></span><br><span class="line"><span class="string">print(type(python_data))</span></span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"name"</span>: <span class="string">"zhangsan"</span>, <span class="string">"age"</span>: <span class="number">20</span>, <span class="string">"language"</span>: [<span class="string">"python"</span>, <span class="string">"java"</span>], <span class="string">"study"</span>: &#123;<span class="string">"AI"</span>: <span class="string">"python"</span>, <span class="string">"bigdata"</span>: <span class="string">"hadoop"</span>&#125;, <span class="string">"if_vip"</span>: true&#125;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line">&#123;'name': 'zhangsan', 'age': 20, 'language': ['python', 'java'], 'study': &#123;'AI': 'python', 'bigdata': 'hadoop'&#125;, 'if_vip': True&#125;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">dict</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>dump(python_data,file):将python数据转换为JSON编码的字符串，并写入文件</li>
+<li>load(json_file):从JSON数据文件中读取数据，并将json编码的字符串转换为python的数据结构</li>
+<li>python数据类型与JSON类型对比<img title="Python" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-4.png">
+</li>
+</ul>
+<p>实例18：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dump和load</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info.json"</span>,<span class="string">"w"</span>) <span class="keyword">as</span> f: <span class="comment">#文件操作完自动调用close方法关闭</span></span><br><span class="line"></span><br><span class="line">    json.dump(json_dict,f)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info.json"</span>,<span class="string">"r"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    user_info_data = json.load(f)</span><br><span class="line">    print(user_info_data)</span><br><span class="line">    print(type(user_info_data))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">'name'</span>: <span class="string">'zhangsan'</span>, <span class="string">'age'</span>: <span class="number">20</span>, <span class="string">'language'</span>: [<span class="string">'python'</span>, <span class="string">'java'</span>], <span class="string">'study'</span>: &#123;<span class="string">'AI'</span>: <span class="string">'python'</span>, <span class="string">'bigdata'</span>: <span class="string">'hadoop'</span>&#125;, <span class="string">'if_vip'</span>: <span class="keyword">True</span>&#125;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">dict</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="CSV格式文件操作"><a href="#CSV格式文件操作" class="headerlink" title="CSV格式文件操作"></a>CSV格式文件操作</h2><p>链接：<a href="https://docs.python.org/3/library/csv.html" target="_blank" rel="noopener">csv操作</a></p>
+<ul>
+<li>csv格式文件默认以逗号分隔</li>
+<li>引入csv模块：import csv</li>
+<li>writerow([row_data])一次写入一行数据</li>
+<li>writerows([[row_data],[row_data],···])一次写入多行数据</li>
+</ul>
+<p>实例19：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##csv文件操作</span></span><br><span class="line"><span class="comment">#向csv文件写数据</span></span><br><span class="line"></span><br><span class="line">datas = [[<span class="string">"nam'''e"</span>,<span class="string">"age"</span>],[<span class="string">"张三"</span>,<span class="number">20</span>],[<span class="string">"lisi"</span>,<span class="number">30</span>]] <span class="comment">#第一个列表是表示csv文件的标题</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info_csv.csv"</span>,<span class="string">"w"</span>,newline=<span class="string">""</span>,encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    writer = csv.writer(f)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> datas:</span><br><span class="line"><span class="comment"># #一次写入一行</span></span><br><span class="line">        writer.writerow(row)</span><br><span class="line"><span class="comment"># #一次写入多行</span></span><br><span class="line">        writer.writerows(datas)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>reader(file_object)根据打开的文件对象返回一个可迭代reader对象</li>
+<li>可以使用next(reader)遍历reader对象，获取每一行数据</li>
+</ul>
+<p>实例19：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#从csv文件读数据</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info_csv.csv"</span>,<span class="string">"r"</span>,newline=<span class="string">""</span>,encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    reader = csv.reader(f) <span class="comment">#reader可迭代对象</span></span><br><span class="line">    header = next(reader) <span class="comment">#读一行数据</span></span><br><span class="line">    print(header)</span><br><span class="line">    print(<span class="string">"------------"</span>)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">        print(row)</span><br><span class="line">        print(row[<span class="number">0</span>])</span><br><span class="line">        print(row[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">"nam'''e"</span>, <span class="string">'age'</span>]</span><br><span class="line">------------</span><br><span class="line">[<span class="string">"nam'''e"</span>, <span class="string">'age'</span>]</span><br><span class="line">nam<span class="string">'''e</span></span><br><span class="line"><span class="string">age</span></span><br><span class="line"><span class="string">['张三', '20']</span></span><br><span class="line"><span class="string">张三</span></span><br><span class="line"><span class="string">20</span></span><br><span class="line"><span class="string">['lisi', '30']</span></span><br><span class="line"><span class="string">lisi</span></span><br><span class="line"><span class="string">30</span></span><br><span class="line"><span class="string">['张三', '20']</span></span><br><span class="line"><span class="string">张三</span></span><br><span class="line"><span class="string">20</span></span><br><span class="line"><span class="string">["nam'''</span>e<span class="string">", 'age']</span></span><br><span class="line"><span class="string">nam'''e</span></span><br><span class="line"><span class="string">age</span></span><br><span class="line"><span class="string">['张三', '20']</span></span><br><span class="line"><span class="string">张三</span></span><br><span class="line"><span class="string">20</span></span><br><span class="line"><span class="string">['lisi', '30']</span></span><br><span class="line"><span class="string">lisi</span></span><br><span class="line"><span class="string">30</span></span><br><span class="line"><span class="string">['lisi', '30']</span></span><br><span class="line"><span class="string">lisi</span></span><br><span class="line"><span class="string">30</span></span><br><span class="line"><span class="string">["</span>nam<span class="string">'''e", 'age']</span></span><br><span class="line"><span class="string">nam'''</span>e</span><br><span class="line">age</span><br><span class="line">[<span class="string">'张三'</span>, <span class="string">'20'</span>]</span><br><span class="line">张三</span><br><span class="line"><span class="number">20</span></span><br><span class="line">[<span class="string">'lisi'</span>, <span class="string">'30'</span>]</span><br><span class="line">lisi</span><br><span class="line"><span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>DictWrite和DictReader对象处理Python字典类型的数据</li>
+</ul>
+<p>实例20：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">header = [<span class="string">"name"</span>,<span class="string">"age"</span>]</span><br><span class="line">rows = [&#123;<span class="string">"name"</span>:<span class="string">"zhangsan"</span>,<span class="string">"age"</span>:<span class="number">20</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"lisi"</span>,<span class="string">"age"</span>:<span class="number">30</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;]</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info_csv_dict.csv"</span>,<span class="string">"w"</span>,newline=<span class="string">""</span>,encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    writer = csv.DictWriter(f,header)</span><br><span class="line">    writer.writeheader()</span><br><span class="line">    writer.writerows(rows)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info_csv_dict.csv"</span>,<span class="string">"r"</span>,newline=<span class="string">""</span>,encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    reader = csv.DictReader(f)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">        print(row)</span><br><span class="line">        print(<span class="string">"name:&#123;&#125;,age:&#123;&#125;"</span>.format(row[<span class="string">"name"</span>],row[<span class="string">"age"</span>]))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">OrderedDict([(<span class="string">'name'</span>, <span class="string">'zhangsan'</span>), (<span class="string">'age'</span>, <span class="string">'20'</span>)])</span><br><span class="line">name:zhangsan,age:<span class="number">20</span></span><br><span class="line">OrderedDict([(<span class="string">'name'</span>, <span class="string">'lisi'</span>), (<span class="string">'age'</span>, <span class="string">'30'</span>)])</span><br><span class="line">name:lisi,age:<span class="number">30</span></span><br><span class="line">OrderedDict([(<span class="string">'name'</span>, <span class="string">'wangwu'</span>), (<span class="string">'age'</span>, <span class="string">'18'</span>)])</span><br><span class="line">name:wangwu,age:<span class="number">18</span></span><br></pre></td></tr></table></figure>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><p>链接：<a href="http://www.runoob.com/python/python-object.html" target="_blank" rel="noopener">面对对象编程</a></p>
+<ul>
+<li>类(Class): 用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例。</li>
+<li>类变量：类变量在整个实例化的对象中是公用的。类变量定义在类中且在函数体之外。类变量通常不作为实例变量使用。</li>
+<li>数据成员：类变量或者实例变量, 用于处理类及其实例对象的相关的数据。</li>
+<li>方法重写：如果从父类继承的方法不能满足子类的需求，可以对其进行改写，这个过程叫方法的覆盖（override），也称为方法的重写。</li>
+<li>实例变量：定义在方法中的变量，只作用于当前实例的类。</li>
+<li>继承：即一个派生类（derived class）继承基类（base class）的字段和方法。继承也允许把一个派生类的对象作为一个基类对象对待。例如，有这样一个设计：一个Dog类型的对象派生自Animal类，这是模拟”是一个（is-a）”关系（例图，Dog是一个Animal）。</li>
+<li>实例化：创建一个类的实例，类的具体对象。</li>
+<li>方法：类中定义的函数。</li>
+<li>对象：通过类定义的数据结构实例。对象包括两个数据成员（类变量和实例变量）和方法。</li>
+<li>类与对象的关系：类相当于创建对象的模板，根据类可以创建多个对象</li>
+<li>类的构成：类的名称、类的属性、类的方法</li>
+<li>类的定义</li>
+</ul>
+<p>实例21：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 类名：</span></span><br><span class="line"><span class="class">    <span class="title">def</span> 方法名<span class="params">(self,[,参数列表])</span></span></span><br><span class="line"><span class="class">####</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">#定义类</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Dog</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line">		print(<span class="string">"小狗正在啃骨头..."</span>)</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">drink</span><span class="params">(self)</span>:</span></span><br><span class="line">		print(<span class="string">"小狗正在喝水..."</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类的命名规则按照“大驼峰”，首字母大写</li>
+<li>定义的方法默认要传入一个self参数，表示自己，self参数必须是第一个参数</li>
+<li>创建对象：对象变量名 = 类名()</li>
+</ul>
+<p>实例22：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>:</span></span><br><span class="line">    name = <span class="string">'petter'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"小狗正在啃骨头..."</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">drink</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"小狗正在喝水..."</span>)</span><br><span class="line"><span class="comment">#创建对象</span></span><br><span class="line">wang_cai = Dog()</span><br><span class="line">print(id(wang_cai))</span><br><span class="line">wang_cai.eat()</span><br><span class="line">wang_cai.drink()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a_fu = Dog()</span><br><span class="line"><span class="comment"># id([object])返回对象的内存地址</span></span><br><span class="line">print(id(a_fu))</span><br><span class="line">a_fu.eat()</span><br><span class="line">a_fu.drink()</span><br><span class="line">print(a_fu.name)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1379489803568</span></span><br><span class="line">小狗正在啃骨头...</span><br><span class="line">小狗正在喝水...</span><br><span class="line"><span class="number">1379489740056</span></span><br><span class="line">小狗正在啃骨头...</span><br><span class="line">小狗正在喝水...</span><br><span class="line">petter</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+     <div>
+            
+                ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>    
+
+     <div align="center">
+          
+            <div class="copyright">
+            <p><span>
+            <b>本文地址：</b><a href="/2018/07/08/Python-五/" title="Python(五)">https://huxuzhe.github.io/2018/07/08/Python-五/</a><br /><b>转载请注明出处，谢谢！</b>
+            </span></p>
+            </div>
+          
+     </div>   
+
+
+  
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HuXuzhe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HuXuzhe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    HuXuzhe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://huxuzhe.github.io/2018/07/08/Python-五/" title="Python(五)">https://huxuzhe.github.io/2018/07/08/Python-五/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日期与时间/" rel="tag"><i class="fa fa-tag"></i> 日期与时间</a>
+          
+            <a href="/tags/文件与文件夹操作/" rel="tag"><i class="fa fa-tag"></i> 文件与文件夹操作</a>
+          
+            <a href="/tags/面对对象/" rel="tag"><i class="fa fa-tag"></i> 面对对象</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/08/Python-四/" rel="next" title="Python(四)">
+                <i class="fa fa-chevron-left"></i> Python(四)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/08/Python-六/" rel="prev" title="Python(六)">
+                Python(六) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzg4MS8xNDQxMQ=="></div>
+    </div>
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/photo.jpg"
+                alt="HuXuzhe" />
+            </a>
+            
+              <p class="site-author-name" itemprop="name">HuXuzhe</p>
+              <p class="site-description motion-element" itemprop="description">机器学习、深度学习挖坑中~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HuXuzhe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:huxuzhe1993@gmail.com" target="_blank" title="G-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>G-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://note.youdao.com/noteshare?id=db847f1aa0f5c7e82ef6e1e7bc2f436c" target="_blank" title="Youdao">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Youdao</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/haley_hu/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/84a1d681c37f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-pencil-square-o"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hacking-linux.com" title="Kyle's Blog" target="_blank">Kyle's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xrblog.github.io" title="xrblog" target="_blank">xrblog</a>
+                  </li>
+                
+              </ul>
+             ﻿<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("06/29/2018 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#日期和时间"><span class="nav-number">1.</span> <span class="nav-text">日期和时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#time模块"><span class="nav-number">1.1.</span> <span class="nav-text">time模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#datetime模块"><span class="nav-number">1.2.</span> <span class="nav-text">datetime模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与文件夹操作"><span class="nav-number">2.</span> <span class="nav-text">文件与文件夹操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON格式文件操作"><span class="nav-number">3.</span> <span class="nav-text">JSON格式文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSV格式文件操作"><span class="nav-number">4.</span> <span class="nav-text">CSV格式文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程"><span class="nav-number">5.</span> <span class="nav-text">面向对象编程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuXuzhe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数统计&#58;</span> 
+    
+    <span title="全站字数统计">57.1k</span> 字
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+  主题 -
+  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+   <span id="busuanzi_container_site_pv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第<span id="busuanzi_value_site_uv"></span>位访客
+  </span>
+  
+</div>
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">扫微信加好友,注明博客</div>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

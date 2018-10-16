@@ -1,0 +1,1541 @@
+﻿<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习,数学,函数,线性代数," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haley_Hu's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="写在前面:函数 函数与数据的泛化 推理与归纳  线性代数 向量与矩阵 特征值与特征空间 高维空间向量 特征向量">
+<meta name="keywords" content="机器学习,数学,函数,线性代数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习数学基础(一)">
+<meta property="og:url" content="https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/index.html">
+<meta property="og:site_name" content="Haley_Hu&#39;s Blog">
+<meta property="og:description" content="写在前面:函数 函数与数据的泛化 推理与归纳  线性代数 向量与矩阵 特征值与特征空间 高维空间向量 特征向量">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M2.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M3.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M4.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M5.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M6.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M7.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M8.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M9.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M10.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M11.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M12.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M13.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M14.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M22.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M15.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M16.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M17.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M18.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M19.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M20.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M21.png">
+<meta property="og:updated_time" content="2018-07-09T08:03:37.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习数学基础(一)">
+<meta name="twitter:description" content="写在前面:函数 函数与数据的泛化 推理与归纳  线性代数 向量与矩阵 特征值与特征空间 高维空间向量 特征向量">
+<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/M1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/"/>
+
+
+
+
+
+  <title>机器学习数学基础(一) | Haley_Hu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <a href="https://github.com/HuXuzhe" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haley_Hu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Teaching is Learning,一起交流！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简介
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuXuzhe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haley_Hu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">机器学习数学基础(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T11:43:59+09:00">
+                2018-07-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-09T17:03:37+09:00">
+                2018-07-09
+              </time>
+            
+          </span>
+         
+        
+        <span id="busuanzi_container_page_pv">  |  阅读量 : <span id="busuanzi_value_page_pv"></span> 次</span>
+        
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/数学基础/" itemprop="url" rel="index">
+                    <span itemprop="name">数学基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,539字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面:"></a>写在前面:</h2><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li>函数与数据的泛化</li>
+<li>推理与归纳</li>
+</ul>
+<h3 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h3><ul>
+<li>向量与矩阵</li>
+<li>特征值与特征空间</li>
+<li>高维空间向量</li>
+<li>特征向量</li>
+</ul>
+<a id="more"></a>
+<h2 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>在数学中，函数(function)就是一种关系，是一组输入和一组输出之间的关系，也是映射。<br><img title="function" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M1.png"></p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><ul>
+<li>1.2.1指数函数(常用作激活函数)</li>
+</ul>
+<img title="指数函数" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M2.png">
+<p>$$<br>y = e^x<br>$$<br>应用链接：<a href="http://setosa.io/ev/exponentiation/" target="_blank" rel="noopener">动态模型展示链接</a></p>
+<ul>
+<li>1.2.2 对数函数(指数函数的反函数)</li>
+</ul>
+<img title="对数函数" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M3.png">
+<ul>
+<li>1.2.3 sigmoid函数(一般用作激活函数:因为映射到（0,1）之间)</li>
+</ul>
+<img title="sigmoid函数" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M4.png">
+<p>$$<br>S(x) = \frac{1}{1+e^{-x}} = \frac{e}{e^x+1}<br>$$</p>
+<ul>
+<li>线性整流函数(常用的为斜坡函数：rectifier)</li>
+</ul>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M5.png">
+<p>$$<br>f(x) = max(0,x)<br>$$<br>当 x &gt; 0 时，x = y<br>当 x &lt; 0 时，y = 0</p>
+<p>链接：<a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E6%95%B4%E6%B5%81%E5%87%BD%E6%95%B0" target="_blank" rel="noopener">线性整流函数函数</a></p>
+<ul>
+<li>复合函数（函数的嵌套,Function Decomposition）</li>
+</ul>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M6.png">
+<p>举例：<br>$$<br>f(x) = 2x+3<br>$$</p>
+<p>$$<br>f(f(x)) = 2(2x+3)+3 = 4x + 9<br>$$</p>
+<h3 id="动态函数和静态函数"><a href="#动态函数和静态函数" class="headerlink" title="动态函数和静态函数"></a>动态函数和静态函数</h3><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M7.png">
+<p>上面为静态函数，下面为动态函数<br>区别：动态函数的输入是和时间有关系，静态函数的输入则和时间没有关系</p>
+<h3 id="比较接近现实的函数-The-Real-World-Data"><a href="#比较接近现实的函数-The-Real-World-Data" class="headerlink" title="比较接近现实的函数(The Real-World Data)"></a>比较接近现实的函数(The Real-World Data)</h3><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M8.png">
+<h3 id="凸函数-Convex-Set-and-Function"><a href="#凸函数-Convex-Set-and-Function" class="headerlink" title="凸函数(Convex Set and Function)"></a>凸函数(Convex Set and Function)</h3><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M9.png">
+<p>如上图左，t为权重，相当于x，y都属于在0和1之间。<br>上图右，满足公式的条件就是凸函数。</p>
+<h2 id="线性代数-Linear-Algebra"><a href="#线性代数-Linear-Algebra" class="headerlink" title="线性代数(Linear Algebra)"></a>线性代数(Linear Algebra)</h2><h3 id="向量-Vector-是一个有方向的标量"><a href="#向量-Vector-是一个有方向的标量" class="headerlink" title="向量(Vector)是一个有方向的标量"></a>向量(Vector)是一个有方向的标量</h3><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M10.png">
+<h3 id="向量空间-vector-space"><a href="#向量空间-vector-space" class="headerlink" title="向量空间(vector space)"></a>向量空间(vector space)</h3><p>欧几里德空间(Euclidean space)被数学代表着物理空间和概念，比如，长宽高，角度等。用的笛卡尔坐标系来表示。<br>$$<br>\begin{pmatrix} 1 \ 2 \end{pmatrix}<br>$$</p>
+<p>上面是二维向量空间<br>$$<br>\left(<br>\begin{matrix}<br>1\<br>2\<br>3\<br>\end{matrix}<br>\right)<br>$$<br>上面是三维向量空间</p>
+<h3 id="向量的模-Norm-of-Vectors-，向量的范数"><a href="#向量的模-Norm-of-Vectors-，向量的范数" class="headerlink" title="向量的模(Norm of Vectors)，向量的范数"></a>向量的模(Norm of Vectors)，向量的范数</h3><p>$$<br>\parallel x \parallel<br>$$</p>
+<p>为向量X的范数，<br>$$<br>[V;\parallel \cdot \parallel ]<br>$$<br>为赋范空间</p>
+<p>公理：<br>$$<br>\parallel X\parallel \geq 0<br>$$</p>
+<p>$$<br>\parallel \alpha{X}\parallel = \mid\alpha\mid{\parallel X \parallel}<br>$$</p>
+<p>$$<br>\parallel X+Y \parallel \leq \parallel X \parallel + \parallel Y \parallel<br>$$</p>
+<h3 id="范数-L-0-TO-L-infinity"><a href="#范数-L-0-TO-L-infinity" class="headerlink" title="范数(L-0 TO L-infinity)"></a>范数(L-0 TO L-infinity)</h3><p>链接：<a href="https://blog.csdn.net/u014381600/article/details/54341317" target="_blank" rel="noopener">范数</a></p>
+<ul>
+<li>L-0范数</li>
+</ul>
+<p>指向量中非0的元素的个数，如果用L0范数来规则化一个参数矩阵W的话，就是希望W的大部分元素都是0，意思就是让参数W是稀疏的。但是实际上我们更多是用是L1范数来实现稀疏，因为L1范数的最有凸近似，而且比L0范数要容易优化求解。总之，L1范数和L0范数都可以实现稀疏，L1因具有比L0更好的优化求解特性而被广泛应用。</p>
+<p>例子：<br>$$<br>\begin{pmatrix} 1 \ 2\end{pmatrix} \Rightarrow 2  \quad\text{说明非零的个数有两个}<br>$$</p>
+<p>$$<br>\begin{pmatrix} 1 \ 0\end{pmatrix} \Rightarrow 1<br>\quad\text{说明非零的个数只有1个}<br>$$</p>
+<ul>
+<li>L-1范数和L-2范数</li>
+</ul>
+<p>L-1norm是两点之间的距离，也称曼哈顿距离(Mahatten Distance)，即在欧几里德空间的固定指教坐标系上两点所形成的线段对轴产生的投影的距离总和</p>
+<img title="L1" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M11.png">
+<p>L-2norm是欧几里德距离(Euclidean Distance),也叫欧氏距离，表示在m维空间中两个点之间的距离</p>
+<img title="L2" src="http://pbhfphh1b.bkt.clouddn.com/static/images/M12.png">
+<p>转自：<a href="http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/" target="_blank" rel="noopener">参考链接</a></p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M13.png">
+<p>在正则化中二者的区别：<br><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M14.png"></p>
+<p>下图是表示曼哈顿距离和欧几里德距离的直观图，曼哈顿距离可能有多解<br><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M22.png"></p>
+<p>归纳总结：<br>$$<br>\parallel x \parallel_p = (\sum_{i = 1}^n {\mid x_i\mid}^p)^\frac{1}{p}<br>$$<br>所以当<br>$$<br>n = \infty<br>$$<br>则公式为<br>$$<br>\parallel x \parallel_\infty = (\sum_{i = 1}^n {\mid x_i\mid}^\infty)^\frac{1}{\infty}<br>$$</p>
+<p>$$<br>\Rightarrow \sqrt[\infty]{\sum_{i=1}^n \mid X_i\mid^{\infty} }<br>$$</p>
+<p>假设存在一个条件：<br>$$<br>max(x_1,x_2,x_3,\cdots,x_n) =x_j<br>$$</p>
+<p>$$<br>x_j\text{里面最大的一个值}<br>$$</p>
+<p>$$<br>\because x_j^\infty &gt;&gt; x_i^\infty<br>$$</p>
+<p>$$<br>\parallel x \parallel_\infty = (\sum_{i = 1}^n {\mid x_i\mid}^\infty)^\frac{1}{\infty} \Rightarrow \mid x_j \mid<br>$$</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M15.png">
+<p>下面是综合的图：</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M16.png">
+<h3 id="矩阵-Matrix"><a href="#矩阵-Matrix" class="headerlink" title="矩阵(Matrix)"></a>矩阵(Matrix)</h3><p>向量可以看作是特殊的矩阵，是一个一维矩阵。(dimensions = 1)<br>欧美的习惯，A表示列矩阵，例如：<br>$$<br>A = \begin{bmatrix} a_1 \a_2\a_3\end{bmatrix}<br>$$</p>
+<p>$$<br>A^T = \begin{bmatrix} a_1&amp; a_2&amp;a_3\end{bmatrix}<br>$$</p>
+<p>$$<br>\text{说明：}A^T\text{是}A\text{的转置矩阵}<br>$$</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M17.png">
+<h3 id="张量-Tensor"><a href="#张量-Tensor" class="headerlink" title="张量(Tensor)"></a>张量(Tensor)</h3><p>链接：<a href="https://www.wukong.com/question/6531498435785261325/" target="_blank" rel="noopener">中文链接</a>，<br><a href="https://www.quora.com/What-is-a-tensor" target="_blank" rel="noopener">英文链接</a></p>
+<p>张量这个词最早来自于物理。张量是在标量和向量的基础之上做的进一步推广。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M18.png">
+<p>在一个三维的坐标系中，我们可以用三维的向量来表示压力的大小和方向，与此同时我们还需要表示出压力作用的切平面，切平面同样可以用其法向量（垂直于切平面的向量）来表示出来。这种物理量就存在两个方向（力的方向和受力表面的方向），就是一个二阶的张量。实际上标量就是0阶张量，而向量则是一阶张量。</p>
+<p>实际上你需要记住的只有一点，在进行张量运算的时候，经常把张量当成多维数组进行计算。</p>
+<h3 id="行列式-Determinant"><a href="#行列式-Determinant" class="headerlink" title="行列式(Determinant)"></a>行列式(Determinant)</h3><p>行列式就是矩阵的值。<br>表示可以为：<br>$$<br>det(A)<br>$$</p>
+<p>$$<br>detA<br>$$</p>
+<p>$$<br>\mid A\mid<br>$$</p>
+<p>以上都是行列式的表达方式。<br>行列式也可以看作矩阵组成的面积。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M19.png">
+<h3 id="特征向量-Eigenvector-和特征值-Eigenvalue"><a href="#特征向量-Eigenvector-和特征值-Eigenvalue" class="headerlink" title="特征向量(Eigenvector)和特征值(Eigenvalue)"></a>特征向量(Eigenvector)和特征值(Eigenvalue)</h3><p>链接：<a href="http://setosa.io/ev/eigenvectors-and-eigenvalues/" target="_blank" rel="noopener">demonstration展示链接</a><br>$$<br>\text{设矩阵A是n阶矩阵，如果数}\lambda\text{和n维非零向量x使关系式}<br>$$</p>
+<p>$$<br>Ax = \lambda x<br>$$</p>
+<p>$$<br>\text{成立，那么，这样的数}\lambda\text{成为矩阵A的特征值，非零向量x称为A的对应于特征值}\lambda<br>\text{的特征向量。}<br>$$</p>
+<h3 id="奇异值分解（SVD-Singular-Value-Decomposition）"><a href="#奇异值分解（SVD-Singular-Value-Decomposition）" class="headerlink" title="奇异值分解（SVD:Singular Value Decomposition）"></a>奇异值分解（SVD:Singular Value Decomposition）</h3><p>把一个矩阵分成三个矩阵的乘积，其中有一个矩阵是对角矩阵。<br>如下图：<br><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M20.png"></p>
+<h3 id="雅可比矩阵和海森矩阵-Jacobian-and-Hessian-Matrices"><a href="#雅可比矩阵和海森矩阵-Jacobian-and-Hessian-Matrices" class="headerlink" title="雅可比矩阵和海森矩阵(Jacobian and Hessian Matrices)"></a>雅可比矩阵和海森矩阵(Jacobian and Hessian Matrices)</h3><p>链接：<a href="https://zh.wikipedia.org/wiki/%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener">Jacobian</a>，<br><a href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E6%A3%AE%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener">Hessian</a></p>
+<p>在向量分析中，雅可比矩阵是函数的一阶偏导数以一定方式排列成的矩阵，其行列式称为雅可比行列式。</p>
+<p>在数学中，海森矩阵（Hessian matrix 或 Hessian）是一个多变量实值函数的二阶偏导数组成的方块矩阵。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/M21.png">
+<p>参考资料(对于机器学习够用，而且比较全面):</p>
+<p>黄博高等数学公式总结：<a href="https://zhuanlan.zhihu.com/p/36311622" target="_blank" rel="noopener">高等数学</a></p>
+<p>黄博的线性代数总结：<a href="https://zhuanlan.zhihu.com/p/36584206" target="_blank" rel="noopener">线性代数</a></p>
+
+      
+    </div>
+    
+    
+    
+
+     <div>
+            
+                ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>    
+
+     <div align="center">
+          
+            <div class="copyright">
+            <p><span>
+            <b>本文地址：</b><a href="/2018/07/09/机器学习数学基础-一/" title="机器学习数学基础(一)">https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/</a><br /><b>转载请注明出处，谢谢！</b>
+            </span></p>
+            </div>
+          
+     </div>   
+
+
+  
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HuXuzhe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HuXuzhe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    HuXuzhe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/" title="机器学习数学基础(一)">https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+          
+            <a href="/tags/数学/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+          
+            <a href="/tags/函数/" rel="tag"><i class="fa fa-tag"></i> 函数</a>
+          
+            <a href="/tags/线性代数/" rel="tag"><i class="fa fa-tag"></i> 线性代数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/09/Python-十/" rel="next" title="Python(十)">
+                <i class="fa fa-chevron-left"></i> Python(十)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/09/Numpy/" rel="prev" title="Numpy">
+                Numpy <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzg4MS8xNDQxMQ=="></div>
+    </div>
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/photo.jpg"
+                alt="HuXuzhe" />
+            </a>
+            
+              <p class="site-author-name" itemprop="name">HuXuzhe</p>
+              <p class="site-description motion-element" itemprop="description">机器学习、深度学习挖坑中~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HuXuzhe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:huxuzhe1993@gmail.com" target="_blank" title="G-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>G-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://note.youdao.com/noteshare?id=db847f1aa0f5c7e82ef6e1e7bc2f436c" target="_blank" title="Youdao">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Youdao</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/haley_hu/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/84a1d681c37f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-pencil-square-o"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hacking-linux.com" title="Kyle's Blog" target="_blank">Kyle's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xrblog.github.io" title="xrblog" target="_blank">xrblog</a>
+                  </li>
+                
+              </ul>
+             ﻿<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("06/29/2018 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">1.1.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性代数"><span class="nav-number">1.2.</span> <span class="nav-text">线性代数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数-1"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">2.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型"><span class="nav-number">2.2.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态函数和静态函数"><span class="nav-number">2.3.</span> <span class="nav-text">动态函数和静态函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较接近现实的函数-The-Real-World-Data"><span class="nav-number">2.4.</span> <span class="nav-text">比较接近现实的函数(The Real-World Data)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凸函数-Convex-Set-and-Function"><span class="nav-number">2.5.</span> <span class="nav-text">凸函数(Convex Set and Function)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性代数-Linear-Algebra"><span class="nav-number">3.</span> <span class="nav-text">线性代数(Linear Algebra)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#向量-Vector-是一个有方向的标量"><span class="nav-number">3.1.</span> <span class="nav-text">向量(Vector)是一个有方向的标量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量空间-vector-space"><span class="nav-number">3.2.</span> <span class="nav-text">向量空间(vector space)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量的模-Norm-of-Vectors-，向量的范数"><span class="nav-number">3.3.</span> <span class="nav-text">向量的模(Norm of Vectors)，向量的范数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#范数-L-0-TO-L-infinity"><span class="nav-number">3.4.</span> <span class="nav-text">范数(L-0 TO L-infinity)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵-Matrix"><span class="nav-number">3.5.</span> <span class="nav-text">矩阵(Matrix)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#张量-Tensor"><span class="nav-number">3.6.</span> <span class="nav-text">张量(Tensor)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行列式-Determinant"><span class="nav-number">3.7.</span> <span class="nav-text">行列式(Determinant)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征向量-Eigenvector-和特征值-Eigenvalue"><span class="nav-number">3.8.</span> <span class="nav-text">特征向量(Eigenvector)和特征值(Eigenvalue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#奇异值分解（SVD-Singular-Value-Decomposition）"><span class="nav-number">3.9.</span> <span class="nav-text">奇异值分解（SVD:Singular Value Decomposition）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#雅可比矩阵和海森矩阵-Jacobian-and-Hessian-Matrices"><span class="nav-number">3.10.</span> <span class="nav-text">雅可比矩阵和海森矩阵(Jacobian and Hessian Matrices)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuXuzhe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数统计&#58;</span> 
+    
+    <span title="全站字数统计">57.1k</span> 字
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+  主题 -
+  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+   <span id="busuanzi_container_site_pv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第<span id="busuanzi_value_site_uv"></span>位访客
+  </span>
+  
+</div>
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">扫微信加好友,注明博客</div>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

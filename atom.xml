@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-07-07T10:09:59.650Z</updated>
+  <updated>2018-10-16T10:15:21.469Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,40 +17,575 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python基础语法</title>
-    <link href="https://huxuzhe.github.io/2018/07/07/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-    <id>https://huxuzhe.github.io/2018/07/07/python基础语法/</id>
-    <published>2018-07-07T03:25:39.000Z</published>
-    <updated>2018-07-07T10:09:59.650Z</updated>
+    <title>时间管理(8)</title>
+    <link href="https://huxuzhe.github.io/2018/10/16/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-8/"/>
+    <id>https://huxuzhe.github.io/2018/10/16/时间管理-8/</id>
+    <published>2018-10-16T04:07:46.000Z</published>
+    <updated>2018-10-16T10:15:21.469Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Python概述&quot;&gt;&lt;a href=&quot;#Python概述&quot; class=&quot;headerlink&quot; title=&quot;Python概述&quot;&gt;&lt;/a&gt;Python概述&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;一种面向对象的解释型计算机程序设计语言&lt;/li&gt;
-&lt;li&gt;具有丰富且强大的内置库和第三方库&lt;/li&gt;
-&lt;li&gt;语法简洁灵活&lt;/li&gt;
-&lt;li&gt;开源、跨平台&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;应用场景：&quot;&gt;&lt;a href=&quot;#应用场景：&quot; class=&quot;headerlink&quot; title=&quot;应用场景：&quot;&gt;&lt;/a&gt;应用场景：&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;数据分析&lt;/li&gt;
-&lt;li&gt;人工智能&lt;/li&gt;
-&lt;li&gt;网络爬虫&lt;/li&gt;
-&lt;li&gt;自动化运维&lt;/li&gt;
-&lt;li&gt;·······&lt;/li&gt;
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;前面我们学习如何管理任务和习惯，并且化为了一个个行动记入了待清理清单。经常有人说，每天都很忙，但一天到头缺又不知道自己都忙了什么，就好像在说：“抽屉里东西很多，却不知道都有什么。”这一小节，我们将学习到如何安排日程的相关要领，帮助我们过上井井有条的每一天，并从中获得成就感。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(7)</title>
+    <link href="https://huxuzhe.github.io/2018/10/15/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-7/"/>
+    <id>https://huxuzhe.github.io/2018/10/15/时间管理-7/</id>
+    <published>2018-10-15T02:53:21.000Z</published>
+    <updated>2018-10-16T10:15:36.273Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;锻炼身体可以增加我们生命的长度和质量，但在这件事上，我们投入的时间比较少，尤其对于长期加班，工作学习繁重的人，“没时间”就成了万能的挡箭牌。&lt;/p&gt;
+&lt;p&gt;其实健身这件事不需要那么多时间，既不需要你煞有介事的跑到健身房送钱办卡，也不需要你一个小时半个小时苦哈哈的跑步，那些听上去高大上的事情往往是最难坚持的，你也不需要为了证明什么而来折磨自己。&lt;/p&gt;
+&lt;p&gt;其实吧，&lt;b&gt;只要方法得当，仅仅利用碎片化的时间，付出极小的努力&lt;/b&gt;，就能达到健身的标准，而且还有更有趣呢~~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(6)</title>
+    <link href="https://huxuzhe.github.io/2018/10/14/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-6/"/>
+    <id>https://huxuzhe.github.io/2018/10/14/时间管理-6/</id>
+    <published>2018-10-14T04:17:20.000Z</published>
+    <updated>2018-10-16T07:48:35.076Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;前面我们学了随手记和待处理清单，可是有的时候我们任务需要的时间长且必须有重要的，就比如我来说，我每个学习的发表乃至最终的毕业论文，贯穿了我整个研究生生涯。如果在最后期限的时候完成，那样不仅非常的焦急，而且会完成的很糟糕，会有影响毕业等问题。所以这节我们会学习到如何切分大型任务和长远任务的方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(5)</title>
+    <link href="https://huxuzhe.github.io/2018/10/13/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-5/"/>
+    <id>https://huxuzhe.github.io/2018/10/13/时间管理-5/</id>
+    <published>2018-10-13T10:03:01.000Z</published>
+    <updated>2018-10-13T14:15:37.995Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;这节我们将学习如何摆脱晚睡陋习。我们常常再看会儿这个，玩一会儿那个，干一会儿那个。虽然我们大家都知道早睡早起身体好，晚上经常晚于11点睡觉会严重影响自己的身体健康，记忆力会差，情绪会糟糕，皮肤还会不好。我们将学习到三种早睡方法，分别是早起倒逼法，沐浴自控法以及晚间二分法。更重要的是我们能够更加利用起来实现大家的自我提升。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(4)</title>
+    <link href="https://huxuzhe.github.io/2018/10/12/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-4/"/>
+    <id>https://huxuzhe.github.io/2018/10/12/时间管理-4/</id>
+    <published>2018-10-12T04:10:18.000Z</published>
+    <updated>2018-10-12T03:44:50.268Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;前面三章通过要事管理可以把短期任务集中管理起来；通过早期创造了整块的自主时间；通过习惯养成巩固了自己的好习惯。这章讲述碎片管
+      
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(3)</title>
+    <link href="https://huxuzhe.github.io/2018/10/11/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-3/"/>
+    <id>https://huxuzhe.github.io/2018/10/11/时间管理-3/</id>
+    <published>2018-10-11T02:03:22.000Z</published>
+    <updated>2018-10-11T01:44:13.230Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;上一节我们学会了如何早起，早起既是一种非常立竿见影的时间管理方法，同时也是一种习惯。和早起一样，我们总觉得这是自己的意志力薄弱，其实，多数人开始培养一个习惯都不自觉的使用了错误的方法，期望过高，太过严苛，也就注定失败。为了养成一个良好的习惯，我们这节将讲解学习如何&lt;b&gt;[如何坚持和养成好习惯]&lt;/b&gt;。从”烂开始”，”具象法”和”小红花法”。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(2)</title>
+    <link href="https://huxuzhe.github.io/2018/10/11/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-2/"/>
+    <id>https://huxuzhe.github.io/2018/10/11/时间管理-2/</id>
+    <published>2018-10-10T15:05:40.000Z</published>
+    <updated>2018-10-10T15:38:05.804Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;这里讲的是睡眠管理：如何养成早起习惯！早起，是最养生和搞笑的时间管理方法。但是真要坚持早起，却又难住了很多人。就比如我，曾经参加过早起活动，最后还是以失败告终。不过这部分，我们将学习到&lt;b&gt;无痛起床的技能，帮助我们轻松实现早起并且真正坚持下来。&lt;/b&gt;我们也将学习到三个工具：双闹钟法，五分钟清醒术，三条命坚持。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理(1)</title>
+    <link href="https://huxuzhe.github.io/2018/10/09/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-1/"/>
+    <id>https://huxuzhe.github.io/2018/10/09/时间管理-1/</id>
+    <published>2018-10-09T03:41:17.000Z</published>
+    <updated>2018-10-09T07:30:22.281Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;时间管理第一课笔记&quot;&gt;&lt;a href=&quot;#时间管理第一课笔记&quot; class=&quot;headerlink&quot; title=&quot;时间管理第一课笔记&quot;&gt;&lt;/a&gt;时间管理第一课笔记&lt;/h1&gt;&lt;h2 id=&quot;如何用清单管理要事&quot;&gt;&lt;a href=&quot;#如何用清单管理要事&quot; class=&quot;headerlink&quot; title=&quot;如何用清单管理要事&quot;&gt;&lt;/a&gt;如何用清单管理要事&lt;/h2&gt;&lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h3&gt;&lt;p&gt;我们先来了解下“时间管理四象限”。&lt;b&gt;按照重要性和紧急性两个指标把事情归纳为四类：重要紧急，重要不紧急，不重要紧急以及不重要不紧急。&lt;/b&gt;其实就是“要事优先做”，以免变的更加紧急。&lt;/p&gt;
+&lt;p&gt; 但是真正行动起来的时候却发现：越重要的事情我们似乎越是拖着不愿意做，即变的越来越重要越来越紧急，最后就是刚刚好完成，乃至完成不了。戳痛泪点，我就是典型的这样，觉得时间会很多，时间也足够做完，想想还是比较可怕的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精读西瓜书(四)</title>
+    <link href="https://huxuzhe.github.io/2018/09/22/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E5%9B%9B/"/>
+    <id>https://huxuzhe.github.io/2018/09/22/精读西瓜书-四/</id>
+    <published>2018-09-22T11:56:00.000Z</published>
+    <updated>2018-09-24T02:07:38.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;继续西瓜书第二章内容，这篇内容以比较检验，偏差与方差为主，即将结束西瓜书第二章内容。&lt;/p&gt;
+&lt;h1 id=&quot;知识点归纳&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
+    
+    
+      <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精读西瓜书(三)</title>
+    <link href="https://huxuzhe.github.io/2018/09/19/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E4%B8%89/"/>
+    <id>https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/</id>
+    <published>2018-09-19T11:33:54.000Z</published>
+    <updated>2018-09-22T10:29:13.277Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;这里接精读西瓜书二内容，仍然讲的是模型的评估与选择，主要是性能度量。&lt;/p&gt;
+&lt;h1 id=&quot;知识点归纳&quot;&gt;&lt;a href=&quot;#知识点归纳&quot; class=&quot;headerlink&quot; title=&quot;知识点归纳&quot;&gt;&lt;/a&gt;知识点归纳&lt;/h1&gt;&lt;h2 id=&quot;性能度量&quot;&gt;&lt;a href=&quot;#性能度量&quot; class=&quot;headerlink&quot; title=&quot;性能度量&quot;&gt;&lt;/a&gt;性能度量&lt;/h2&gt;&lt;p&gt;先复习一下，机器学习理想的目标。&lt;/p&gt;
+&lt;p&gt;通过评估学习器的泛化误差，选出泛化误差最小的学习器。&lt;/p&gt;
+&lt;p&gt;上一节，通过不同的评估方法来选出最终的模型，但是对于学习器的泛化能力进行评估，仅仅评估方法是不够的，还需要有衡量模型泛化能力的评价标准，这就是性能度量(performance measure)。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【性能度量(performance measure)】：&lt;/b&gt;衡量模型泛化能力的评价标准&lt;/p&gt;
+&lt;p&gt;性能度量反映了任务需要，在对比不同模型的能力时，使用不同的性能度量往往会导致不同的评价结果。因此，什么样的学习器是好的，不仅仅取决于&lt;b&gt;算法和数据&lt;/b&gt;，还决定于&lt;b&gt;任务需求&lt;/b&gt;。&lt;/p&gt;
+&lt;p&gt;在预测任务中，$y_i$是示例$x_i$的真实标记，要评估学习器$f$的性能，需要把学习器预测结果$f(x)$与真实标记$y$进行比较。&lt;/p&gt;
+&lt;p&gt;因为有标记，所以讨论的是监督性学习。&lt;/p&gt;
+&lt;img src=&quot;http://pbhfphh1b.bkt.clouddn.com/static/images/3-1.png&quot;&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
+    
+    
+      <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精读西瓜书(二)</title>
+    <link href="https://huxuzhe.github.io/2018/09/03/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E4%BA%8C/"/>
+    <id>https://huxuzhe.github.io/2018/09/03/精读西瓜书-二/</id>
+    <published>2018-09-03T12:17:39.000Z</published>
+    <updated>2018-09-20T08:02:28.942Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面：&quot;&gt;&lt;a href=&quot;#写在前面：&quot; class=&quot;headerlink&quot; title=&quot;写在前面：&quot;&gt;&lt;/a&gt;写在前面：&lt;/h1&gt;&lt;p&gt;第二章主要让我们了解经验误差与拟合，评估方法，比较检验以及偏差与方法，重点主要是评估方法，理解过拟合与欠拟合，roc曲线。&lt;/p&gt;
+&lt;h1 id=&quot;知识点归纳&quot;&gt;&lt;a href=&quot;#知识点归纳&quot; class=&quot;headerlink&quot; title=&quot;知识点归纳&quot;&gt;&lt;/a&gt;知识点归纳&lt;/h1&gt;&lt;h2 id=&quot;经验误差与过拟合&quot;&gt;&lt;a href=&quot;#经验误差与过拟合&quot; class=&quot;headerlink&quot; title=&quot;经验误差与过拟合&quot;&gt;&lt;/a&gt;经验误差与过拟合&lt;/h2&gt;&lt;p&gt;&lt;b&gt;【错误率(error rate)】&lt;/b&gt;：分类错误的样本占样本总数的比例&lt;/p&gt;
+&lt;p&gt;例：m个样本中有a个样本分类错误，则错误率$E = a / m$&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【精度(accuracy)】&lt;/b&gt;：分类正确的样本数占样本总数的比例&lt;/p&gt;
+&lt;p&gt;例：m个样本中有m-a个分类正确，则精度$A = 1 - E$&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【误差(error)】&lt;/b&gt;:学习器的实际预测输出与样本的真实输出之间的差异&lt;/p&gt;
+&lt;p&gt;例：比如有1000个西瓜，其中真实的好瓜有600个，但是学习器预测的只有400个，这之间的差异就是误差。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【训练误差(training error)或经验误差(empirical error)】&lt;/b&gt;：学习器在训练集上的误差&lt;/p&gt;
+&lt;p&gt;注意：学习器就是在训练集上训练出来的，但实际上在回到训练集上对样本进行结果预测的时候，仍会存在误差。（换句话说，就是结果值与标记值不同）&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【泛化误差(generalization error)】&lt;/b&gt;:学习器在新样本上的误差&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
+    
+    
+      <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精读西瓜书(一)</title>
+    <link href="https://huxuzhe.github.io/2018/09/02/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E4%B8%80/"/>
+    <id>https://huxuzhe.github.io/2018/09/02/精读西瓜书-一/</id>
+    <published>2018-09-01T15:05:07.000Z</published>
+    <updated>2018-09-02T06:36:07.492Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;我们在这里将学习到以下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;机器学习定义&lt;/li&gt;
+&lt;li&gt;基本术语&lt;/li&gt;
+&lt;li&gt;假设空间&lt;/li&gt;
+&lt;li&gt;归纳偏好&lt;/li&gt;
+&lt;li&gt;发展历程(了解即可)&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
-      <category term="python" scheme="https://huxuzhe.github.io/categories/python/"/>
+      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/python/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
     
     
-      <category term="python基础语法" scheme="https://huxuzhe.github.io/tags/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="命名规则" scheme="https://huxuzhe.github.io/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/"/>
+  </entry>
+  
+  <entry>
+    <title>Matplotlib</title>
+    <link href="https://huxuzhe.github.io/2018/07/10/Matplotlib/"/>
+    <id>https://huxuzhe.github.io/2018/07/10/Matplotlib/</id>
+    <published>2018-07-10T02:48:44.000Z</published>
+    <updated>2018-07-10T03:29:52.237Z</updated>
     
-      <category term="顺序语句" scheme="https://huxuzhe.github.io/tags/%E9%A1%BA%E5%BA%8F%E8%AF%AD%E5%8F%A5/"/>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据展示及可视化&quot;&gt;&lt;a href=&quot;#数据展示及可视化&quot; class=&quot;headerlink&quot; title=&quot;数据展示及可视化&quot;&gt;&lt;/a&gt;数据展示及可视化&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;数据可视化的重要性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基本图表的绘制及应用场景&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数据分析常用图标的绘制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pandas及Seaborn绘图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他常用的可视化工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;数据可视化准则&quot;&gt;&lt;a href=&quot;#数据可视化准则&quot; class=&quot;headerlink&quot; title=&quot;数据可视化准则&quot;&gt;&lt;/a&gt;数据可视化准则&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;真实性(Truthful)&lt;/li&gt;
+&lt;li&gt;功能性(Functionality)&lt;/li&gt;
+&lt;li&gt;美观(Beauty)&lt;/li&gt;
+&lt;li&gt;深刻性(Insightful)&lt;/li&gt;
+&lt;li&gt;启发性(Enlightening)&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pandas</title>
+    <link href="https://huxuzhe.github.io/2018/07/09/Pandas/"/>
+    <id>https://huxuzhe.github.io/2018/07/09/Pandas/</id>
+    <published>2018-07-09T11:29:28.000Z</published>
+    <updated>2018-07-10T03:29:35.426Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Pandas进阶及统计分析&quot;&gt;&lt;a href=&quot;#Pandas进阶及统计分析&quot; class=&quot;headerlink&quot; title=&quot;Pandas进阶及统计分析&quot;&gt;&lt;/a&gt;Pandas进阶及统计分析&lt;/h2&gt;&lt;h3 id=&quot;基本数据对象及操作&quot;&gt;&lt;a href=&quot;#基本数据对象及操作&quot; class=&quot;headerlink&quot; title=&quot;基本数据对象及操作&quot;&gt;&lt;/a&gt;基本数据对象及操作&lt;/h3&gt;&lt;h3 id=&quot;数据清洗&quot;&gt;&lt;a href=&quot;#数据清洗&quot; class=&quot;headerlink&quot; title=&quot;数据清洗&quot;&gt;&lt;/a&gt;数据清洗&lt;/h3&gt;&lt;h3 id=&quot;数据合并及分组&quot;&gt;&lt;a href=&quot;#数据合并及分组&quot; class=&quot;headerlink&quot; title=&quot;数据合并及分组&quot;&gt;&lt;/a&gt;数据合并及分组&lt;/h3&gt;&lt;h3 id=&quot;透视表&quot;&gt;&lt;a href=&quot;#透视表&quot; class=&quot;headerlink&quot; title=&quot;透视表&quot;&gt;&lt;/a&gt;透视表&lt;/h3&gt;&lt;hr&gt;
+&lt;h2 id=&quot;基本数据对象及操作-1&quot;&gt;&lt;a href=&quot;#基本数据对象及操作-1&quot; class=&quot;headerlink&quot; title=&quot;基本数据对象及操作&quot;&gt;&lt;/a&gt;基本数据对象及操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2008年由Wes McKinney创建&lt;/li&gt;
+&lt;li&gt;一个强大的分析结构化数据的工具集&lt;/li&gt;
+&lt;li&gt;基础是NumPy，提供了高性能矩阵的运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;链接：&lt;a href=&quot;http://pandas.pydata.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pandas&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="pandas" scheme="https://huxuzhe.github.io/tags/pandas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Numpy</title>
+    <link href="https://huxuzhe.github.io/2018/07/09/Numpy/"/>
+    <id>https://huxuzhe.github.io/2018/07/09/Numpy/</id>
+    <published>2018-07-09T09:00:27.000Z</published>
+    <updated>2018-07-09T16:53:22.372Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;h3 id=&quot;Drew-Conway认为数据科学包括：&quot;&gt;&lt;a href=&quot;#Drew-Conway认为数据科学包括：&quot; class=&quot;headerlink&quot; title=&quot;Drew Conway认为数据科学包括：&quot;&gt;&lt;/a&gt;Drew Conway认为数据科学包括：&lt;/h3&gt;&lt;h4 id=&quot;黑客技术：&quot;&gt;&lt;a href=&quot;#黑客技术：&quot; class=&quot;headerlink&quot; title=&quot;黑客技术：&quot;&gt;&lt;/a&gt;黑客技术：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;如编程能力&lt;/li&gt;
+&lt;li&gt;向量化操作和算法思想&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;数学和统计知识&quot;&gt;&lt;a href=&quot;#数学和统计知识&quot; class=&quot;headerlink&quot; title=&quot;数学和统计知识&quot;&gt;&lt;/a&gt;数学和统计知识&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;如常见的分布、最小二乘法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;实质性的专业知识&quot;&gt;&lt;a href=&quot;#实质性的专业知识&quot; class=&quot;headerlink&quot; title=&quot;实质性的专业知识&quot;&gt;&lt;/a&gt;实质性的专业知识&lt;/h4&gt;&lt;hr&gt;
+&lt;h3 id=&quot;数据科学设计到的操作-by-David-Donoho&quot;&gt;&lt;a href=&quot;#数据科学设计到的操作-by-David-Donoho&quot; class=&quot;headerlink&quot; title=&quot;数据科学设计到的操作 by David Donoho&quot;&gt;&lt;/a&gt;数据科学设计到的操作 by David Donoho&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;数据探索与准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;数据操作、清洗等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;数据展现形式与转化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;不同格式的数据操作，表格型、图像、文本等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;关于数据的计算&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;通过编程（python或R）计算分析数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;数据建模&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;预测、聚类等机器学习模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;数据可视化与展示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;绘图、交互式、动画等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;数据科学和涉及到的学科知识&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;何为数据分析&quot;&gt;&lt;a href=&quot;#何为数据分析&quot; class=&quot;headerlink&quot; title=&quot;何为数据分析&quot;&gt;&lt;/a&gt;何为数据分析&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;用适当的&lt;font color=&quot;red&quot;&gt;统计分析方法&lt;/font&gt;对收集来的&lt;font color=&quot;red&quot;&gt;大量数据&lt;/font&gt;进行分析，提取有用&lt;font color=&quot;red&quot;&gt;信息&lt;/font&gt;和形成&lt;font color=&quot;red&quot;&gt;结论&lt;/font&gt;对数据加以&lt;font color=&quot;red&quot;&gt;详细研究&lt;/font&gt;和&lt;font color=&quot;red&quot;&gt;概括总结&lt;/font&gt;的过程。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="Numpy" scheme="https://huxuzhe.github.io/tags/Numpy/"/>
+    
+      <category term="Python进阶" scheme="https://huxuzhe.github.io/tags/Python%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习数学基础(一)</title>
+    <link href="https://huxuzhe.github.io/2018/07/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E4%B8%80/"/>
+    <id>https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/</id>
+    <published>2018-07-09T02:43:59.000Z</published>
+    <updated>2018-07-09T08:03:37.056Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面:&quot;&gt;&lt;/a&gt;写在前面:&lt;/h2&gt;&lt;h3 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;函数与数据的泛化&lt;/li&gt;
+&lt;li&gt;推理与归纳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;线性代数&quot;&gt;&lt;a href=&quot;#线性代数&quot; class=&quot;headerlink&quot; title=&quot;线性代数&quot;&gt;&lt;/a&gt;线性代数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;向量与矩阵&lt;/li&gt;
+&lt;li&gt;特征值与特征空间&lt;/li&gt;
+&lt;li&gt;高维空间向量&lt;/li&gt;
+&lt;li&gt;特征向量&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="数学基础" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="数学" scheme="https://huxuzhe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="函数" scheme="https://huxuzhe.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="线性代数" scheme="https://huxuzhe.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python(十)</title>
+    <link href="https://huxuzhe.github.io/2018/07/09/Python-%E5%8D%81/"/>
+    <id>https://huxuzhe.github.io/2018/07/09/Python-十/</id>
+    <published>2018-07-08T16:38:02.000Z</published>
+    <updated>2018-07-08T15:47:40.427Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;微信用户数据分析&quot;&gt;&lt;a href=&quot;#微信用户数据分析&quot; class=&quot;headerlink&quot; title=&quot;微信用户数据分析&quot;&gt;&lt;/a&gt;微信用户数据分析&lt;/h3&gt;&lt;h4 id=&quot;微信接口itchat&quot;&gt;&lt;a href=&quot;#微信接口itchat&quot; class=&quot;headerlink&quot; title=&quot;微信接口itchat&quot;&gt;&lt;/a&gt;微信接口itchat&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;第三方开源的微信个人接口&lt;/li&gt;
+&lt;li&gt;安装方法：pip install itchat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;用户数据分析指标&quot;&gt;&lt;a href=&quot;#用户数据分析指标&quot; class=&quot;headerlink&quot; title=&quot;用户数据分析指标&quot;&gt;&lt;/a&gt;用户数据分析指标&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;不同性别好友人数和占比&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="微信接口itchat" scheme="https://huxuzhe.github.io/tags/%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%8F%A3itchat/"/>
+    
+      <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python(九)</title>
+    <link href="https://huxuzhe.github.io/2018/07/09/Python-%E4%B9%9D/"/>
+    <id>https://huxuzhe.github.io/2018/07/09/Python-九/</id>
+    <published>2018-07-08T16:11:44.000Z</published>
+    <updated>2018-07-08T16:00:33.151Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h3&gt;&lt;h4 id=&quot;原理：&quot;&gt;&lt;a href=&quot;#原理：&quot; class=&quot;headerlink&quot; title=&quot;原理：&quot;&gt;&lt;/a&gt;原理：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;循环遍历列表，每次循环找出本次循环最大的元素排在后边&lt;/li&gt;
+&lt;li&gt;需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img title=&quot;冒泡排序&quot; src=&quot;http://pbhfphh1b.bkt.clouddn.com/static/images/L9-1.png&quot;&gt;
+    
+    </summary>
+    
+      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="数据结构与算法" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="冒泡排序" scheme="https://huxuzhe.github.io/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="选择排序" scheme="https://huxuzhe.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="快速排序" scheme="https://huxuzhe.github.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="归并排序" scheme="https://huxuzhe.github.io/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python(八)</title>
+    <link href="https://huxuzhe.github.io/2018/07/08/Python-%E5%85%AB/"/>
+    <id>https://huxuzhe.github.io/2018/07/08/Python-八/</id>
+    <published>2018-07-08T07:23:13.000Z</published>
+    <updated>2018-07-08T06:53:39.327Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;re模块的使用&quot;&gt;&lt;a href=&quot;#re模块的使用&quot; class=&quot;headerlink&quot; title=&quot;re模块的使用&quot;&gt;&lt;/a&gt;re模块的使用&lt;/h3&gt;&lt;p&gt;链接：&lt;a href=&quot;http://www.runoob.com/python3/python3-reg-expressions.html#flags&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;正则表达式&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;match-正则表达式，待匹配字符串-起始位置-）&quot;&gt;&lt;a href=&quot;#match-正则表达式，待匹配字符串-起始位置-）&quot; class=&quot;headerlink&quot; title=&quot;match(正则表达式，待匹配字符串(起始位置)）&quot;&gt;&lt;/a&gt;match(正则表达式，待匹配字符串(起始位置)）&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;用于正则匹配检查，如果待匹配字符串能够匹配正则表达式，则match方法返回匹配对象，否则返回None&lt;/li&gt;
+&lt;li&gt;采用从左往右逐项比较匹配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实例1：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;##例如：新的邮箱手机号验证格式是否正确，用正则表达式对于格式验证&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rs = re.match(&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop.cn&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(rs)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(rs.span())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;_sre.SRE_Match object; span=(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;), match=&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop&#39;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;#匹配目标的位置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="正则化表达式" scheme="https://huxuzhe.github.io/tags/%E6%AD%A3%E5%88%99%E5%8C%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python(七)</title>
+    <link href="https://huxuzhe.github.io/2018/07/08/Python-%E4%B8%83/"/>
+    <id>https://huxuzhe.github.io/2018/07/08/Python-七/</id>
+    <published>2018-07-08T06:48:41.000Z</published>
+    <updated>2018-07-08T06:19:58.035Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;类属性（可以理解为类中共享的全局变量）&quot;&gt;&lt;a href=&quot;#类属性（可以理解为类中共享的全局变量）&quot; class=&quot;headerlink&quot; title=&quot;类属性（可以理解为类中共享的全局变量）&quot;&gt;&lt;/a&gt;类属性（可以理解为类中共享的全局变量）&lt;/h3&gt;&lt;h4 id=&quot;实例属性&quot;&gt;&lt;a href=&quot;#实例属性&quot; class=&quot;headerlink&quot; title=&quot;实例属性&quot;&gt;&lt;/a&gt;实例属性&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;所属于具体的实例对象，不同实例对象之间的实例属性互不影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img title=&quot;实例对象&quot; src=&quot;http://pbhfphh1b.bkt.clouddn.com/static/images/L7-1.png&quot;&gt;
+&lt;h4 id=&quot;类属性&quot;&gt;&lt;a href=&quot;#类属性&quot; class=&quot;headerlink&quot; title=&quot;类属性&quot;&gt;&lt;/a&gt;类属性&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;所属于类对象，多个实例对象之间共享同一个类属性&lt;/li&gt;
+&lt;li&gt;获取类属性方法：类名.类属性&lt;/li&gt;
+&lt;li&gt;通过实例对象不能够修改类属性&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="类属性" scheme="https://huxuzhe.github.io/tags/%E7%B1%BB%E5%B1%9E%E6%80%A7/"/>
+    
+      <category term="类方法" scheme="https://huxuzhe.github.io/tags/%E7%B1%BB%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="单例类" scheme="https://huxuzhe.github.io/tags/%E5%8D%95%E4%BE%8B%E7%B1%BB/"/>
+    
+      <category term="异常处理" scheme="https://huxuzhe.github.io/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+      <category term="包和模块" scheme="https://huxuzhe.github.io/tags/%E5%8C%85%E5%92%8C%E6%A8%A1%E5%9D%97/"/>
     
   </entry>
   

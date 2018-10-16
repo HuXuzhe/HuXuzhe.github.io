@@ -1,0 +1,1456 @@
+﻿<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="冒泡排序,选择排序,快速排序,归并排序," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haley_Hu's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="冒泡排序原理： 循环遍历列表，每次循环找出本次循环最大的元素排在后边 需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较">
+<meta name="keywords" content="冒泡排序,选择排序,快速排序,归并排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python(九)">
+<meta property="og:url" content="https://huxuzhe.github.io/2018/07/09/Python-九/index.html">
+<meta property="og:site_name" content="Haley_Hu&#39;s Blog">
+<meta property="og:description" content="冒泡排序原理： 循环遍历列表，每次循环找出本次循环最大的元素排在后边 需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-2.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-3.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-4.png">
+<meta property="og:updated_time" content="2018-07-08T16:00:33.151Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python(九)">
+<meta name="twitter:description" content="冒泡排序原理： 循环遍历列表，每次循环找出本次循环最大的元素排在后边 需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较">
+<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huxuzhe.github.io/2018/07/09/Python-九/"/>
+
+
+
+
+
+  <title>Python(九) | Haley_Hu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <a href="https://github.com/HuXuzhe" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haley_Hu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Teaching is Learning,一起交流！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简介
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huxuzhe.github.io/2018/07/09/Python-九/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuXuzhe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haley_Hu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python(九)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T01:11:44+09:00">
+                2018-07-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-09T01:00:33+09:00">
+                2018-07-09
+              </time>
+            
+          </span>
+         
+        
+        <span id="busuanzi_container_page_pv">  |  阅读量 : <span id="busuanzi_value_page_pv"></span> 次</span>
+        
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Python基础</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python基础/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,200字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><ul>
+<li>循环遍历列表，每次循环找出本次循环最大的元素排在后边</li>
+<li>需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较</li>
+</ul>
+<img title="冒泡排序" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-1.png">
+<a id="more"></a>
+<p>实例1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#冒泡排序</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">排序的总轮数=列表元素个数 - 1</span></span><br><span class="line"><span class="string">每轮元素互相比较的次数 = 列表元素个数 - 已经排好序的元素个数 - 1</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#data_list:待排序列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(data_list)</span>:</span></span><br><span class="line">    num = len(data_list) <span class="comment">#列表元素个数</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,num <span class="number">-1</span>):<span class="comment">#排序的总轮数</span></span><br><span class="line">        print(<span class="string">"第&#123;&#125;轮："</span>.format(i))</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,num-i<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> data_list[j] &gt; data_list[j+<span class="number">1</span>]:<span class="comment">#前后两个元素比较</span></span><br><span class="line">                data_list[j],data_list[j+<span class="number">1</span>] = data_list[j+<span class="number">1</span>],data_list[j]</span><br><span class="line">            print(data_list)</span><br><span class="line">list = [<span class="number">28</span>,<span class="number">32</span>,<span class="number">14</span>,<span class="number">12</span>,<span class="number">53</span>,<span class="number">42</span>]</span><br><span class="line">bubble_sort(list)</span><br><span class="line">print(<span class="string">'---------排序结果--------------'</span>)</span><br><span class="line">print(list)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">0</span>轮：</span><br><span class="line">[<span class="number">28</span>, <span class="number">32</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">28</span>, <span class="number">14</span>, <span class="number">32</span>, <span class="number">12</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">28</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">28</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">28</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">第<span class="number">1</span>轮：</span><br><span class="line">[<span class="number">14</span>, <span class="number">28</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">14</span>, <span class="number">12</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">14</span>, <span class="number">12</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">14</span>, <span class="number">12</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">第<span class="number">2</span>轮：</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">第<span class="number">3</span>轮：</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">第<span class="number">4</span>轮：</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">---------排序结果--------------</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><h4 id="原理：-1"><a href="#原理：-1" class="headerlink" title="原理："></a>原理：</h4><ul>
+<li>将待排序列表看成是已排序和未排序两部分</li>
+<li>每次从未排序列表中找出最小值放到已排序列表末尾</li>
+</ul>
+<img title="选择排序" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-2.png">
+<p>PS:初始时，最小值假定为未排序的第一个位置的值<br>实例2：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#选择排序</span></span><br><span class="line"><span class="comment">#data_list:待排序列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">select_sort</span><span class="params">(data_list)</span>:</span></span><br><span class="line">    list_len = len(data_list) <span class="comment">#待排序元素个数</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,list_len<span class="number">-1</span>):<span class="comment">#控制排序比较总轮数</span></span><br><span class="line">        tmp_min_index = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,list_len):</span><br><span class="line">            <span class="keyword">if</span> data_list[tmp_min_index] &gt; data_list[j]:</span><br><span class="line">                tmp_min_index = j</span><br><span class="line">        <span class="keyword">if</span> i != tmp_min_index:</span><br><span class="line">            data_list[i],data_list[tmp_min_index] = data_list[tmp_min_index],data_list[i]</span><br><span class="line"></span><br><span class="line">        print(data_list)</span><br><span class="line"></span><br><span class="line">list = [<span class="number">28</span>,<span class="number">32</span>,<span class="number">14</span>,<span class="number">12</span>,<span class="number">53</span>,<span class="number">42</span>]</span><br><span class="line">select_sort(list)</span><br><span class="line">print(<span class="string">'---------排序结果--------------'</span>)</span><br><span class="line">print(list)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">12</span>, <span class="number">32</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">32</span>, <span class="number">28</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">53</span>, <span class="number">42</span>]</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br><span class="line">---------排序结果--------------</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><h4 id="原理：-2"><a href="#原理：-2" class="headerlink" title="原理："></a>原理：</h4><ul>
+<li>一次排序按照一个基准值将待排序的列表分割成两部分，基准值左边是比基准值小的元素，基准值右边是比基准值大的元素</li>
+<li>按照上一步的方法对基准值左右两部分数据分别进行快速排序</li>
+</ul>
+<img title="快速排序" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-3.png">
+<p>实例3：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#快速排序</span></span><br><span class="line"><span class="comment">#data_list:待排序列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(data_list,start,end)</span>:</span></span><br><span class="line">    <span class="comment">#设置递归结束条件</span></span><br><span class="line">    <span class="keyword">if</span> start &gt;= end:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    low_index = start<span class="comment">#低位游标</span></span><br><span class="line">    high_index = end <span class="comment">#高位游标</span></span><br><span class="line">    basic_data = data_list[start] <span class="comment">#初始基准值</span></span><br><span class="line">    <span class="comment">#低位游标不能超过高位游标，防止到重合的点继续游标移动</span></span><br><span class="line">    <span class="keyword">while</span> low_index &lt; high_index:</span><br><span class="line">        <span class="comment">#模拟高位游标从右向左指向的元素与基准值进行比较，比基准值大则高位游标一直向左移动</span></span><br><span class="line">        <span class="keyword">while</span> low_index &lt; high_index <span class="keyword">and</span> data_list[high_index] &gt;= basic_data:</span><br><span class="line">            high_index -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> low_index != high_index:</span><br><span class="line">            <span class="comment">#当高位游标指向的元素小于基准值，则移动该值到低位游标指向的位置</span></span><br><span class="line">            data_list[low_index] = data_list[high_index]</span><br><span class="line">            low_index += <span class="number">1</span> <span class="comment">#低位游标向右移动一位</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> low_index &lt; high_index <span class="keyword">and</span> data_list[low_index]&lt;basic_data:</span><br><span class="line">            low_index +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> low_index != high_index:</span><br><span class="line">            data_list[high_index] = data_list[low_index]</span><br><span class="line">            high_index -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    data_list[low_index] = basic_data</span><br><span class="line">    <span class="comment">#递归调用</span></span><br><span class="line">    quick_sort(data_list,start,low_index<span class="number">-1</span>) <span class="comment">#对基准值左边未排序队列排序</span></span><br><span class="line">    quick_sort(data_list,high_index+<span class="number">1</span>,end) <span class="comment">#对基准值右边未排序队列排序</span></span><br><span class="line"></span><br><span class="line">list = [<span class="number">28</span>,<span class="number">32</span>,<span class="number">14</span>,<span class="number">12</span>,<span class="number">53</span>,<span class="number">42</span>]</span><br><span class="line">quick_sort(list,<span class="number">0</span>,len(list)<span class="number">-1</span>)</span><br><span class="line">print(<span class="string">'---------排序结果--------------'</span>)</span><br><span class="line">print(list)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---------排序结果--------------</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h4 id="原理：-3"><a href="#原理：-3" class="headerlink" title="原理："></a>原理：</h4><ul>
+<li>先递归分解序列，再排序合并序列</li>
+</ul>
+<img title="归并排序" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L9-4.png">
+<p>注意：图片第二行拆半拆分应该是：22 32 14 12 53 42 22 62的顺序，但是原理如图片所示</p>
+<p>实例4：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#归并排序</span></span><br><span class="line"><span class="comment">#data_list:待排序列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">(data_list)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> len(data_list)&lt;=<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> data_list</span><br><span class="line">    <span class="comment">#根据列表长度确定拆分的中间位置</span></span><br><span class="line">    mid_index = len(data_list) // <span class="number">2</span></span><br><span class="line">    <span class="comment"># left_list = data_list[:mid_index] #使用切片实现对列表的切分</span></span><br><span class="line">    <span class="comment"># right_list = data_list[mid_index:]</span></span><br><span class="line">    left_list = merge_sort(data_list[:mid_index])</span><br><span class="line">    right_list = merge_sort(data_list[mid_index:])</span><br><span class="line">    <span class="keyword">return</span> merge(left_list,right_list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(left_list,right_list)</span>:</span></span><br><span class="line">    l_index = <span class="number">0</span></span><br><span class="line">    r_index = <span class="number">0</span></span><br><span class="line">    merge_list = []</span><br><span class="line">    <span class="keyword">while</span> l_index &lt; len(left_list) <span class="keyword">and</span> r_index &lt; len(right_list):</span><br><span class="line">        <span class="keyword">if</span> left_list[l_index] &lt; right_list[r_index]:</span><br><span class="line">            merge_list.append(left_list[l_index])</span><br><span class="line">            l_index += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            merge_list.append(right_list[r_index])</span><br><span class="line">            r_index += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    merge_list += left_list[l_index:]</span><br><span class="line">    merge_list += right_list[r_index:]</span><br><span class="line">    <span class="keyword">return</span> merge_list</span><br><span class="line"></span><br><span class="line">list = [<span class="number">28</span>,<span class="number">32</span>,<span class="number">14</span>,<span class="number">12</span>,<span class="number">53</span>,<span class="number">42</span>]</span><br><span class="line">new_list = merge_sort(list)</span><br><span class="line">print(<span class="string">'---------排序结果--------------'</span>)</span><br><span class="line">print(new_list)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---------排序结果--------------</span><br><span class="line">[<span class="number">12</span>, <span class="number">14</span>, <span class="number">28</span>, <span class="number">32</span>, <span class="number">42</span>, <span class="number">53</span>]</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+     <div>
+            
+                ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>    
+
+     <div align="center">
+          
+            <div class="copyright">
+            <p><span>
+            <b>本文地址：</b><a href="/2018/07/09/Python-九/" title="Python(九)">https://huxuzhe.github.io/2018/07/09/Python-九/</a><br /><b>转载请注明出处，谢谢！</b>
+            </span></p>
+            </div>
+          
+     </div>   
+
+
+  
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HuXuzhe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HuXuzhe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    HuXuzhe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://huxuzhe.github.io/2018/07/09/Python-九/" title="Python(九)">https://huxuzhe.github.io/2018/07/09/Python-九/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/冒泡排序/" rel="tag"><i class="fa fa-tag"></i> 冒泡排序</a>
+          
+            <a href="/tags/选择排序/" rel="tag"><i class="fa fa-tag"></i> 选择排序</a>
+          
+            <a href="/tags/快速排序/" rel="tag"><i class="fa fa-tag"></i> 快速排序</a>
+          
+            <a href="/tags/归并排序/" rel="tag"><i class="fa fa-tag"></i> 归并排序</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/08/Python-八/" rel="next" title="Python(八)">
+                <i class="fa fa-chevron-left"></i> Python(八)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/09/Python-十/" rel="prev" title="Python(十)">
+                Python(十) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzg4MS8xNDQxMQ=="></div>
+    </div>
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/photo.jpg"
+                alt="HuXuzhe" />
+            </a>
+            
+              <p class="site-author-name" itemprop="name">HuXuzhe</p>
+              <p class="site-description motion-element" itemprop="description">机器学习、深度学习挖坑中~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HuXuzhe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:huxuzhe1993@gmail.com" target="_blank" title="G-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>G-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://note.youdao.com/noteshare?id=db847f1aa0f5c7e82ef6e1e7bc2f436c" target="_blank" title="Youdao">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Youdao</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/haley_hu/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/84a1d681c37f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-pencil-square-o"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hacking-linux.com" title="Kyle's Blog" target="_blank">Kyle's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xrblog.github.io" title="xrblog" target="_blank">xrblog</a>
+                  </li>
+                
+              </ul>
+             ﻿<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("06/29/2018 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理："><span class="nav-number">1.1.</span> <span class="nav-text">原理：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-number">2.</span> <span class="nav-text">选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理：-1"><span class="nav-number">2.1.</span> <span class="nav-text">原理：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">3.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理：-2"><span class="nav-number">3.1.</span> <span class="nav-text">原理：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">4.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理：-3"><span class="nav-number">4.1.</span> <span class="nav-text">原理：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuXuzhe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数统计&#58;</span> 
+    
+    <span title="全站字数统计">57.1k</span> 字
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+  主题 -
+  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+   <span id="busuanzi_container_site_pv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第<span id="busuanzi_value_site_uv"></span>位访客
+  </span>
+  
+</div>
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">扫微信加好友,注明博客</div>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

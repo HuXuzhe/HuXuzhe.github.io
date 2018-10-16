@@ -1,0 +1,1846 @@
+﻿<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="matplotlib," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haley_Hu's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="数据展示及可视化 数据可视化的重要性  基本图表的绘制及应用场景  数据分析常用图标的绘制  Pandas及Seaborn绘图  其他常用的可视化工具    数据可视化准则 真实性(Truthful) 功能性(Functionality) 美观(Beauty) 深刻性(Insightful) 启发性(Enlightening)">
+<meta name="keywords" content="matplotlib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matplotlib">
+<meta property="og:url" content="https://huxuzhe.github.io/2018/07/10/Matplotlib/index.html">
+<meta property="og:site_name" content="Haley_Hu&#39;s Blog">
+<meta property="og:description" content="数据展示及可视化 数据可视化的重要性  基本图表的绘制及应用场景  数据分析常用图标的绘制  Pandas及Seaborn绘图  其他常用的可视化工具    数据可视化准则 真实性(Truthful) 功能性(Functionality) 美观(Beauty) 深刻性(Insightful) 启发性(Enlightening)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t2.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z2.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z3.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z4.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z5.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z6.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z7.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z8.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z9.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z10.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z11.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z12.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z13png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z14.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z15.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z16.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z17.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z18.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z19.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t3.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z20.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z21.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z22.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z23.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z24.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t4.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z25.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z26.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z27.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z28.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z29.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t5.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z30.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z31.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z32.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z33.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z34.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z35.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z36.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z37.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z38.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t6.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z39.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/z40.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t7.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t8.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t9.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t10.png">
+<meta property="og:updated_time" content="2018-07-10T03:29:52.237Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Matplotlib">
+<meta name="twitter:description" content="数据展示及可视化 数据可视化的重要性  基本图表的绘制及应用场景  数据分析常用图标的绘制  Pandas及Seaborn绘图  其他常用的可视化工具    数据可视化准则 真实性(Truthful) 功能性(Functionality) 美观(Beauty) 深刻性(Insightful) 启发性(Enlightening)">
+<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/t1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huxuzhe.github.io/2018/07/10/Matplotlib/"/>
+
+
+
+
+
+  <title>Matplotlib | Haley_Hu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <a href="https://github.com/HuXuzhe" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haley_Hu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Teaching is Learning,一起交流！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简介
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huxuzhe.github.io/2018/07/10/Matplotlib/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuXuzhe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haley_Hu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Matplotlib</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T11:48:44+09:00">
+                2018-07-10
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-10T12:29:52+09:00">
+                2018-07-10
+              </time>
+            
+          </span>
+         
+        
+        <span id="busuanzi_container_page_pv">  |  阅读量 : <span id="busuanzi_value_page_pv"></span> 次</span>
+        
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据处理/" itemprop="url" rel="index">
+                    <span itemprop="name">数据处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,874字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  25 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据展示及可视化"><a href="#数据展示及可视化" class="headerlink" title="数据展示及可视化"></a>数据展示及可视化</h2><ol>
+<li><p>数据可视化的重要性</p>
+</li>
+<li><p>基本图表的绘制及应用场景</p>
+</li>
+<li><p>数据分析常用图标的绘制</p>
+</li>
+<li><p>Pandas及Seaborn绘图</p>
+</li>
+<li><p>其他常用的可视化工具</p>
+</li>
+</ol>
+<hr>
+<h2 id="数据可视化准则"><a href="#数据可视化准则" class="headerlink" title="数据可视化准则"></a>数据可视化准则</h2><ul>
+<li>真实性(Truthful)</li>
+<li>功能性(Functionality)</li>
+<li>美观(Beauty)</li>
+<li>深刻性(Insightful)</li>
+<li>启发性(Enlightening)</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入工具</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np     <span class="comment">#和notebook交互的语言，目的是将图打印出来</span></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">anscombe_df = sns.load_dataset(<span class="string">'anscombe'</span>)</span><br><span class="line">anscombe_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t1.png">
+<ul>
+<li>查看样本方差</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anscombe_df.groupby(<span class="string">'dataset'</span>).agg([np.mean, np.var])  <span class="comment">#var是样本方差</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t2.png">
+<ul>
+<li>sns可视化</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sns.set(style=<span class="string">"ticks"</span>)</span><br><span class="line">sns.lmplot(x=<span class="string">"x"</span>, y=<span class="string">"y"</span>, col=<span class="string">"dataset"</span>, hue=<span class="string">"dataset"</span>, </span><br><span class="line">           data=anscombe_df, col_wrap=<span class="number">2</span>, ci=<span class="keyword">None</span>, palette=<span class="string">"muted"</span>, </span><br><span class="line">           size=<span class="number">4</span>, scatter_kws=&#123;<span class="string">"s"</span>: <span class="number">50</span>, <span class="string">"alpha"</span>: <span class="number">1</span>&#125;)                    <span class="comment">##从这里的数据可以看出，可视化的重要性，数据是不一样的，虽然他们的mean和var都一样</span></span><br><span class="line">                                                                        <span class="comment">## 统计特性不一定能完全反应数据的特性</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z1.png">
+<h2 id="基本图表的绘制及应用场景"><a href="#基本图表的绘制及应用场景" class="headerlink" title="基本图表的绘制及应用场景"></a>基本图表的绘制及应用场景</h2><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><ul>
+<li>用于创建出版质量图表的绘图工具库</li>
+<li>目的是为Python构建一个Matlab式的绘图接口</li>
+<li>import matplotlib.pyplot as plt</li>
+<li>pyplot模块包含了常用的matplotlib API函数</li>
+</ul>
+<h3 id="Matplotlib构架"><a href="#Matplotlib构架" class="headerlink" title="Matplotlib构架"></a>Matplotlib构架</h3><ul>
+<li>Backend层</li>
+<li>用于处理向屏幕或文件渲染图形</li>
+<li>在Jupyter，使用inline backend</li>
+<li><a href="https://matplotlib.org/faq/usage_faq.html#what-is-a-backend" target="_blank" rel="noopener">什么是backend</a></li>
+<li>Artist层</li>
+<li>包含图像绘制的容器，如Figure，Subplot及Axes</li>
+<li>包含基本元素，如Line2D，Rectangle等</li>
+<li>Scripting层</li>
+<li>简化访问Artist和Backend层的过程</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用于在jupyter中进行绘图</span></span><br><span class="line"><span class="comment">#%matplotlib notebook　　　　　#非嵌入的图片 #嵌入图片见下面</span></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Backend</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line">mpl.get_backend()</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;module://ipykernel.pylab.backend_inline&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="使用matplotlib-pyplot直接绘制"><a href="#使用matplotlib-pyplot直接绘制" class="headerlink" title="使用matplotlib.pyplot直接绘制"></a>使用<a href="https://matplotlib.org/api/pyplot_api.html" target="_blank" rel="noopener">matplotlib.pyplot</a>直接绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(<span class="number">3</span>, <span class="number">2</span>,<span class="string">'*'</span>)                        <span class="comment">#需要指定mark</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z2.png">
+<ul>
+<li>使用scripting</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用scripting层绘制</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.backends.backend_agg <span class="keyword">import</span> FigureCanvasAgg</span><br><span class="line"><span class="keyword">from</span> matplotlib.figure <span class="keyword">import</span> Figure</span><br><span class="line"></span><br><span class="line">fig = Figure()</span><br><span class="line">canvas = FigureCanvasAgg(fig)</span><br><span class="line"></span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax.plot(<span class="number">3</span>, <span class="number">2</span>, <span class="string">'.'</span>)</span><br><span class="line">canvas.print_png(<span class="string">'test.png'</span>)  <span class="comment">##保存图片</span></span><br></pre></td></tr></table></figure>
+<h3 id="pyplot"><a href="#pyplot" class="headerlink" title="pyplot"></a>pyplot</h3><ul>
+<li><a href="https://matplotlib.org/users/pyplot_tutorial.html" target="_blank" rel="noopener">pyplot</a></li>
+<li>可通过gcf(get current figure)获取当前图像对象，gca(get current axis)获取当前坐标轴对象</li>
+<li>可以通过pyplot.plot()进行绘图，其底层调用的还是axes.plot()函数</li>
+<li>多参考相关的API文档</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#gca获取当前坐标对象</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(<span class="number">3</span>, <span class="number">2</span>, <span class="string">'o'</span>)</span><br><span class="line">ax = plt.gca()      <span class="comment">#获取当前坐标轴</span></span><br><span class="line"><span class="comment"># 设置坐标轴范围</span></span><br><span class="line">ax.axis([<span class="number">0</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z3.png">
+<ul>
+<li>matplotlib会自动用颜色区分不同数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># matplot 会自动用颜色区分不同的数据</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(<span class="number">1.5</span>, <span class="number">1.5</span>, <span class="string">'o'</span>)</span><br><span class="line">plt.plot(<span class="number">2</span>, <span class="number">2</span>, <span class="string">'*'</span>)</span><br><span class="line">plt.plot(<span class="number">2.5</span>, <span class="number">2.5</span>, <span class="string">'*'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z4.png">
+<h3 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h3><ul>
+<li>plt.scatter()</li>
+<li><a href="https://matplotlib.org/api/pyplot_api.html?highlight=matplotlib%20pyplot%20scatter#matplotlib.pyplot.scatter" target="_blank" rel="noopener">scatter_API</a></li>
+<li>zip封装及解包</li>
+<li>坐标标签plt.xlabel(),plt.ylabel()，标题plt.title()，图例plt.legend()</li>
+<li>颜色、标记、线性</li>
+<li>axplot(x,y,’r–’) 等价于ax.plot(x,y,linestyle = ‘–’,color = ‘r’)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>])</span><br><span class="line">y = x</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.scatter(x, y)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z5.png">
+<ul>
+<li>改变颜色及大小</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 改变颜色及大小</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>])</span><br><span class="line">y = x</span><br><span class="line">colors = [<span class="string">'red'</span>] * (len(x) - <span class="number">1</span>)</span><br><span class="line">colors.append(<span class="string">'green'</span>)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.scatter(x, y, s=<span class="number">100</span>, c=colors)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z6.png">
+<ul>
+<li>用zip合并为一个新的列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用zip合并两个列表为一个新列表</span></span><br><span class="line"><span class="comment"># 新列表中的每个元素为对应位置上的元组</span></span><br><span class="line">l1 = list(range(<span class="number">1</span>, <span class="number">6</span>))</span><br><span class="line">l2 = list(range(<span class="number">6</span>, <span class="number">11</span>))</span><br><span class="line">zip_generator = zip(l1, l2) <span class="comment">#生成器</span></span><br><span class="line">tuple_list = list(zip_generator)</span><br><span class="line">print(type(zip_generator))</span><br><span class="line">print(list(tuple_list))</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">zip</span>'&gt;</span></span><br><span class="line">[(1, 6), (2, 7), (3, 8), (4, 9), (5, 10)]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用*进行对元组列表解包</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用*进行对元组列表解包</span></span><br><span class="line">x, y = zip(*tuple_list)</span><br><span class="line">print(x)</span><br><span class="line">print(y)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1, 2, 3, 4, 5)</span><br><span class="line">(6, 7, 8, 9, 10)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置中文字符</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.scatter(x[:<span class="number">2</span>], y[:<span class="number">2</span>], c=<span class="string">'red'</span>, label=<span class="string">'samples 1'</span>)</span><br><span class="line">plt.scatter(x[<span class="number">2</span>:], y[<span class="number">2</span>:], c=<span class="string">'blue'</span>, label=<span class="string">'samples2'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加坐标标签，标题，如果用中文需要加下面的中文设置代码</span></span><br><span class="line">plt.xlabel(<span class="string">'数值1'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'数值2'</span>)</span><br><span class="line">plt.title(<span class="string">'散点图'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加图例</span></span><br><span class="line"><span class="comment"># plt.legend()</span></span><br><span class="line"><span class="comment"># 4: 右下角  </span></span><br><span class="line">plt.legend(loc=<span class="number">4</span>, frameon=<span class="keyword">True</span>, title=<span class="string">'Legend'</span>) <span class="comment">#frameon指是否加边框，best是最佳位置</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">"font.sans-serif"</span>] = [<span class="string">"SimHei"</span>] <span class="comment">#设置中文字符，如果不加这行，只能用英文</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z7.png">
+<h3 id="线图"><a href="#线图" class="headerlink" title="线图"></a>线图</h3><ul>
+<li>plt.plot()</li>
+<li>填充线间的区域</li>
+<li>plt.gca().fill_between()</li>
+<li>np.array()生成时间数据</li>
+<li>np.array(‘2017-01-01,’2017-01-08’,dtype = ‘datetime64[D]’)</li>
+<li>绘制图像的坐标轴为时间数据时，可以借助pandas的to_datetime()完成</li>
+<li>旋转坐标轴文字的方向</li>
+<li>plt.xticks(rotation = )或遍历ticks进行set_rotation()</li>
+<li>调整边界距离，plt.subplots_adjust()</li>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html?highlight=plot#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">linear_data = np.arange(<span class="number">1</span>, <span class="number">9</span>)</span><br><span class="line">quadratic_data = linear_data ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(linear_data, <span class="string">'-o'</span>, quadratic_data, <span class="string">'-o'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里我们只指定了y轴数据，x轴的数据是matplotlib自动生成的</span></span><br><span class="line"></span><br><span class="line">plt.plot([<span class="number">22</span>, <span class="number">44</span>, <span class="number">66</span>], <span class="string">'--r'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加坐标轴标签及图例</span></span><br><span class="line">plt.xlabel(<span class="string">'x data'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y data'</span>)</span><br><span class="line">plt.title(<span class="string">'Line Chart Title'</span>)</span><br><span class="line">plt.legend([<span class="string">'legend1'</span>, <span class="string">'legend2'</span>, <span class="string">'legend3'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 填充两个line间的区域</span></span><br><span class="line">plt.gca().fill_between(range(len(linear_data)),</span><br><span class="line">                      linear_data, quadratic_data,</span><br><span class="line">                      facecolor=<span class="string">'green'</span>,</span><br><span class="line">                      alpha=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">"examples.jpg"</span>)    <span class="comment">#保存图片##</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z8.png">
+<ul>
+<li>绘制横轴为时间的线图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制横轴为时间的线图</span></span><br><span class="line">plt.figure()</span><br><span class="line">observation_dates = np.arange(<span class="string">'2017-10-11'</span>, <span class="string">'2017-10-19'</span>, dtype=<span class="string">'datetime64[D]'</span>)</span><br><span class="line">observation_dates</span><br><span class="line">plt.plot(observation_dates, linear_data, <span class="string">'-o'</span>,</span><br><span class="line">        observation_dates, quadratic_data, <span class="string">'-o'</span>)</span><br><span class="line"><span class="comment"># 横轴并不是我们想要的结果</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z9.png">
+<ul>
+<li>借用pandas绘制横轴为时间的线图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 借助pandas绘制横轴为时间的线图</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">plt.figure()</span><br><span class="line">observation_dates = np.arange(<span class="string">'2017-10-11'</span>, <span class="string">'2017-10-19'</span>, dtype=<span class="string">'datetime64[D]'</span>)</span><br><span class="line">observation_dates = list(map(pd.to_datetime, observation_dates))</span><br><span class="line">plt.plot(observation_dates, linear_data, <span class="string">'-o'</span>,</span><br><span class="line">        observation_dates, quadratic_data, <span class="string">'-o'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plt.xticks(rotation='45')        #用这个比较好，转角45度</span></span><br><span class="line">x = plt.gca().xaxis </span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> x.get_ticklabels():</span><br><span class="line">    item.set_rotation(<span class="number">45</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 调整边界距离</span></span><br><span class="line">plt.subplots_adjust(bottom=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对于学术制图，可在标题中包含latex语法</span></span><br><span class="line">ax = plt.gca()</span><br><span class="line">ax.set_title(<span class="string">'Quadratic ($x^2$) vs. Linear ($x$)'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z10.png">
+<h3 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h3><ul>
+<li>plt.bar()</li>
+<li>group bar chart</li>
+<li>同一副图中包含多个柱状图时，注意要对x轴的数据做相应的移动，避免柱状图重叠</li>
+<li>stack bar chart</li>
+<li>使用bottom参数</li>
+<li>横向柱状图</li>
+<li>barh</li>
+<li>相应的参数width变为参数height；bottom变为left</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">x_vals = list(range(len(linear_data)))</span><br><span class="line">plt.bar(x_vals, linear_data, width=<span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># group bar chart</span></span><br><span class="line"><span class="comment"># 同一副图中添加新的柱状图</span></span><br><span class="line"><span class="comment"># 注意，为了不覆盖第一个柱状图，需要对x轴做偏移，必须通过偏移来完成</span></span><br><span class="line">x_vals2 = [item + <span class="number">0.3</span> <span class="keyword">for</span> item <span class="keyword">in</span> x_vals]</span><br><span class="line">plt.bar(x_vals2, quadratic_data, width=<span class="number">0.3</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z11.png">
+<ul>
+<li>重叠柱状图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stack bar chart</span></span><br><span class="line">plt.figure()</span><br><span class="line">x_vals = list(range(len(linear_data)))</span><br><span class="line">plt.bar(x_vals, linear_data, width=<span class="number">0.3</span>)</span><br><span class="line">plt.bar(x_vals, quadratic_data, width=<span class="number">0.3</span>, bottom=linear_data)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z12.png">
+<ul>
+<li>横向柱状图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 横向柱状图</span></span><br><span class="line">plt.figure()</span><br><span class="line">x_vals = list(range(len(linear_data)))</span><br><span class="line">plt.barh(x_vals, linear_data, height=<span class="number">0.3</span>)</span><br><span class="line">plt.barh(x_vals, quadratic_data, height=<span class="number">0.3</span>, left=linear_data)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z13png">
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ul>
+<li>散点图，适用于二维或三维数据集，但其中只有两维需要比较</li>
+<li>线图，适用于二维数据集，适合进行趋势的比较</li>
+<li>柱状图，适用于二维数据集，但只有一个维度需要比较，利用柱子的高度反映数据的差异</li>
+</ul>
+<h2 id="数据分析常用图标的绘制"><a href="#数据分析常用图标的绘制" class="headerlink" title="数据分析常用图标的绘制"></a>数据分析常用图标的绘制</h2><h3 id="Subplots"><a href="#Subplots" class="headerlink" title="Subplots"></a>Subplots</h3><ul>
+<li>plt.subplots() 建立子图</li>
+<li><a href="https://matplotlib.org/api/pyplot_api.html?highlight=matplotlib%20pyplot%20subplots#matplotlib.pyplot.subplots" target="_blank" rel="noopener">subplot_api</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line"><span class="comment"># 表示1行2列，现在在第一个子图上进行操作</span></span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">linear_data = np.arange(<span class="number">1</span>, <span class="number">9</span>)</span><br><span class="line">plt.plot(linear_data, <span class="string">'-o'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#在第二个子图上画图</span></span><br><span class="line">exponential_data = linear_data ** <span class="number">2</span></span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">plt.plot(exponential_data, <span class="string">'-x'</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">plt.plot(exponential_data, <span class="string">'-x'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z14.png">
+<ul>
+<li>保证子图坐标范围一致</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保证子图中坐标范围一致</span></span><br><span class="line">plt.figure()</span><br><span class="line">ax1 = plt.subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">plt.plot(linear_data, <span class="string">'-o'</span>)</span><br><span class="line">ax2 = plt.subplot(<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, sharey=ax1) </span><br><span class="line">plt.plot(exponential_data, <span class="string">'-x'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z15.png">
+<ul>
+<li>建子图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#建子图</span></span><br><span class="line">fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(<span class="number">2</span>, <span class="number">3</span>,</span><br><span class="line">                                                      sharex=<span class="keyword">True</span>, sharey=<span class="keyword">True</span>)</span><br><span class="line">ax5.plot(exponential_data, <span class="string">'-'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z16.png">
+<h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h3><ul>
+<li><p>对数据分布情况的图表示</p>
+</li>
+<li><p>首先要对数据进行分组，然后统计每个分组内数据的数量</p>
+</li>
+<li><p>作用：</p>
+</li>
+<li><p>显示各分组频率或数量分布的情况</p>
+</li>
+<li><p>易于显示各组之间频率或数量的差别</p>
+</li>
+<li><p>plt.hist(data,bins)</p>
+<p>data:数据列表</p>
+<p>bins:分组边界或分组个数</p>
+</li>
+<li><p><a href="https://matplotlib.org/api/pyplot_api.html?highlight=matplotlib%20pyplot%20hist#matplotlib.pyplot.hist" target="_blank" rel="noopener">直方图_api</a></p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(<span class="number">2</span>, <span class="number">2</span>, sharex=<span class="keyword">True</span>)</span><br><span class="line">axs = [ax1, ax2, ax3, ax4]</span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>]=<span class="keyword">False</span> <span class="comment">#用来正常显示负号</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(len(axs)):</span><br><span class="line">    sample_size = <span class="number">10</span> ** (n + <span class="number">1</span>)</span><br><span class="line">    sample = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=sample_size)</span><br><span class="line">    <span class="comment"># 默认bin的个数为10</span></span><br><span class="line">    axs[n].hist(sample)</span><br><span class="line">    axs[n].set_title(<span class="string">'n=&#123;&#125;'</span>.format(sample_size))</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z17.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(<span class="number">2</span>, <span class="number">2</span>, sharex=<span class="keyword">True</span>)</span><br><span class="line">axs = [ax1, ax2, ax3, ax4]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(len(axs)):</span><br><span class="line">    sample_size = <span class="number">10</span> ** (n + <span class="number">1</span>)</span><br><span class="line">    sample = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=sample_size)</span><br><span class="line">    <span class="comment"># bin设为100</span></span><br><span class="line">    <span class="comment">#axs[n].hist(sample, bins=100)  </span></span><br><span class="line">    axs[n].hist(sample,normed = <span class="keyword">True</span>) <span class="comment">#normed是归一化</span></span><br><span class="line">    axs[n].set_title(<span class="string">'n=&#123;&#125;'</span>.format(sample_size))</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z18.png">
+<ul>
+<li>使用gridspec和直方图绘制一个复杂的分析图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用gridspec和直方图绘制一个复杂分析图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br><span class="line"></span><br><span class="line">x = np.random.random(size=<span class="number">10000</span>)</span><br><span class="line">y = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=<span class="number">10000</span>)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line">gspec = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">top_hist = plt.subplot(gspec[<span class="number">0</span>, <span class="number">1</span>:])</span><br><span class="line">side_hist = plt.subplot(gspec[<span class="number">1</span>:, <span class="number">0</span>])</span><br><span class="line">lower_right = plt.subplot(gspec[<span class="number">1</span>:, <span class="number">1</span>:])</span><br><span class="line"></span><br><span class="line">lower_right.scatter(x, y,alpha = <span class="number">0.3</span> )  <span class="comment">#alpha是透明度</span></span><br><span class="line">top_hist.hist(x, bins=<span class="number">100</span>, normed=<span class="keyword">True</span>)</span><br><span class="line">side_hist.hist(y, bins=<span class="number">100</span>, orientation=<span class="string">'horizontal'</span>, normed=<span class="keyword">True</span>)</span><br><span class="line">side_hist.invert_xaxis()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z19.png">
+<h3 id="盒形图"><a href="#盒形图" class="headerlink" title="盒形图"></a>盒形图</h3><ul>
+<li><a href="http://support.sas.com/documentation/cdl_alternate/zh/vaug/67500/HTML/default/n0kzo3n26iuhvhn1c1u3hwwa2qtt.htm" target="_blank" rel="noopener">详细说明</a></li>
+<li>plt.boxplot()</li>
+<li>whis默认为1.5启用离群值；’range’为不启用离群值</li>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.boxplot.html" target="_blank" rel="noopener">盒形图_api</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 正态分布采样</span></span><br><span class="line">normal_sample = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=<span class="number">10000</span>)</span><br><span class="line"><span class="comment"># 随机数采样</span></span><br><span class="line">random_sample = np.random.random(size=<span class="number">10000</span>)</span><br><span class="line"><span class="comment"># gamma分布采样</span></span><br><span class="line">gamma_sample = np.random.gamma(<span class="number">2</span>, size=<span class="number">10000</span>)</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'normal'</span>: normal_sample,</span><br><span class="line">                  <span class="string">'random'</span>: random_sample,</span><br><span class="line">                  <span class="string">'gamma'</span>: gamma_sample&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.describe()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t3.png">
+<ul>
+<li>盒形图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.boxplot(df[<span class="string">'normal'</span>], whis=<span class="string">'range'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z20.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.boxplot([df[<span class="string">'normal'</span>], df[<span class="string">'random'</span>], df[<span class="string">'gamma'</span>]], whis=<span class="string">'range'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z21.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.boxplot([df[<span class="string">'normal'</span>], df[<span class="string">'random'</span>], df[<span class="string">'gamma'</span>]])</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z22.png">
+<h3 id="热图"><a href="#热图" class="headerlink" title="热图"></a>热图</h3><ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist2d.html?highlight=matplotlib%20axes%20axes%20hist2d#matplotlib.axes.Axes.hist2d" target="_blank" rel="noopener">热图_api</a></li>
+<li>可用于三维数据的可视化</li>
+<li>plt.imshow(arr)</li>
+<li>plt.hist2d()</li>
+<li>plt.colorbar()添加颜色条</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">y = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=<span class="number">10000</span>)</span><br><span class="line">x = np.random.random(size=<span class="number">10000</span>)</span><br><span class="line">plt.hist2d(x, y, bins=<span class="number">25</span>)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">(array([[  0.,   0.,   0.,   0.,   0.,   4.,   8.,  12.,  29.,  26.,  41.,</span><br><span class="line">          51.,  52.,  40.,  37.,  49.,  22.,  15.,   8.,   4.,   1.,   1.,</span><br><span class="line">           0.,   1.,   0.],</span><br><span class="line">        [  0.,   1.,   0.,   0.,   5.,   3.,   7.,  18.,  27.,  32.,  38.,</span><br><span class="line">          54.,  44.,  45.,  38.,  23.,  30.,  11.,   4.,   4.,   0.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   3.,   1.,   7.,  10.,  18.,  29.,  24.,  35.,</span><br><span class="line">          43.,  50.,  50.,  36.,  28.,  25.,  16.,   3.,   5.,   1.,   1.,</span><br><span class="line">           0.,   1.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   1.,   5.,   4.,  12.,  15.,  19.,  35.,  39.,</span><br><span class="line">          32.,  55.,  51.,  44.,  24.,  23.,  13.,   8.,   5.,   0.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   1.,   0.,   2.,   1.,   6.,   6.,  14.,  28.,  33.,  46.,</span><br><span class="line">          43.,  44.,  40.,  45.,  26.,  17.,  20.,   6.,   5.,   5.,   0.,</span><br><span class="line">           1.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   0.,   3.,   8.,   9.,  17.,  25.,  45.,  31.,</span><br><span class="line">          46.,  63.,  44.,  33.,  19.,  24.,   8.,   9.,   5.,   1.,   0.,</span><br><span class="line">           1.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   1.,   1.,   9.,  10.,  21.,  27.,  27.,  47.,</span><br><span class="line">          34.,  41.,  53.,  46.,  24.,  16.,  14.,  12.,   8.,   3.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   1.,   2.,   1.,  12.,  11.,  28.,  25.,  44.,</span><br><span class="line">          51.,  54.,  46.,  42.,  37.,  16.,  16.,   3.,   5.,   3.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   1.,   1.,   5.,  17.,  11.,  23.,  20.,  36.,</span><br><span class="line">          48.,  49.,  37.,  44.,  24.,  20.,  11.,   5.,   4.,   2.,   0.,</span><br><span class="line">           1.,   0.,   0.],</span><br><span class="line">        [  1.,   0.,   0.,   1.,   0.,   8.,  10.,  19.,  25.,  44.,  39.,</span><br><span class="line">          45.,  45.,  40.,  30.,  24.,  18.,  11.,   4.,   6.,   5.,   0.,</span><br><span class="line">           0.,   1.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   0.,   3.,   3.,  14.,  10.,  19.,  45.,  36.,</span><br><span class="line">          57.,  50.,  53.,  42.,  26.,  21.,  12.,   4.,  10.,   3.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  1.,   0.,   0.,   2.,   2.,   7.,   7.,  15.,  20.,  36.,  45.,</span><br><span class="line">          53.,  38.,  55.,  32.,  25.,  21.,  13.,   9.,   1.,   0.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   3.,   1.,   7.,  10.,  14.,  27.,  40.,  46.,</span><br><span class="line">          47.,  50.,  51.,  44.,  30.,  20.,  16.,   9.,   2.,   1.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   0.,   2.,  10.,  11.,  24.,  28.,  42.,  36.,</span><br><span class="line">          51.,  41.,  46.,  31.,  26.,  22.,  12.,  11.,   2.,   3.,   1.,</span><br><span class="line">           1.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   2.,   4.,   6.,  16.,  15.,  31.,  32.,  44.,</span><br><span class="line">          53.,  52.,  52.,  49.,  34.,  23.,  16.,  11.,   9.,   2.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   2.,   2.,   5.,  12.,  10.,  27.,  31.,  36.,</span><br><span class="line">          37.,  55.,  42.,  42.,  33.,  36.,  12.,   7.,   4.,   1.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   1.,   2.,   0.,  11.,  13.,  12.,  26.,  28.,  43.,</span><br><span class="line">          32.,  61.,  52.,  35.,  40.,  26.,  11.,   8.,   2.,   0.,   0.,</span><br><span class="line">           1.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   2.,   0.,   8.,   7.,  17.,  14.,  32.,  45.,</span><br><span class="line">          44.,  56.,  46.,  39.,  27.,  19.,  16.,  10.,   6.,   2.,   1.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  1.,   0.,   1.,   1.,   4.,   4.,   5.,  20.,  27.,  41.,  44.,</span><br><span class="line">          44.,  48.,  53.,  38.,  37.,  20.,  13.,   6.,   2.,   3.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   2.,   2.,   3.,   8.,  26.,  26.,  35.,  43.,</span><br><span class="line">          49.,  40.,  54.,  40.,  27.,  28.,  13.,   9.,   2.,   1.,   1.,</span><br><span class="line">           0.,   0.,   1.],</span><br><span class="line">        [  0.,   0.,   0.,   2.,   0.,   5.,   8.,  10.,  19.,  33.,  35.,</span><br><span class="line">          53.,  52.,  50.,  47.,  22.,  22.,  22.,  10.,   4.,   4.,   0.,</span><br><span class="line">           1.,   0.,   1.],</span><br><span class="line">        [  1.,   0.,   1.,   0.,   3.,   4.,   4.,   9.,  23.,  38.,  37.,</span><br><span class="line">          59.,  56.,  45.,  35.,  37.,  23.,  13.,   6.,   1.,   3.,   1.,</span><br><span class="line">           0.,   1.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   1.,   2.,   5.,   5.,  22.,  21.,  30.,  43.,</span><br><span class="line">          54.,  57.,  47.,  35.,  42.,  28.,  13.,  11.,   3.,   1.,   0.,</span><br><span class="line">           0.,   0.,   0.],</span><br><span class="line">        [  1.,   0.,   0.,   0.,   3.,   3.,   7.,   8.,  21.,  36.,  36.,</span><br><span class="line">          63.,  60.,  47.,  53.,  35.,  28.,  14.,   8.,   4.,   1.,   0.,</span><br><span class="line">           2.,   0.,   0.],</span><br><span class="line">        [  0.,   0.,   0.,   0.,   5.,   7.,  10.,  26.,  22.,  27.,  39.,</span><br><span class="line">          40.,  53.,  49.,  40.,  33.,  22.,   9.,  13.,   5.,   3.,   2.,</span><br><span class="line">           0.,   0.,   0.]]),</span><br><span class="line"> array([  8.27648177e-05,   4.00777802e-02,   8.00727956e-02,</span><br><span class="line">          1.20067811e-01,   1.60062826e-01,   2.00057842e-01,</span><br><span class="line">          2.40052857e-01,   2.80047873e-01,   3.20042888e-01,</span><br><span class="line">          3.60037903e-01,   4.00032919e-01,   4.40027934e-01,</span><br><span class="line">          4.80022950e-01,   5.20017965e-01,   5.60012980e-01,</span><br><span class="line">          6.00007996e-01,   6.40003011e-01,   6.79998026e-01,</span><br><span class="line">          7.19993042e-01,   7.59988057e-01,   7.99983073e-01,</span><br><span class="line">          8.39978088e-01,   8.79973103e-01,   9.19968119e-01,</span><br><span class="line">          9.59963134e-01,   9.99958150e-01]),</span><br><span class="line"> array([-3.87298648, -3.56051544, -3.2480444 , -2.93557336, -2.62310232,</span><br><span class="line">        -2.31063128, -1.99816024, -1.6856892 , -1.37321816, -1.06074712,</span><br><span class="line">        -0.74827608, -0.43580504, -0.123334  ,  0.18913704,  0.50160808,</span><br><span class="line">         0.81407912,  1.12655016,  1.4390212 ,  1.75149224,  2.06396328,</span><br><span class="line">         2.37643431,  2.68890535,  3.00137639,  3.31384743,  3.62631847,</span><br><span class="line">         3.93878951]),</span><br><span class="line"> &lt;matplotlib.image.AxesImage at 0x20b1d6959b0&gt;)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z23.png">
+<ul>
+<li>热度</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">y = np.random.normal(loc=<span class="number">0.</span>, scale=<span class="number">1.</span>, size=<span class="number">10000</span>)</span><br><span class="line">x = np.random.random(size=<span class="number">10000</span>)</span><br><span class="line">plt.hist2d(x, y, bins=<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">plt.colorbar()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z24.png">
+<h2 id="Pandas及Seaborn绘图"><a href="#Pandas及Seaborn绘图" class="headerlink" title="Pandas及Seaborn绘图"></a>Pandas及Seaborn绘图</h2><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><ul>
+<li>df.plot(kind = )</li>
+<li>kind用于指定绘图的类型</li>
+<li>pd.plotting.scatter_matrix()</li>
+<li>pd.plotting.parrallel_coordinates()</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html" target="_blank" rel="noopener">dataframe绘图</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># panda绘图，可用的绘图样式 </span></span><br><span class="line">plt.style.available</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[&apos;bmh&apos;,</span><br><span class="line"> &apos;classic&apos;,</span><br><span class="line"> &apos;dark_background&apos;,</span><br><span class="line"> &apos;fast&apos;,</span><br><span class="line"> &apos;fivethirtyeight&apos;,</span><br><span class="line"> &apos;ggplot&apos;,</span><br><span class="line"> &apos;grayscale&apos;,</span><br><span class="line"> &apos;seaborn-bright&apos;,</span><br><span class="line"> &apos;seaborn-colorblind&apos;,</span><br><span class="line"> &apos;seaborn-dark-palette&apos;,</span><br><span class="line"> &apos;seaborn-dark&apos;,</span><br><span class="line"> &apos;seaborn-darkgrid&apos;,</span><br><span class="line"> &apos;seaborn-deep&apos;,</span><br><span class="line"> &apos;seaborn-muted&apos;,</span><br><span class="line"> &apos;seaborn-notebook&apos;,</span><br><span class="line"> &apos;seaborn-paper&apos;,</span><br><span class="line"> &apos;seaborn-pastel&apos;,</span><br><span class="line"> &apos;seaborn-poster&apos;,</span><br><span class="line"> &apos;seaborn-talk&apos;,</span><br><span class="line"> &apos;seaborn-ticks&apos;,</span><br><span class="line"> &apos;seaborn-white&apos;,</span><br><span class="line"> &apos;seaborn-whitegrid&apos;,</span><br><span class="line"> &apos;seaborn&apos;,</span><br><span class="line"> &apos;Solarize_Light2&apos;,</span><br><span class="line"> &apos;tableau-colorblind10&apos;,</span><br><span class="line"> &apos;_classic_test&apos;]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置绘图样式</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置绘图样式</span></span><br><span class="line">plt.style.use(<span class="string">'seaborn-colorblind'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dataframe绘图</span></span><br><span class="line">np.random.seed(<span class="number">100</span>)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'A'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>),</span><br><span class="line">                  <span class="string">'B'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>) + <span class="number">20</span>,</span><br><span class="line">                  <span class="string">'C'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>) - <span class="number">20</span>&#125;,</span><br><span class="line">                 index=pd.date_range(<span class="string">'2017/1/1'</span>, periods=<span class="number">365</span>))</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t4.png">
+<ul>
+<li>散点图绘图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.plot(<span class="string">'A'</span>, <span class="string">'B'</span>, kind=<span class="string">'scatter'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z25.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 颜色(c)和大小(s)有'B'列的数据决定</span></span><br><span class="line">ax = df.plot(<span class="string">'A'</span>, <span class="string">'C'</span>, kind=<span class="string">'scatter'</span>,</span><br><span class="line">        c=<span class="string">'B'</span>, s=df[<span class="string">'B'</span>], colormap=<span class="string">'viridis'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置坐标为相同比例</span></span><br><span class="line">ax.set_aspect(<span class="string">'equal'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z26.png">
+<ul>
+<li>盒形图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.plot(kind=<span class="string">'box'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z27.png">
+<ul>
+<li>直方图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.plot(kind=<span class="string">'hist'</span>, alpha=<span class="number">0.7</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z28.png">
+<ul>
+<li>拟合分布图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.plot(kind=<span class="string">'kde'</span>) <span class="comment">#拟合分布图</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z29.png">
+<ul>
+<li>查看变量间的关系</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pandas.tools.plotting</span></span><br><span class="line">iris = pd.read_csv(<span class="string">'iris.csv'</span>)</span><br><span class="line">iris.head()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t5.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用于查看变量间的关系</span></span><br><span class="line">pd.plotting.scatter_matrix(iris)  <span class="comment">#每俩俩之间的关系</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z30.png">
+<ul>
+<li>查看多变量分布</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用于查看多遍量分布</span></span><br><span class="line">plt.figure()</span><br><span class="line">pd.plotting.parallel_coordinates(iris, <span class="string">'Name'</span>)  <span class="comment">#平行坐标</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z31.png">
+<h3 id="Seaborn"><a href="#Seaborn" class="headerlink" title="Seaborn"></a>Seaborn</h3><ul>
+<li>一个制图工具库，可以制作出吸引人的，信息量大的统计图</li>
+<li>在Matplotlib上构建，支持numpy和pandas的数据结构可视化，甚至是scipy和statsmodels的统计模型可视化</li>
+</ul>
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li>多个内置主题和颜色主题</li>
+<li>可视化单一变量、二维变量用于比较数据集中各变量的分布情况</li>
+<li>可视化线性回归模型中的独立变量及不独立变量</li>
+<li>可视化矩阵数据，通过聚类算法探究矩阵间的结构</li>
+<li>可视化时间序列数据及不确定性的展示</li>
+<li>可在分各区域制图，用于复杂的可视化</li>
+</ul>
+<h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><ul>
+<li>conda install seaborn</li>
+<li>pip install seaborn</li>
+</ul>
+<h3 id="数据集分布可视化"><a href="#数据集分布可视化" class="headerlink" title="数据集分布可视化"></a>数据集分布可视化</h3><ul>
+<li>单变量分布 sns.ditplot()</li>
+<li>直方图 sns.distplot(kde = False)</li>
+<li>核密度估计 sns.distplot(hist = False)或sns.kdeplot()</li>
+<li>拟合参数分布 sns.distplot(kde = False,fit = )</li>
+<li>双变量分布</li>
+<li>散布图 sns.joinplot()</li>
+<li>二维直方图 Hexbin.sns.jointplot(kind = ‘hex’)</li>
+<li>核密度估计 sns.jointplot(kind = ‘kde’)</li>
+</ul>
+<h3 id="类别数据可视化"><a href="#类别数据可视化" class="headerlink" title="类别数据可视化"></a>类别数据可视化</h3><ul>
+<li>类别散布图</li>
+<li>sns.stripplot() 数据点会重叠</li>
+<li>sns.swarmplot() 数据点避免重叠</li>
+<li>hue指定子类别</li>
+<li>类别内数据分布</li>
+<li>盒子图 sns.boxplot,hue指定子类别</li>
+<li>小提琴图 sns.violinplot(), hue指定子类别</li>
+<li>类别内统计图</li>
+<li>柱状图 sns.barplot()</li>
+<li>点图 sns.pointplot()</li>
+<li>类别内统计图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入seaborn工具</span></span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">100</span>)</span><br><span class="line">v1 = pd.Series(np.random.normal(<span class="number">0</span>, <span class="number">10</span>, <span class="number">1000</span>), name=<span class="string">'v1'</span>)</span><br><span class="line">v2 = pd.Series(<span class="number">2</span> * v1 + np.random.normal(<span class="number">60</span>, <span class="number">15</span>, <span class="number">1000</span>), name=<span class="string">'v2'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过matplotlib绘图</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.hist(v1, alpha=<span class="number">0.7</span>, bins=np.arange(<span class="number">-50</span>, <span class="number">150</span>, <span class="number">5</span>), label=<span class="string">'v1'</span>)</span><br><span class="line">plt.hist(v2, alpha=<span class="number">0.7</span>, bins=np.arange(<span class="number">-50</span>, <span class="number">150</span>, <span class="number">5</span>), label=<span class="string">'v2'</span>)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z32.png">
+<ul>
+<li>绘制直方图和折线拟合</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.hist([v1, v2], histtype=<span class="string">'barstacked'</span>, normed=<span class="keyword">True</span>)</span><br><span class="line">v3 = np.concatenate((v1, v2))</span><br><span class="line">sns.kdeplot(v3)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z33.png">
+<ul>
+<li>使用seaborn绘图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用seaborn绘图</span></span><br><span class="line">plt.figure()</span><br><span class="line">sns.distplot(v3)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z34.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用seaborn绘图</span></span><br><span class="line">plt.figure()</span><br><span class="line">sns.jointplot(v1, v2, alpha=<span class="number">0.4</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z35.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用seaborn绘图</span></span><br><span class="line">plt.figure()</span><br><span class="line">grid = sns.jointplot(v1, v2, alpha=<span class="number">0.4</span>)</span><br><span class="line">grid.ax_joint.set_aspect(<span class="string">'equal'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z36.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">sns.jointplot(v1, v2, kind=<span class="string">'hex'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z37.png">
+<ul>
+<li>密度曲线</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">sns.jointplot(v1, v2, kind=<span class="string">'kde'</span>)  <span class="comment">#kde是密度曲线</span></span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z38.png">
+<ul>
+<li>密度曲线图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iris = pd.read_csv(<span class="string">'iris.csv'</span>)</span><br><span class="line">iris.head()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t6.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.pairplot(iris, hue=<span class="string">'Name'</span>, diag_kind=<span class="string">'kde'</span>)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z39.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.subplot(<span class="number">121</span>)</span><br><span class="line">sns.swarmplot(<span class="string">'Name'</span>, <span class="string">'PetalLength'</span>, data=iris)</span><br><span class="line">plt.subplot(<span class="number">122</span>)</span><br><span class="line">sns.violinplot(<span class="string">'Name'</span>, <span class="string">'PetalLength'</span>, data=iris)</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/z40.png">
+<h2 id="其他常用的可视化工具（可交互）"><a href="#其他常用的可视化工具（可交互）" class="headerlink" title="其他常用的可视化工具（可交互）"></a>其他常用的可视化工具（可交互）</h2><h3 id="D3-js"><a href="#D3-js" class="headerlink" title="D3.js"></a>D3.js</h3><ul>
+<li>D3(Data- Driven Documents),是一个用动态图形显示数据的JavaScript库，一个可视化工具</li>
+<li>mpld3</li>
+<li><a href="http://mpld3.github.io/" target="_blank" rel="noopener">参考链接</a></li>
+<li>pip install mpld3</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##交互式图例</span></span><br><span class="line"><span class="keyword">import</span> mpld3</span><br><span class="line"><span class="keyword">from</span> mpld3 <span class="keyword">import</span> plugins</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">100</span>)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'A'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>),</span><br><span class="line">                  <span class="string">'B'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>) + <span class="number">20</span>,</span><br><span class="line">                  <span class="string">'C'</span>: np.random.randn(<span class="number">365</span>).cumsum(<span class="number">0</span>) - <span class="number">20</span>&#125;,</span><br><span class="line">                 index=range(<span class="number">365</span>))</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t7.png">
+<ul>
+<li>查看列的名字</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.columns.values</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([&apos;A&apos;, &apos;B&apos;, &apos;C&apos;], dtype=object)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>绘制的是一个交互式图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">12</span>, <span class="number">8</span>))</span><br><span class="line">labels = df.columns.tolist()</span><br><span class="line">lines = ax.plot(df.index.values, df.values, lw=<span class="number">2</span>)</span><br><span class="line">interactive_legend = plugins.InteractiveLegendPlugin(lines, labels)</span><br><span class="line">plugins.connect(fig, interactive_legend)</span><br><span class="line"></span><br><span class="line">mpld3.display()</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t8.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#图像保存成html</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'./interactive_legend_eg.html'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    mpld3.save_html(fig, f)</span><br></pre></td></tr></table></figure>
+<h3 id="echarts"><a href="#echarts" class="headerlink" title="echarts"></a>echarts</h3><ul>
+<li>一个纯Javascript的图标库，可以流畅的运行在PC和移动设备上，兼容当前绝大部分浏览器，底层依赖轻量级的Canvas类库ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图标。</li>
+<li>pyecharts</li>
+<li><a href="http://pyecharts.org/#/zh-cn/" target="_blank" rel="noopener">参考链接</a></li>
+<li>pip install pyecharts</li>
+<li><a href="http://pyecharts.org/#/zh-cn/prepare" target="_blank" rel="noopener">详细用法</a></li>
+<li>与Python进行对接，方便在Python中直接使用数据生成图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#柱状图交互式图例</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar</span><br><span class="line"></span><br><span class="line">comp_df = pd.read_csv(<span class="string">'./comparison_result.csv'</span>, index_col=<span class="string">'state'</span>)</span><br><span class="line">comp_df</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t9.png">
+<ul>
+<li>堆叠柱状图也是一个交互式图</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">good_state_results = comp_df.iloc[<span class="number">0</span>, :].values</span><br><span class="line">heavy_state_results = comp_df.iloc[<span class="number">1</span>, :].values</span><br><span class="line">light_state_results = comp_df.iloc[<span class="number">2</span>, :].values</span><br><span class="line">medium_state_results = comp_df.iloc[<span class="number">3</span>, :].values</span><br><span class="line"></span><br><span class="line">labels = comp_df.index.values.tolist()</span><br><span class="line">city_names = comp_df.columns.tolist()</span><br><span class="line"></span><br><span class="line">bar = Bar(<span class="string">"堆叠柱状图"</span>)</span><br><span class="line">bar.add(<span class="string">'良好'</span>, city_names, good_state_results, is_stack=<span class="keyword">True</span>, xaxis_interval=<span class="number">0</span>, xaxis_rotate=<span class="number">30</span>)</span><br><span class="line">bar.add(<span class="string">'轻度污染'</span>, city_names, light_state_results, is_stack=<span class="keyword">True</span>, xaxis_interval=<span class="number">0</span>, xaxis_rotate=<span class="number">30</span>)</span><br><span class="line">bar.add(<span class="string">'中度污染'</span>, city_names, medium_state_results, is_stack=<span class="keyword">True</span>, xaxis_interval=<span class="number">0</span>, xaxis_rotate=<span class="number">30</span>)</span><br><span class="line">bar.add(<span class="string">'重度污染'</span>, city_names, heavy_state_results, is_stack=<span class="keyword">True</span>, xaxis_interval=<span class="number">0</span>, xaxis_rotate=<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line">bar</span><br></pre></td></tr></table></figure>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/t10.png">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保存结果到html</span></span><br><span class="line">bar.render(<span class="string">'./echarts_demo.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>相关链接：<a href="https://github.com/HuXuzhe/ML_basic" target="_blank" rel="noopener">源文件</a></p>
+
+      
+    </div>
+    
+    
+    
+
+     <div>
+            
+                ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>    
+
+     <div align="center">
+          
+            <div class="copyright">
+            <p><span>
+            <b>本文地址：</b><a href="/2018/07/10/Matplotlib/" title="Matplotlib">https://huxuzhe.github.io/2018/07/10/Matplotlib/</a><br /><b>转载请注明出处，谢谢！</b>
+            </span></p>
+            </div>
+          
+     </div>   
+
+
+  
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HuXuzhe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HuXuzhe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    HuXuzhe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://huxuzhe.github.io/2018/07/10/Matplotlib/" title="Matplotlib">https://huxuzhe.github.io/2018/07/10/Matplotlib/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matplotlib/" rel="tag"><i class="fa fa-tag"></i> matplotlib</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/09/Pandas/" rel="next" title="Pandas">
+                <i class="fa fa-chevron-left"></i> Pandas
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/02/精读西瓜书-一/" rel="prev" title="精读西瓜书(一)">
+                精读西瓜书(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzg4MS8xNDQxMQ=="></div>
+    </div>
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/photo.jpg"
+                alt="HuXuzhe" />
+            </a>
+            
+              <p class="site-author-name" itemprop="name">HuXuzhe</p>
+              <p class="site-description motion-element" itemprop="description">机器学习、深度学习挖坑中~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HuXuzhe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:huxuzhe1993@gmail.com" target="_blank" title="G-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>G-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://note.youdao.com/noteshare?id=db847f1aa0f5c7e82ef6e1e7bc2f436c" target="_blank" title="Youdao">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Youdao</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/haley_hu/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/84a1d681c37f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-pencil-square-o"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hacking-linux.com" title="Kyle's Blog" target="_blank">Kyle's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xrblog.github.io" title="xrblog" target="_blank">xrblog</a>
+                  </li>
+                
+              </ul>
+             ﻿<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("06/29/2018 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据展示及可视化"><span class="nav-number">1.</span> <span class="nav-text">数据展示及可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据可视化准则"><span class="nav-number">2.</span> <span class="nav-text">数据可视化准则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本图表的绘制及应用场景"><span class="nav-number">3.</span> <span class="nav-text">基本图表的绘制及应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Matplotlib"><span class="nav-number">3.1.</span> <span class="nav-text">Matplotlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matplotlib构架"><span class="nav-number">3.2.</span> <span class="nav-text">Matplotlib构架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用matplotlib-pyplot直接绘制"><span class="nav-number">3.3.</span> <span class="nav-text">使用matplotlib.pyplot直接绘制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pyplot"><span class="nav-number">3.4.</span> <span class="nav-text">pyplot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#散点图"><span class="nav-number">3.5.</span> <span class="nav-text">散点图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线图"><span class="nav-number">3.6.</span> <span class="nav-text">线图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱状图"><span class="nav-number">3.7.</span> <span class="nav-text">柱状图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景"><span class="nav-number">4.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分析常用图标的绘制"><span class="nav-number">5.</span> <span class="nav-text">数据分析常用图标的绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Subplots"><span class="nav-number">5.1.</span> <span class="nav-text">Subplots</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直方图"><span class="nav-number">5.2.</span> <span class="nav-text">直方图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒形图"><span class="nav-number">5.3.</span> <span class="nav-text">盒形图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热图"><span class="nav-number">5.4.</span> <span class="nav-text">热图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pandas及Seaborn绘图"><span class="nav-number">6.</span> <span class="nav-text">Pandas及Seaborn绘图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pandas"><span class="nav-number">6.1.</span> <span class="nav-text">Pandas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Seaborn"><span class="nav-number">6.2.</span> <span class="nav-text">Seaborn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特点："><span class="nav-number">6.3.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装："><span class="nav-number">6.4.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据集分布可视化"><span class="nav-number">6.5.</span> <span class="nav-text">数据集分布可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类别数据可视化"><span class="nav-number">6.6.</span> <span class="nav-text">类别数据可视化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他常用的可视化工具（可交互）"><span class="nav-number">7.</span> <span class="nav-text">其他常用的可视化工具（可交互）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#D3-js"><span class="nav-number">7.1.</span> <span class="nav-text">D3.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echarts"><span class="nav-number">7.2.</span> <span class="nav-text">echarts</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuXuzhe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数统计&#58;</span> 
+    
+    <span title="全站字数统计">57.1k</span> 字
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+  主题 -
+  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+   <span id="busuanzi_container_site_pv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第<span id="busuanzi_value_site_uv"></span>位访客
+  </span>
+  
+</div>
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">扫微信加好友,注明博客</div>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

@@ -1,0 +1,1502 @@
+﻿<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="模型评估与选择," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haley_Hu's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="写在前面这里接精读西瓜书二内容，仍然讲的是模型的评估与选择，主要是性能度量。 知识点归纳性能度量先复习一下，机器学习理想的目标。 通过评估学习器的泛化误差，选出泛化误差最小的学习器。 上一节，通过不同的评估方法来选出最终的模型，但是对于学习器的泛化能力进行评估，仅仅评估方法是不够的，还需要有衡量模型泛化能力的评价标准，这就是性能度量(performance measure)。 【性能度量(perf">
+<meta name="keywords" content="模型评估与选择">
+<meta property="og:type" content="article">
+<meta property="og:title" content="精读西瓜书(三)">
+<meta property="og:url" content="https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/index.html">
+<meta property="og:site_name" content="Haley_Hu&#39;s Blog">
+<meta property="og:description" content="写在前面这里接精读西瓜书二内容，仍然讲的是模型的评估与选择，主要是性能度量。 知识点归纳性能度量先复习一下，机器学习理想的目标。 通过评估学习器的泛化误差，选出泛化误差最小的学习器。 上一节，通过不同的评估方法来选出最终的模型，但是对于学习器的泛化能力进行评估，仅仅评估方法是不够的，还需要有衡量模型泛化能力的评价标准，这就是性能度量(performance measure)。 【性能度量(perf">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-1.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-2.jpg">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-3.jpg">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-4.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-5.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-6.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-7.jpg">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-8.jpg">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-9.jpg">
+<meta property="og:updated_time" content="2018-09-22T10:29:13.277Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="精读西瓜书(三)">
+<meta name="twitter:description" content="写在前面这里接精读西瓜书二内容，仍然讲的是模型的评估与选择，主要是性能度量。 知识点归纳性能度量先复习一下，机器学习理想的目标。 通过评估学习器的泛化误差，选出泛化误差最小的学习器。 上一节，通过不同的评估方法来选出最终的模型，但是对于学习器的泛化能力进行评估，仅仅评估方法是不够的，还需要有衡量模型泛化能力的评价标准，这就是性能度量(performance measure)。 【性能度量(perf">
+<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/3-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/"/>
+
+
+
+
+
+  <title>精读西瓜书(三) | Haley_Hu's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <a href="https://github.com/HuXuzhe" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Haley_Hu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Teaching is Learning,一起交流！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简介
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuXuzhe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haley_Hu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">精读西瓜书(三)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T20:33:54+09:00">
+                2018-09-19
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-22T19:29:13+09:00">
+                2018-09-22
+              </time>
+            
+          </span>
+         
+        
+        <span id="busuanzi_container_page_pv">  |  阅读量 : <span id="busuanzi_value_page_pv"></span> 次</span>
+        
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/精读西瓜书/" itemprop="url" rel="index">
+                    <span itemprop="name">精读西瓜书</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,925字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>这里接精读西瓜书二内容，仍然讲的是模型的评估与选择，主要是性能度量。</p>
+<h1 id="知识点归纳"><a href="#知识点归纳" class="headerlink" title="知识点归纳"></a>知识点归纳</h1><h2 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h2><p>先复习一下，机器学习理想的目标。</p>
+<p>通过评估学习器的泛化误差，选出泛化误差最小的学习器。</p>
+<p>上一节，通过不同的评估方法来选出最终的模型，但是对于学习器的泛化能力进行评估，仅仅评估方法是不够的，还需要有衡量模型泛化能力的评价标准，这就是性能度量(performance measure)。</p>
+<p><b>【性能度量(performance measure)】：</b>衡量模型泛化能力的评价标准</p>
+<p>性能度量反映了任务需要，在对比不同模型的能力时，使用不同的性能度量往往会导致不同的评价结果。因此，什么样的学习器是好的，不仅仅取决于<b>算法和数据</b>，还决定于<b>任务需求</b>。</p>
+<p>在预测任务中，$y_i$是示例$x_i$的真实标记，要评估学习器$f$的性能，需要把学习器预测结果$f(x)$与真实标记$y$进行比较。</p>
+<p>因为有标记，所以讨论的是监督性学习。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-1.png">
+<a id="more"></a>
+<h3 id="回归任务"><a href="#回归任务" class="headerlink" title="回归任务"></a>回归任务</h3><h4 id="均方误差"><a href="#均方误差" class="headerlink" title="均方误差"></a>均方误差</h4><p><b>【均方误差(mean squared error)】:</b>回归任务最常用的性能度量。<br>$$<br>E(f;D) = \frac{1}{m} \sum_{i=1}^m (f(x_i)-y_i)^2<br>$$<br>可知，均方误差是m个离散样本的方差的平均数</p>
+<p>但对于数据分布$D$和概率密度函数$p(\cdot)$，均方误差可描述为：<br>$$<br>E(f;D)=\int_{x \sim D}(f(x)-y)^2p(x)dx<br>$$<br>可以看出，此时样本可以看做非离散样本而是连续样本。</p>
+<h3 id="分类任务"><a href="#分类任务" class="headerlink" title="分类任务"></a>分类任务</h3><h4 id="错误率与精度"><a href="#错误率与精度" class="headerlink" title="错误率与精度"></a>错误率与精度</h4><p>这是分类任务中最常用的两种性能度量，既适用于二分类任务，也适用于多分类任务。</p>
+<p>错误率:分类错误的样本占总样本的比例</p>
+<p>精度：分类正确的样本总样本的比例</p>
+<p>【错误率公式】：<br>$$<br>E(f;D)=\frac{1}{m} \sum_{i=1}^m \mathbb{I}(f(x_i)\ne y_i)<br>$$<br>其中$$ \mathbb{I} (\cdot)$$为指示函数(indicator function)，真为1，假为0。常用于次数(满足某一断言或条件)的统计</p>
+<p>错误率是m个离散样本的指示函数和的平均数</p>
+<p>【精度公式】:<br>$$<br>\begin{align}<br>acc(f;D) &amp; =\frac{1}{m}\sum_{i=1}^m \mathbb{I}(f(x_i)=y_i) \<br>&amp; = 1-E(f;D) \<br>\end{align}<br>$$<br>精度和错误率相同，也是m个离散样本的指示函数和的平均数，但是两个的指示函数不同。</p>
+<p>但是，对于数据分布$D$和概率密度函数$p(\cdot)$，错误率与精度可分别描述为：<br>$$<br>E(f;D)=\int_{x \sim D}\mathbb{I}(f(x) \neq y)p(x)dx<br>$$</p>
+<p>$$<br>\begin{align}<br>acc(f;D) &amp;=\int_{x \sim D}\mathbb{I}(f(x) = y)p(x)dx \<br>&amp; = 1-E(f;D)<br>\end{align}<br>$$</p>
+<p>可了解到，此时的样本可以看做费离散样本，也就是连续样本。</p>
+<p>性能度量方法：</p>
+<p>通常，错误率低、精度高的模型性能好；反之模型性能差。错误率与精度反应的是分类任务模型判断正确与否的能力。</p>
+<h4 id="查准率、查全率与F1"><a href="#查准率、查全率与F1" class="headerlink" title="查准率、查全率与F1"></a>查准率、查全率与F1</h4><p>错误率和精准率虽然常用，但不能满足所有的需求。当任务需求不是要判断有样本被判别正确与否的时候，而是关注正例以及反例的查出的准确率时，就需要使用其他的性能度量。</p>
+<p>在二分类问题中，可根据其真实类别与学习器预测类别的组合划分为真正例(true positive)、假正例(false positive)、真反例(true negative)、假反例(false negative)，分别简称TP、FP、TN、FN，样例总数 = TP + FP + TN + FN。分类结果的“混淆矩阵(confusion matrix)”。</p>
+<p>举例：</p>
+<p>好西瓜判断成好西瓜，判断正确①【TP】；好西瓜判断成坏西瓜，判断错误②【TN】</p>
+<p>坏西瓜判断成好西瓜，判断错误③【FP】；坏西瓜判断成坏西瓜，判断正确④【FN】</p>
+<p>其中，①和④都是判断正确，②和③都是判断错误。错误率和精度是①和④、②和③的综合判断，只有判断正确与否的概念，但是没有正例与反例的区别，所以引入查准率【precision】与查全率【recall】。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-2.jpg">
+<p><b>【查准率】：</b>【真正例样本数】与【预测结果是正例的样本数】的比值</p>
+<p><b>【查全率】：</b>【真正例样本数】与【真实情况是正例的样本数】的比值</p>
+<p>查准率是挑出的好瓜里面，有多少是真的好瓜。如果希望选出的瓜中好瓜比例高的话，则可只挑选最有把握的瓜，但这样会难免会漏掉不少好瓜，查准率高了但查全率就会降低。</p>
+<p>查全率是挑出来的真的好瓜，占总共好瓜个数的多少。希望将好瓜极可能多地挑出来，则可通过增加选瓜的数量来实现，如果所有西瓜都选上，那么所有的好瓜也必然都被选上，这样查准率就会降低。</p>
+<p>一般来说，查准率高时，查全率偏低；查全率高，查准率偏低。通过只在一些简单任务中，查准率和查全率都偏高。</p>
+<p>性能度量的方法：1.直接观察数值；2.建立P-R曲线</p>
+<p>下面讲P-R曲线图，即以查准率为纵轴，查全率为横轴作图，就可以得到查准率-查全率曲线，简称“P-R曲线”。</p>
+<p>值得注意的是，同一个模型，在同一个正例判断标准下，得到的查准率和查全率只有一个，也就是说，在图中应该是只有一个点，而不是一条曲线。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-3.jpg">
+<p>P-R图直观地显示出学习器在样本总体上的查全率、查准率。</p>
+<p><b>可是如何来比较以及判断哪个学习器更优呢？</b></p>
+<p>当没有曲线交叉曲线的时候：外侧学习器性能优于内侧学习器，比如学习器B是优于学习器C</p>
+<p>当曲线有交叉的时候：</p>
+<p>方法一：比较P-R曲线下的面积大小，但是这个值不太容易估算。</p>
+<p>方法二：设计了一些综合考虑查准率、查全率的性能度量。平衡点(Break-Even Point，简称BEP)就是这样一个度量，它是“查准率=查全率”时的取值。基于平衡点的比较，平衡点在外侧的曲线优于内测的，比如学习器A是优于学习器B</p>
+<p>方法三：比较常用的是F1度量，F1的来能给的一般形式是$F_\beta$<br>$$<br>F1 = \frac{2\times P \times R}{P+R} = \frac{2 \times TP}{样例总数+TP-TN}<br>$$</p>
+<p>F1是基于查准率与查全率的调和平均(harmonic mean)定义的：<br>$$<br>\frac{1}{F1}=\frac{1}{2} \cdot (\frac{1}{P}+\frac{1}{R})<br>$$<br>$F_\beta$则是加权调和平均：<br>$$<br>\frac{1}{F_\beta}=\frac{1}{1+\beta^2} \cdot (\frac{1}{P}+\frac{\beta^2}{R})<br>$$<br>调和平均更重视较小值。其中$\beta &gt; 0$度量了查全率对查准率的相对重要性。$\beta = 1$为标准的F1，若大于1，查全率有更大影响；小于1，查准率有更大影响。</p>
+<p>以上是一个二分类混淆矩阵的查全率和查准率的判断。</p>
+<p>但实际情况中，有多个二分类混淆矩阵。当需要考虑估计算法的全局性能时，希望在N个二分类混淆集镇上综合考察查准率和查全率。有两种方法来解决。</p>
+<p>方法1：“宏”：先在各混淆矩阵上分别计算出查准率和查全率，再计算平均值，得到宏查准率(macro-P)、宏查全率(macro-R)、宏F1(macro-F1)</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-4.png">
+<p>方法2：“微”：先将各混淆矩阵的对应元素进行平均，得到TP、FP、TN、FN的平均值，再基于这些平均值计算出微查准率(micro-P)、微查全(micro-R)率以及微F1(micro-F1)的值。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-5.png">
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-6.png">
+<h4 id="ROC与AUC"><a href="#ROC与AUC" class="headerlink" title="ROC与AUC"></a>ROC与AUC</h4><p>ROC曲线图是通过对测试样本设置不同的阈值并与测试值进行比较，划分出正例与反例。再计算出两个重要量的值，分别以它们为横、纵坐标作图，就得到“ROC曲线”。<b>与P-R不同的是，P-R图逐个将样本作为正例，而ROC图是逐次与阈值进行比较后划分正例。</b>ROC曲线的纵轴是“真正例率(True Positive Rate,简称TPR)，横轴是”假正例率”(False Positive Rate，简称”FPR”)。</p>
+<p><b>【真正例率(TPR)】:</b>【真正例样本数】与【真实情况是正例的样本数】的比值（查全率）</p>
+<p><b>【假正例率(FPR)】:</b>【假正例样本数】与【真实情况是反例的样本数】的比值</p>
+<p>公式如下：<br>$$<br>TPR = \frac{TP}{TP+FN}<br>$$</p>
+<p>$$<br>FPR=\frac{FP}{TN+FP}<br>$$</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-7.jpg">
+<p>ROC图全名为“受试者工作特征”。</p>
+<p>如图，(0,1)点为理想模型。随机模型则是真正例率与假正例率持平的直线，既对角线。</p>
+<p>学习器进行比较时，与P-R图相似，若一个学习器的ROC曲线被另一个学习器曲线完全“包住”，则可断言后者的性能优于前者。</p>
+<p>若ROC曲线发生交叉，则较为合理的判断是比较ROC曲线下的面积，即AUC(Area Under ROC Curve)。</p>
+<h4 id="代价敏感错误率与代价曲线"><a href="#代价敏感错误率与代价曲线" class="headerlink" title="代价敏感错误率与代价曲线"></a>代价敏感错误率与代价曲线</h4><p>因为在现实任务中会遇到这样的情况，不同类型的错误所造成的后果不同。拿上面西瓜的例子来说明，如果把好瓜当成坏瓜，等于浪费了一个好瓜；但是把坏瓜当成好瓜，就有可能让顾客吃坏肚子，不得不去就医。因此，为权衡不同类型错误所造成的不同损失，可为错误赋予”非均等代价(unequal cost)。”</p>
+<p>说明一点：之前的介绍的性能度量，大多都隐性的假设了”均等假设”。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-8.jpg">
+<p>上图为二分类代价矩阵，其中$cost_{ij}$表示将第$i$类样本预测为第$j$类样本的代价。</p>
+<p>值得说明一点：一般情况下，重要的是代价比值而非绝对值。例如：$cost_{01} : cost_{10} = 5:1$与$50:1$所起的效果相当。</p>
+<p>在非均等代价下，希望做的不再是简单的最小化错误次数，而是希望最小化”总体代价(total cost)”。</p>
+<p>例：若将表中第0类作为正例，第1类作为反类，则代价敏感(cost-sensitive)错误率为：<br>$$<br>E(f;D;cost)=\frac{1}{m}(\sum_{x_i \in D^+}\mathbb{I}(f(x_i) \neq y_i)\times cost_{01}+ \sum_{x_i \in D^-}\mathbb{I}(f(x_i)\neq y_i)\times cost_{10})<br>$$<br>在这样非均等代价下，ROC曲线不能直接反映出学习器的期望总体代价，而“代价曲线(cost curve)”则可以达到该目的。代价曲线图的横轴是取值[0,1]的正例率代价，纵轴是取值[0,1]的归一化代价。<br>$$<br>P(+)cost=\frac{p\times cost_{01}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$</p>
+<p>$$<br>cost_{norm} = \frac{FNR\times p\times cost_{01}+FPR\times (1-p)\times cost_{10}}{p\times cost_{01}+(1-p)\times cost_{10}}<br>$$</p>
+<p>其中$p$是样例为正例的概率。</p>
+<p><b>【假反利率(FNR)】：</b>【假反例样本数】与【真实情况是正例的样本数】的比值。(1-查全率)</p>
+<p>代价曲线的绘制方法：</p>
+<ul>
+<li><p>ROC曲线上取点(FPR,TPR)，则可计算出FNR</p>
+</li>
+<li><p>在代价平面上取两点(0,FPR)、(1,FNR)，并且连成线段，线段下面的面积即是该条件下的期望总体代价</p>
+</li>
+<li>去遍ROC曲线上所有的点，并重复第二步</li>
+<li>所以线段下界就是学习期望总体代价</li>
+</ul>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/3-9.jpg">
+      
+    </div>
+    
+    
+    
+
+     <div>
+            
+                ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>    
+
+     <div align="center">
+          
+            <div class="copyright">
+            <p><span>
+            <b>本文地址：</b><a href="/2018/09/19/精读西瓜书-三/" title="精读西瓜书(三)">https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/</a><br /><b>转载请注明出处，谢谢！</b>
+            </span></p>
+            </div>
+          
+     </div>   
+
+
+  
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HuXuzhe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HuXuzhe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    HuXuzhe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/" title="精读西瓜书(三)">https://huxuzhe.github.io/2018/09/19/精读西瓜书-三/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/模型评估与选择/" rel="tag"><i class="fa fa-tag"></i> 模型评估与选择</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/03/精读西瓜书-二/" rel="next" title="精读西瓜书(二)">
+                <i class="fa fa-chevron-left"></i> 精读西瓜书(二)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/22/精读西瓜书-四/" rel="prev" title="精读西瓜书(四)">
+                精读西瓜书(四) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzg4MS8xNDQxMQ=="></div>
+    </div>
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/photo.jpg"
+                alt="HuXuzhe" />
+            </a>
+            
+              <p class="site-author-name" itemprop="name">HuXuzhe</p>
+              <p class="site-description motion-element" itemprop="description">机器学习、深度学习挖坑中~</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HuXuzhe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:huxuzhe1993@gmail.com" target="_blank" title="G-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>G-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://note.youdao.com/noteshare?id=db847f1aa0f5c7e82ef6e1e7bc2f436c" target="_blank" title="Youdao">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Youdao</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/haley_hu/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-quora"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/84a1d681c37f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-pencil-square-o"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hacking-linux.com" title="Kyle's Blog" target="_blank">Kyle's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xrblog.github.io" title="xrblog" target="_blank">xrblog</a>
+                  </li>
+                
+              </ul>
+             ﻿<div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("06/29/2018 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点归纳"><span class="nav-number">2.</span> <span class="nav-text">知识点归纳</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性能度量"><span class="nav-number">2.1.</span> <span class="nav-text">性能度量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回归任务"><span class="nav-number">2.1.1.</span> <span class="nav-text">回归任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#均方误差"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">均方误差</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类任务"><span class="nav-number">2.1.2.</span> <span class="nav-text">分类任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#错误率与精度"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">错误率与精度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查准率、查全率与F1"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">查准率、查全率与F1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROC与AUC"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">ROC与AUC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代价敏感错误率与代价曲线"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">代价敏感错误率与代价曲线</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuXuzhe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数统计&#58;</span> 
+    
+    <span title="全站字数统计">57.1k</span> 字
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+  主题 -
+  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+   <span id="busuanzi_container_site_pv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv" class="theme-info">
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第<span id="busuanzi_value_site_uv"></span>位访客
+  </span>
+  
+</div>
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">扫微信加好友,注明博客</div>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
