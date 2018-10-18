@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-17T09:40:03.548Z</updated>
+  <updated>2018-10-18T10:13:56.674Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,19 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时间管理(10)</title>
+    <link href="https://huxuzhe.github.io/2018/10/18/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-10/"/>
+    <id>https://huxuzhe.github.io/2018/10/18/时间管理-10/</id>
+    <published>2018-10-18T01:28:23.000Z</published>
+    <updated>2018-10-18T10:13:56.674Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;之前我们都是讲如何养成好习惯，如何做计划，但是如果存在坏习惯，也会让我们的效率大打折扣，所以今天我们在这里可以学习到如何戒掉一个坏习惯，主要是我们管不住自己。&lt;/p&gt;
+&lt;p&gt;其实身边很多人都有坏习惯，还有各种上瘾停不下来，尤其是手机瘾，看剧瘾，游戏瘾等，一旦开始就整小时正小时的消磨时间，兴奋过后，自己又觉得荒废，闭门思过几日，就又重蹈覆辙。&lt;/p&gt;
+&lt;p&gt;时间要是被大量的被娱乐，坏习惯和各种不良的思维消耗掉，我们就很难腾出更多时间来处理我们清单的任务，所以，戒掉坏习惯对我们时间管理也是非常重要的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>时间管理(9)</title>
     <link href="https://huxuzhe.github.io/2018/10/17/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-9/"/>
     <id>https://huxuzhe.github.io/2018/10/17/时间管理-9/</id>
     <published>2018-10-17T09:54:21.000Z</published>
-    <updated>2018-10-17T09:40:03.548Z</updated>
+    <updated>2018-10-18T10:14:50.746Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;一提到时间管理，我们都会想到去做计划，而一提到计划，就会去谈年计划，月计划再分解到周计划，日计划。&lt;/p&gt;
-&lt;p&gt;我们普遍以
-      
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;一提到时间管理，我们都会想到去做计划，而一提到计划，就会去谈年计划，月计划再分解到周计划，日计划。&lt;/p&gt;
+&lt;p&gt;我们普遍以为自己知道什么是计划，并且向当然的就认为自己会做计划，只是计划做的好坏不同。但是事实上，几乎所有人的认识都是错误的。我们将在这节课告诉我们&lt;b&gt;什么才是真正的计划，并聚焦于短期任务的计划给我们讲解具体的操作方法&lt;/b&gt;，而后面我们还将会讲解如何对长期的任务做计划。&lt;/p&gt;
     
     </summary>
     
@@ -546,34 +565,6 @@
       <category term="快速排序" scheme="https://huxuzhe.github.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     
       <category term="归并排序" scheme="https://huxuzhe.github.io/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python(八)</title>
-    <link href="https://huxuzhe.github.io/2018/07/08/Python-%E5%85%AB/"/>
-    <id>https://huxuzhe.github.io/2018/07/08/Python-八/</id>
-    <published>2018-07-08T07:23:13.000Z</published>
-    <updated>2018-07-08T06:53:39.327Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;re模块的使用&quot;&gt;&lt;a href=&quot;#re模块的使用&quot; class=&quot;headerlink&quot; title=&quot;re模块的使用&quot;&gt;&lt;/a&gt;re模块的使用&lt;/h3&gt;&lt;p&gt;链接：&lt;a href=&quot;http://www.runoob.com/python3/python3-reg-expressions.html#flags&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;正则表达式&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;match-正则表达式，待匹配字符串-起始位置-）&quot;&gt;&lt;a href=&quot;#match-正则表达式，待匹配字符串-起始位置-）&quot; class=&quot;headerlink&quot; title=&quot;match(正则表达式，待匹配字符串(起始位置)）&quot;&gt;&lt;/a&gt;match(正则表达式，待匹配字符串(起始位置)）&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;用于正则匹配检查，如果待匹配字符串能够匹配正则表达式，则match方法返回匹配对象，否则返回None&lt;/li&gt;
-&lt;li&gt;采用从左往右逐项比较匹配&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;实例1：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;##例如：新的邮箱手机号验证格式是否正确，用正则表达式对于格式验证&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rs = re.match(&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop.cn&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(rs)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(rs.span())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;结果：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;_sre.SRE_Match object; span=(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;), match=&lt;span class=&quot;string&quot;&gt;&#39;chinahadoop&#39;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;#匹配目标的位置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="正则化表达式" scheme="https://huxuzhe.github.io/tags/%E6%AD%A3%E5%88%99%E5%8C%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
