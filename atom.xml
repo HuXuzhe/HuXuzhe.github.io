@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-19T04:08:34.437Z</updated>
+  <updated>2018-10-19T05:19:20.510Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理辅助工具推荐</title>
+    <link href="https://huxuzhe.github.io/2018/10/19/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    <id>https://huxuzhe.github.io/2018/10/19/时间管理辅助工具推荐/</id>
+    <published>2018-10-19T05:50:36.000Z</published>
+    <updated>2018-10-19T05:19:20.510Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;在提高效率的时候，我们无法观测到我们的效率，也无法每天得知我们是否有提高，而且时间管理本来就是一件需要长时间的管理才有可能提
+      
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="工具推荐" scheme="https://huxuzhe.github.io/tags/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(11)</title>
@@ -526,34 +551,6 @@
       <category term="函数" scheme="https://huxuzhe.github.io/tags/%E5%87%BD%E6%95%B0/"/>
     
       <category term="线性代数" scheme="https://huxuzhe.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python(十)</title>
-    <link href="https://huxuzhe.github.io/2018/07/09/Python-%E5%8D%81/"/>
-    <id>https://huxuzhe.github.io/2018/07/09/Python-十/</id>
-    <published>2018-07-08T16:38:02.000Z</published>
-    <updated>2018-07-08T15:47:40.427Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;微信用户数据分析&quot;&gt;&lt;a href=&quot;#微信用户数据分析&quot; class=&quot;headerlink&quot; title=&quot;微信用户数据分析&quot;&gt;&lt;/a&gt;微信用户数据分析&lt;/h3&gt;&lt;h4 id=&quot;微信接口itchat&quot;&gt;&lt;a href=&quot;#微信接口itchat&quot; class=&quot;headerlink&quot; title=&quot;微信接口itchat&quot;&gt;&lt;/a&gt;微信接口itchat&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;第三方开源的微信个人接口&lt;/li&gt;
-&lt;li&gt;安装方法：pip install itchat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;用户数据分析指标&quot;&gt;&lt;a href=&quot;#用户数据分析指标&quot; class=&quot;headerlink&quot; title=&quot;用户数据分析指标&quot;&gt;&lt;/a&gt;用户数据分析指标&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;不同性别好友人数和占比&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="微信接口itchat" scheme="https://huxuzhe.github.io/tags/%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%8F%A3itchat/"/>
-    
-      <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
     
   </entry>
   
