@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-18T10:13:56.674Z</updated>
+  <updated>2018-10-19T04:08:34.437Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(11)</title>
+    <link href="https://huxuzhe.github.io/2018/10/19/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-11/"/>
+    <id>https://huxuzhe.github.io/2018/10/19/时间管理-11/</id>
+    <published>2018-10-19T04:06:33.000Z</published>
+    <updated>2018-10-19T04:08:34.437Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;我们学习了那么多的方法，都是为了 提高做事的效率，能够专注和轻松的执行任务，但是很多人都觉得自己容易分心、执行力差，但事实上，多数人都是&lt;b&gt;计划能力弱&lt;/b&gt;。&lt;/p&gt;
+&lt;p&gt;做事时候要想专注于行动，那么前期的准备工作是必不可少的。那么，我们应该如何提高效率呢，乃至用20的精力完成80的任务呢？我们在这节将要讲&lt;b&gt;环境创设法和帕金森法&lt;/b&gt;，帮我们在做事之前消灭所有的分心因素，进而达到心无旁骛的状态，提高做事效率。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(10)</title>
@@ -533,38 +554,6 @@
       <category term="微信接口itchat" scheme="https://huxuzhe.github.io/tags/%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%8F%A3itchat/"/>
     
       <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python(九)</title>
-    <link href="https://huxuzhe.github.io/2018/07/09/Python-%E4%B9%9D/"/>
-    <id>https://huxuzhe.github.io/2018/07/09/Python-九/</id>
-    <published>2018-07-08T16:11:44.000Z</published>
-    <updated>2018-07-08T16:00:33.151Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h3&gt;&lt;h4 id=&quot;原理：&quot;&gt;&lt;a href=&quot;#原理：&quot; class=&quot;headerlink&quot; title=&quot;原理：&quot;&gt;&lt;/a&gt;原理：&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;循环遍历列表，每次循环找出本次循环最大的元素排在后边&lt;/li&gt;
-&lt;li&gt;需要使用嵌套循环实现，外层循环控制总循环次数，内存循环负责每轮的循环比较&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img title=&quot;冒泡排序&quot; src=&quot;http://pbhfphh1b.bkt.clouddn.com/static/images/L9-1.png&quot;&gt;
-    
-    </summary>
-    
-      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="数据结构与算法" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="冒泡排序" scheme="https://huxuzhe.github.io/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
-    
-      <category term="选择排序" scheme="https://huxuzhe.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
-    
-      <category term="快速排序" scheme="https://huxuzhe.github.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
-    
-      <category term="归并排序" scheme="https://huxuzhe.github.io/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
