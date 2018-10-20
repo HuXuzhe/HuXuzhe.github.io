@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-19T05:25:50.717Z</updated>
+  <updated>2018-10-20T04:55:02.256Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时间管理(12)</title>
+    <link href="https://huxuzhe.github.io/2018/10/20/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-12/"/>
+    <id>https://huxuzhe.github.io/2018/10/20/时间管理-12/</id>
+    <published>2018-10-20T05:55:02.000Z</published>
+    <updated>2018-10-20T04:55:02.256Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>时间管理辅助工具推荐</title>
     <link href="https://huxuzhe.github.io/2018/10/19/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
     <id>https://huxuzhe.github.io/2018/10/19/时间管理辅助工具推荐/</id>
     <published>2018-10-19T05:50:36.000Z</published>
-    <updated>2018-10-19T05:25:50.717Z</updated>
+    <updated>2018-10-19T05:26:00.512Z</updated>
     
     <summary type="html">
     
@@ -512,43 +526,6 @@
       <category term="Numpy" scheme="https://huxuzhe.github.io/tags/Numpy/"/>
     
       <category term="Python进阶" scheme="https://huxuzhe.github.io/tags/Python%E8%BF%9B%E9%98%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习数学基础(一)</title>
-    <link href="https://huxuzhe.github.io/2018/07/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E4%B8%80/"/>
-    <id>https://huxuzhe.github.io/2018/07/09/机器学习数学基础-一/</id>
-    <published>2018-07-09T02:43:59.000Z</published>
-    <updated>2018-07-09T08:03:37.056Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面:&quot;&gt;&lt;/a&gt;写在前面:&lt;/h2&gt;&lt;h3 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;函数与数据的泛化&lt;/li&gt;
-&lt;li&gt;推理与归纳&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;线性代数&quot;&gt;&lt;a href=&quot;#线性代数&quot; class=&quot;headerlink&quot; title=&quot;线性代数&quot;&gt;&lt;/a&gt;线性代数&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;向量与矩阵&lt;/li&gt;
-&lt;li&gt;特征值与特征空间&lt;/li&gt;
-&lt;li&gt;高维空间向量&lt;/li&gt;
-&lt;li&gt;特征向量&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="数学基础" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="数学" scheme="https://huxuzhe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="函数" scheme="https://huxuzhe.github.io/tags/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="线性代数" scheme="https://huxuzhe.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
