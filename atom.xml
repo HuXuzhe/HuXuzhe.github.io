@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-20T17:22:04.290Z</updated>
+  <updated>2018-10-21T06:54:52.558Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(13)</title>
+    <link href="https://huxuzhe.github.io/2018/10/21/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-13/"/>
+    <id>https://huxuzhe.github.io/2018/10/21/时间管理-13/</id>
+    <published>2018-10-21T06:45:06.000Z</published>
+    <updated>2018-10-21T06:54:52.558Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;之前，我们都谈了关于好习惯的养成，坏习惯如何戒掉，长期任务与短期任务如何制定并且有步骤，通过具体化行为来一步步完成，通过小红花法来奖励自己并做好记录，来查看近期完成的情况。&lt;br&gt;这次，我们通过场景答疑来提升自己，提高自己的时间效率，也可以说是工作效率。今天讲的就是，&lt;b&gt;团队领导应如何管理使得员工不累，效率翻倍&lt;/b&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(12)</title>
@@ -467,71 +487,6 @@
     
     
       <category term="pandas" scheme="https://huxuzhe.github.io/tags/pandas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Numpy</title>
-    <link href="https://huxuzhe.github.io/2018/07/09/Numpy/"/>
-    <id>https://huxuzhe.github.io/2018/07/09/Numpy/</id>
-    <published>2018-07-09T09:00:27.000Z</published>
-    <updated>2018-07-09T16:53:22.372Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;h3 id=&quot;Drew-Conway认为数据科学包括：&quot;&gt;&lt;a href=&quot;#Drew-Conway认为数据科学包括：&quot; class=&quot;headerlink&quot; title=&quot;Drew Conway认为数据科学包括：&quot;&gt;&lt;/a&gt;Drew Conway认为数据科学包括：&lt;/h3&gt;&lt;h4 id=&quot;黑客技术：&quot;&gt;&lt;a href=&quot;#黑客技术：&quot; class=&quot;headerlink&quot; title=&quot;黑客技术：&quot;&gt;&lt;/a&gt;黑客技术：&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;如编程能力&lt;/li&gt;
-&lt;li&gt;向量化操作和算法思想&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;数学和统计知识&quot;&gt;&lt;a href=&quot;#数学和统计知识&quot; class=&quot;headerlink&quot; title=&quot;数学和统计知识&quot;&gt;&lt;/a&gt;数学和统计知识&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;如常见的分布、最小二乘法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;实质性的专业知识&quot;&gt;&lt;a href=&quot;#实质性的专业知识&quot; class=&quot;headerlink&quot; title=&quot;实质性的专业知识&quot;&gt;&lt;/a&gt;实质性的专业知识&lt;/h4&gt;&lt;hr&gt;
-&lt;h3 id=&quot;数据科学设计到的操作-by-David-Donoho&quot;&gt;&lt;a href=&quot;#数据科学设计到的操作-by-David-Donoho&quot; class=&quot;headerlink&quot; title=&quot;数据科学设计到的操作 by David Donoho&quot;&gt;&lt;/a&gt;数据科学设计到的操作 by David Donoho&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;数据探索与准备&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;数据操作、清洗等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;数据展现形式与转化&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;不同格式的数据操作，表格型、图像、文本等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;关于数据的计算&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;通过编程（python或R）计算分析数据&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;数据建模&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;预测、聚类等机器学习模型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;数据可视化与展示&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;绘图、交互式、动画等&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&quot;6&quot;&gt;
-&lt;li&gt;数据科学和涉及到的学科知识&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;何为数据分析&quot;&gt;&lt;a href=&quot;#何为数据分析&quot; class=&quot;headerlink&quot; title=&quot;何为数据分析&quot;&gt;&lt;/a&gt;何为数据分析&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;用适当的&lt;font color=&quot;red&quot;&gt;统计分析方法&lt;/font&gt;对收集来的&lt;font color=&quot;red&quot;&gt;大量数据&lt;/font&gt;进行分析，提取有用&lt;font color=&quot;red&quot;&gt;信息&lt;/font&gt;和形成&lt;font color=&quot;red&quot;&gt;结论&lt;/font&gt;对数据加以&lt;font color=&quot;red&quot;&gt;详细研究&lt;/font&gt;和&lt;font color=&quot;red&quot;&gt;概括总结&lt;/font&gt;的过程。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="Numpy" scheme="https://huxuzhe.github.io/tags/Numpy/"/>
-    
-      <category term="Python进阶" scheme="https://huxuzhe.github.io/tags/Python%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
