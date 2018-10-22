@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-21T06:54:52.558Z</updated>
+  <updated>2018-10-22T14:49:49.567Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(14)</title>
+    <link href="https://huxuzhe.github.io/2018/10/23/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-14/"/>
+    <id>https://huxuzhe.github.io/2018/10/23/时间管理-14/</id>
+    <published>2018-10-22T15:31:57.000Z</published>
+    <updated>2018-10-22T14:49:49.567Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;继续纪元老师的场景答疑，这次是对于在校大学生的答疑问题，因为时间的分散，从而不知道如何安排并管理自己的时间。高中的时间都是被
+      
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(13)</title>
@@ -461,32 +484,6 @@
     
     
       <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandas</title>
-    <link href="https://huxuzhe.github.io/2018/07/09/Pandas/"/>
-    <id>https://huxuzhe.github.io/2018/07/09/Pandas/</id>
-    <published>2018-07-09T11:29:28.000Z</published>
-    <updated>2018-07-10T03:29:35.426Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Pandas进阶及统计分析&quot;&gt;&lt;a href=&quot;#Pandas进阶及统计分析&quot; class=&quot;headerlink&quot; title=&quot;Pandas进阶及统计分析&quot;&gt;&lt;/a&gt;Pandas进阶及统计分析&lt;/h2&gt;&lt;h3 id=&quot;基本数据对象及操作&quot;&gt;&lt;a href=&quot;#基本数据对象及操作&quot; class=&quot;headerlink&quot; title=&quot;基本数据对象及操作&quot;&gt;&lt;/a&gt;基本数据对象及操作&lt;/h3&gt;&lt;h3 id=&quot;数据清洗&quot;&gt;&lt;a href=&quot;#数据清洗&quot; class=&quot;headerlink&quot; title=&quot;数据清洗&quot;&gt;&lt;/a&gt;数据清洗&lt;/h3&gt;&lt;h3 id=&quot;数据合并及分组&quot;&gt;&lt;a href=&quot;#数据合并及分组&quot; class=&quot;headerlink&quot; title=&quot;数据合并及分组&quot;&gt;&lt;/a&gt;数据合并及分组&lt;/h3&gt;&lt;h3 id=&quot;透视表&quot;&gt;&lt;a href=&quot;#透视表&quot; class=&quot;headerlink&quot; title=&quot;透视表&quot;&gt;&lt;/a&gt;透视表&lt;/h3&gt;&lt;hr&gt;
-&lt;h2 id=&quot;基本数据对象及操作-1&quot;&gt;&lt;a href=&quot;#基本数据对象及操作-1&quot; class=&quot;headerlink&quot; title=&quot;基本数据对象及操作&quot;&gt;&lt;/a&gt;基本数据对象及操作&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;2008年由Wes McKinney创建&lt;/li&gt;
-&lt;li&gt;一个强大的分析结构化数据的工具集&lt;/li&gt;
-&lt;li&gt;基础是NumPy，提供了高性能矩阵的运算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;链接：&lt;a href=&quot;http://pandas.pydata.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pandas&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="pandas" scheme="https://huxuzhe.github.io/tags/pandas/"/>
     
   </entry>
   
