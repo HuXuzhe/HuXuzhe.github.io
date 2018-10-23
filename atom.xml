@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-22T14:49:49.567Z</updated>
+  <updated>2018-10-23T05:09:21.053Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(15)</title>
+    <link href="https://huxuzhe.github.io/2018/10/23/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-15/"/>
+    <id>https://huxuzhe.github.io/2018/10/23/时间管理-15/</id>
+    <published>2018-10-23T05:43:30.000Z</published>
+    <updated>2018-10-23T05:09:21.053Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;继续场景答疑，长期自律的人真的不累吗？关于这个问题，纪元老师给我讲述了【高效休息法】。让我们将时间管理养成活动，而不是把自己逼到一个巅峰，那样是会很累的！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(14)</title>
@@ -445,45 +465,6 @@
     
     
       <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Matplotlib</title>
-    <link href="https://huxuzhe.github.io/2018/07/10/Matplotlib/"/>
-    <id>https://huxuzhe.github.io/2018/07/10/Matplotlib/</id>
-    <published>2018-07-10T02:48:44.000Z</published>
-    <updated>2018-07-10T03:29:52.237Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数据展示及可视化&quot;&gt;&lt;a href=&quot;#数据展示及可视化&quot; class=&quot;headerlink&quot; title=&quot;数据展示及可视化&quot;&gt;&lt;/a&gt;数据展示及可视化&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;数据可视化的重要性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;基本图表的绘制及应用场景&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数据分析常用图标的绘制&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pandas及Seaborn绘图&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;其他常用的可视化工具&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;数据可视化准则&quot;&gt;&lt;a href=&quot;#数据可视化准则&quot; class=&quot;headerlink&quot; title=&quot;数据可视化准则&quot;&gt;&lt;/a&gt;数据可视化准则&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;真实性(Truthful)&lt;/li&gt;
-&lt;li&gt;功能性(Functionality)&lt;/li&gt;
-&lt;li&gt;美观(Beauty)&lt;/li&gt;
-&lt;li&gt;深刻性(Insightful)&lt;/li&gt;
-&lt;li&gt;启发性(Enlightening)&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="数据处理" scheme="https://huxuzhe.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="matplotlib" scheme="https://huxuzhe.github.io/tags/matplotlib/"/>
     
   </entry>
   
