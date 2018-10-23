@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-23T05:09:21.053Z</updated>
+  <updated>2018-10-23T15:40:46.683Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初学者Python入门以及环境搭建</title>
+    <link href="https://huxuzhe.github.io/2018/10/23/%E5%88%9D%E5%AD%A6%E8%80%85Python%E5%85%A5%E9%97%A8%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>https://huxuzhe.github.io/2018/10/23/初学者Python入门以及环境搭建/</id>
+    <published>2018-10-23T08:57:40.000Z</published>
+    <updated>2018-10-23T15:40:46.683Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;本章写的是适用于准备进入AI领域，开始着手准备学习Python的同学。希望能帮助到大家，欢迎关注&lt;b&gt;“AI数据分析算法”&lt;/b&gt;公众号，加入我们的“AI Legends”—-AI 联盟。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://huxuzhe.github.io/categories/Python/"/>
+    
+    
+      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(15)</title>
@@ -436,35 +456,6 @@
     
     
       <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精读西瓜书(一)</title>
-    <link href="https://huxuzhe.github.io/2018/09/02/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E4%B8%80/"/>
-    <id>https://huxuzhe.github.io/2018/09/02/精读西瓜书-一/</id>
-    <published>2018-09-01T15:05:07.000Z</published>
-    <updated>2018-09-02T06:36:07.492Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;我们在这里将学习到以下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;机器学习定义&lt;/li&gt;
-&lt;li&gt;基本术语&lt;/li&gt;
-&lt;li&gt;假设空间&lt;/li&gt;
-&lt;li&gt;归纳偏好&lt;/li&gt;
-&lt;li&gt;发展历程(了解即可)&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
-    
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
