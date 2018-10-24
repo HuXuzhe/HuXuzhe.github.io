@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-24T03:28:44.839Z</updated>
+  <updated>2018-10-24T08:00:40.627Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(16)</title>
+    <link href="https://huxuzhe.github.io/2018/10/24/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-16/"/>
+    <id>https://huxuzhe.github.io/2018/10/24/时间管理-16/</id>
+    <published>2018-10-24T09:00:40.000Z</published>
+    <updated>2018-10-24T08:00:40.627Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>初学者Python入门以及环境搭建</title>
@@ -416,37 +430,6 @@
 &lt;p&gt;在预测任务中，$y_i$是示例$x_i$的真实标记，要评估学习器$f$的性能，需要把学习器预测结果$f(x)$与真实标记$y$进行比较。&lt;/p&gt;
 &lt;p&gt;因为有标记，所以讨论的是监督性学习。&lt;/p&gt;
 &lt;img src=&quot;http://pbhfphh1b.bkt.clouddn.com/static/images/3-1.png&quot;&gt;
-    
-    </summary>
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
-    
-    
-      <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精读西瓜书(二)</title>
-    <link href="https://huxuzhe.github.io/2018/09/03/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E4%BA%8C/"/>
-    <id>https://huxuzhe.github.io/2018/09/03/精读西瓜书-二/</id>
-    <published>2018-09-03T12:17:39.000Z</published>
-    <updated>2018-09-20T08:02:28.942Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面：&quot;&gt;&lt;a href=&quot;#写在前面：&quot; class=&quot;headerlink&quot; title=&quot;写在前面：&quot;&gt;&lt;/a&gt;写在前面：&lt;/h1&gt;&lt;p&gt;第二章主要让我们了解经验误差与拟合，评估方法，比较检验以及偏差与方法，重点主要是评估方法，理解过拟合与欠拟合，roc曲线。&lt;/p&gt;
-&lt;h1 id=&quot;知识点归纳&quot;&gt;&lt;a href=&quot;#知识点归纳&quot; class=&quot;headerlink&quot; title=&quot;知识点归纳&quot;&gt;&lt;/a&gt;知识点归纳&lt;/h1&gt;&lt;h2 id=&quot;经验误差与过拟合&quot;&gt;&lt;a href=&quot;#经验误差与过拟合&quot; class=&quot;headerlink&quot; title=&quot;经验误差与过拟合&quot;&gt;&lt;/a&gt;经验误差与过拟合&lt;/h2&gt;&lt;p&gt;&lt;b&gt;【错误率(error rate)】&lt;/b&gt;：分类错误的样本占样本总数的比例&lt;/p&gt;
-&lt;p&gt;例：m个样本中有a个样本分类错误，则错误率$E = a / m$&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;【精度(accuracy)】&lt;/b&gt;：分类正确的样本数占样本总数的比例&lt;/p&gt;
-&lt;p&gt;例：m个样本中有m-a个分类正确，则精度$A = 1 - E$&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;【误差(error)】&lt;/b&gt;:学习器的实际预测输出与样本的真实输出之间的差异&lt;/p&gt;
-&lt;p&gt;例：比如有1000个西瓜，其中真实的好瓜有600个，但是学习器预测的只有400个，这之间的差异就是误差。&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;【训练误差(training error)或经验误差(empirical error)】&lt;/b&gt;：学习器在训练集上的误差&lt;/p&gt;
-&lt;p&gt;注意：学习器就是在训练集上训练出来的，但实际上在回到训练集上对样本进行结果预测的时候，仍会存在误差。（换句话说，就是结果值与标记值不同）&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;【泛化误差(generalization error)】&lt;/b&gt;:学习器在新样本上的误差&lt;/p&gt;
     
     </summary>
     
