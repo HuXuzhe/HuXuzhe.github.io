@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-10-25T05:40:27.411Z</updated>
+  <updated>2018-10-26T04:49:20.116Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理(18)</title>
+    <link href="https://huxuzhe.github.io/2018/10/26/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-18/"/>
+    <id>https://huxuzhe.github.io/2018/10/26/时间管理-18/</id>
+    <published>2018-10-26T05:14:37.000Z</published>
+    <updated>2018-10-26T04:49:20.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;场景答疑第六天，为什么我们只坚持具体行为？【具象法】&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class
+      
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>时间管理(17)</title>
@@ -414,32 +438,6 @@
     
     
       <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>精读西瓜书(四)</title>
-    <link href="https://huxuzhe.github.io/2018/09/22/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6-%E5%9B%9B/"/>
-    <id>https://huxuzhe.github.io/2018/09/22/精读西瓜书-四/</id>
-    <published>2018-09-22T11:56:00.000Z</published>
-    <updated>2018-09-24T02:07:38.735Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;继续西瓜书第二章内容，这篇内容以比较检验，偏差与方差为主，即将结束西瓜书第二章内容。&lt;/p&gt;
-&lt;h1 id=&quot;知识点归纳&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="精读西瓜书" scheme="https://huxuzhe.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%B2%BE%E8%AF%BB%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
-    
-    
-      <category term="模型评估与选择" scheme="https://huxuzhe.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
     
   </entry>
   
