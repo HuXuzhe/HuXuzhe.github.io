@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-11-06T03:08:56.444Z</updated>
+  <updated>2018-11-06T15:39:45.435Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CS231n笔记(1)</title>
+    <link href="https://huxuzhe.github.io/2018/11/06/CS231n%E7%AC%94%E8%AE%B0-1/"/>
+    <id>https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/</id>
+    <published>2018-11-06T10:24:46.000Z</published>
+    <updated>2018-11-06T15:39:45.435Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt; 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。&lt;/p&gt;
+&lt;p&gt;关注公众号：AI数据算法分析&lt;br&gt;大家一起进步学习人工智能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CV" scheme="https://huxuzhe.github.io/categories/CV/"/>
+    
+    
+      <category term="CS231n笔记" scheme="https://huxuzhe.github.io/tags/CS231n%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>时间管理---实用工具(2)</title>
     <link href="https://huxuzhe.github.io/2018/11/06/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7-2/"/>
     <id>https://huxuzhe.github.io/2018/11/06/时间管理-实用工具-2/</id>
     <published>2018-11-06T03:13:30.000Z</published>
-    <updated>2018-11-06T03:08:56.444Z</updated>
+    <updated>2018-11-06T05:19:14.684Z</updated>
     
     <summary type="html">
     
@@ -417,28 +438,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;前面我们学习如何管理任务和习惯，并且化为了一个个行动记入了待清理清单。经常有人说，每天都很忙，但一天到头缺又不知道自己都忙了什么，就好像在说：“抽屉里东西很多，却不知道都有什么。”这一小节，我们将学习到如何安排日程的相关要领，帮助我们过上井井有条的每一天，并从中获得成就感。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-    
-      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间管理(7)</title>
-    <link href="https://huxuzhe.github.io/2018/10/15/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-7/"/>
-    <id>https://huxuzhe.github.io/2018/10/15/时间管理-7/</id>
-    <published>2018-10-15T02:53:21.000Z</published>
-    <updated>2018-10-16T10:15:36.273Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;锻炼身体可以增加我们生命的长度和质量，但在这件事上，我们投入的时间比较少，尤其对于长期加班，工作学习繁重的人，“没时间”就成了万能的挡箭牌。&lt;/p&gt;
-&lt;p&gt;其实健身这件事不需要那么多时间，既不需要你煞有介事的跑到健身房送钱办卡，也不需要你一个小时半个小时苦哈哈的跑步，那些听上去高大上的事情往往是最难坚持的，你也不需要为了证明什么而来折磨自己。&lt;/p&gt;
-&lt;p&gt;其实吧，&lt;b&gt;只要方法得当，仅仅利用碎片化的时间，付出极小的努力&lt;/b&gt;，就能达到健身的标准，而且还有更有趣呢~~&lt;/p&gt;
     
     </summary>
     
