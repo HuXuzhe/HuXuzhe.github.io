@@ -88,13 +88,13 @@
 
 
 
-<meta name="description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
+<meta name="description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。如果想查看原版笔记，可以查看下面CS231n-notes，点击则可查看。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
 <meta name="keywords" content="CS231n笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS231n笔记(1)">
 <meta property="og:url" content="https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/index.html">
 <meta property="og:site_name" content="Haley_Hu&#39;s Blog">
-<meta property="og:description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
+<meta property="og:description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。如果想查看原版笔记，可以查看下面CS231n-notes，点击则可查看。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-1.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-2.png">
@@ -110,10 +110,10 @@
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-12.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-13.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-14.png">
-<meta property="og:updated_time" content="2018-11-07T04:54:47.137Z">
+<meta property="og:updated_time" content="2018-11-07T05:04:29.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS231n笔记(1)">
-<meta name="twitter:description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
+<meta name="twitter:description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。如果想查看原版笔记，可以查看下面CS231n-notes，点击则可查看。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
 <meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-1.png">
 
 
@@ -366,7 +366,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-07T13:54:47+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-07T14:04:29+09:00">
                 2018-11-07
               </time>
             
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,317字
+                  2,342字
                 </span>
               
 
@@ -459,7 +459,7 @@
       
 
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p> 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。</p>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p> 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。如果想查看原版笔记，可以查看下面CS231n-notes，点击则可查看。</p>
 <p>关注公众号：AI数据算法分析<br>大家一起进步学习人工智能。</p>
 <a id="more"></a>
 <h1 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h1><p>此篇内容主要讲CS231n课程内容，根据B站课程内容P4部分的笔记总结。</p>
@@ -469,6 +469,7 @@
 </ul>
 <hr>
 <p><a href="https://www.bilibili.com/video/av17204303/?p=4" target="_blank" rel="noopener">CS231n P4课程—图像分类</a></p>
+<p><a href="http://cs231n.github.io/classification/" target="_blank" rel="noopener">CS231n-notes</a></p>
 <h2 id="图像分类"><a href="#图像分类" class="headerlink" title="图像分类"></a>图像分类</h2><p>课程开始于5:09左右，如果大家想直接进入课程的，可以直接跳到5分09秒开始。</p>
 <img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-1.png">
 <p>如上图，图片分类是计算机视觉的核心任务。</p>
@@ -525,7 +526,7 @@
 <p>与其只找最近的那一个图片的标签，不如找相似的K个图片的标签，然后进行投票，票数最多的标签得胜，作为该预测图片的标签。这样就让分类的效果更平滑，对异常值更有抵抗力。</p>
 <img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-14.png">
 <p>从上面的示例可以看出，不同颜色的区域代表的是使用L1距离的分类器的决策边界。白色区域表示不同类别投票数相同时的预测模糊区域(图像与两个以上的分类标签绑定)。需要注意的就是异常数据点，比如3-NN分类器中，红色区域中有紫色的点，导致在紫色区域内有一个红色凸起预测区域，这也表示出现了过拟合现象，即使是训练数据的噪声也进行了很好地学习。但是在5-NN中，整个区域边界就变得非常的平滑，这说明对测试数据的泛化能力更好。</p>
-<p>下一章，就讲解K-NN算法，如何确定K值，请关注<a href="">CS231n笔记(2)</a>—KNN算法。</p>
+<p>下一章，就讲解K-NN算法，如何确定K值，请关注<a href="https://huxuzhe.github.io/2018/11/07/CS231n%E7%AC%94%E8%AE%B0-2/">CS231n笔记(2)</a>—KNN算法。</p>
 
       
     </div>
@@ -569,7 +570,7 @@
   <p><span>本文标题:</span><a href="/2018/11/06/CS231n笔记-1/">CS231n笔记(1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月06日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月07日 - 12:11</p>
+  <p><span>最后更新:</span>2018年11月07日 - 13:11</p>
   <p><span>原始链接:</span><a href="/2018/11/06/CS231n笔记-1/" title="CS231n笔记(1)">https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/"  aria-label="复制成功！"></i></span>
   </p>
