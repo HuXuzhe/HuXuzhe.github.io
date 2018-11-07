@@ -107,7 +107,10 @@
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-7.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-8.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-11.png">
-<meta property="og:updated_time" content="2018-11-06T15:39:45.435Z">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-12.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-13.png">
+<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-14.png">
+<meta property="og:updated_time" content="2018-11-07T04:54:47.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CS231n笔记(1)">
 <meta name="twitter:description" content="写在前面 本文是并不是完全对于CS231n课程的全部翻译，只是作者对课程的一个总结的笔记记录。如有错误的地方，请指出并留言，作者十分感谢。 关注公众号：AI数据算法分析大家一起进步学习人工智能。">
@@ -347,7 +350,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T18:24:46+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T19:24:46+09:00">
                 2018-11-06
               </time>
             
@@ -363,8 +366,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-06T23:39:45+08:00">
-                2018-11-06
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-07T13:54:47+09:00">
+                2018-11-07
               </time>
             
           </span>
@@ -419,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,021字
+                  2,317字
                 </span>
               
 
@@ -435,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  9 分钟
                 </span>
               
             </div>
@@ -473,7 +476,7 @@
 <img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-2.png">
 <p><b>例子：</b>如上图，计算机通过对图像进行分类，并生成集合，比如{cat,dog,pig,plane,..}，然后对输入的图像进行计算，得到在集合中标签的的概率，从而来预测图片属于哪个分类。</p>
 <p><b>计算机中的图片：</b></p>
-<p>计算机是如何识别图片的，当然是和我们识别图片的方法不一样。图像是由一个巨大的三维数组组成的，在上述图片的例子中。这张图片的分辨率是248$\times$400，就可以说这张图片的长度是248个像素，高有400个像素；并且这是一张彩色图片，因此有3个颜色通道，分别是红绿蓝，简称RGB。所以该图像总共有$248\times400\times3=297600$个数字。由于RBG三个三原色的强度范围都是0~255，其中0表示全黑，255就表示全白。</p>
+<p>计算机是如何识别图片的，当然是和我们识别图片的方法不一样。图像是由一个巨大的三维数组组成的，在上述图片的例子中。这张图片的分辨率是248$\times$400，就可以说这张图片的长度是248个像素，高有400个像素；并且这是一张彩色图片，因此有3个颜色通道，分别是红绿蓝，简称RGB。所以该图像总共有$248\times400\times3=297600$个数字。由于RGB三个三原色的强度范围都是0~255，其中0表示全黑，255就表示全白。</p>
 <p>我们的目标和任务就是把这些上百万的数字变成一个简单的标签，用来预测输入的图片。如下图所示。</p>
 <img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-3.png">
 <p>虽然是对于图片的简单的分类，对于我们来说，识别一只猫是非常简单的。但是对于计算机来说，还是有一定的困难，会遇到一定的问题。</p>
@@ -501,7 +504,28 @@
 </ol>
 <p>我们来看一看收集的数据集，如下图所示，只有4个分类的训练集。但在实际中，我们可能有上千分类，每个分类都有成千上万的图像。</p>
 <img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-11.png">
-<h2 id="Nearest-Neighbor-分类器"><a href="#Nearest-Neighbor-分类器" class="headerlink" title="Nearest Neighbor 分类器"></a>Nearest Neighbor 分类器</h2><p>未完待续…..</p>
+<h2 id="Nearest-Neighbor-分类器"><a href="#Nearest-Neighbor-分类器" class="headerlink" title="Nearest Neighbor 分类器"></a>Nearest Neighbor 分类器</h2><p>作为课程的介绍的第一个方法，来实现图片分类。但是实际上用的比较少，甚至说极少，但对于新手来说，可以对解决图像分类方法有个初步的认识。</p>
+<p>举例：<br>图像分类数据集：<a href="http://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" rel="noopener">CIFAR10</a><br><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-12.png"></p>
+<p>这个数据集有10个分类，50000个训练集图片以及10000张测试集图片。左边是样本图像。右边的第一列是测试图像，箭头右边的则是使用Nearest-Neighbor算法，从训练集中选出最类似的10张图片。</p>
+<p>可以观察出，例如第一行，飞机被分错了，可有可能的原因就是，背景颜色都是黑的，这才导致被判断错误。可以看出虽然图片分类的准确度没有那么高，但这仍然是一个好的demo。那具体是如何比较两张图片呢？是如何进行分类的呢？</p>
+<p>这里用的到方式是逐个像素的比较，最后将他们的差异值全部加起来。换句话说，就是将图片转化为两个向量$I_1$和$I_2$，然后计算他们的$L_1$距离(<a href="https://baike.baidu.com/item/%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB" target="_blank" rel="noopener">曼哈顿距离</a>)。<br>$$<br>d_1(I_1,I_2)=\sum_p|I_1^p-I_2^p|<br>$$<br><img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-13.png"></p>
+<p>差异值越小，说明图片就越相似。</p>
+<hr>
+<p>下面，我们来通过代码实现这个分类器。首先，将数据集加载到内存中，并分为4组。分别是训练特征(Xtr)、训练标签(Ytr)、测试特征(Xte)、测试标签(Yte)。Xtr的大小是$50000\times32\times32\times3$，而Ytr则是一个$50000\times1$，每个数值大小的范围是0~9(因为一共有10个分类)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Xtr, Ytr, Xte, Yte =load_CIFAR10(<span class="string">'data/cifar10'</span>) <span class="comment">#loaddown all of images</span></span><br><span class="line">Xtr_rows = Xtr.reshape(Xtr.shape[<span class="number">0</span>], <span class="number">32</span>*<span class="number">32</span>*<span class="number">3</span>) <span class="comment">#Xtr_rows becomes 50000 x 3072</span></span><br><span class="line">Xte_rows = Xte.reshape(Xte.shape[<span class="number">0</span>], <span class="number">32</span>*<span class="number">32</span>*<span class="number">3</span>) <span class="comment">#Xte_rows becomes 50000 x 3072</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">接下来创建一个Nearest Neighbor的分类器</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">nn = NearestNeighbor() <span class="comment">#creat a  Nearest Neighbor classifier class</span></span><br><span class="line">nn.train(Xtr_rows, Ytr) <span class="comment">#train the classifier</span></span><br><span class="line">Yte_predict = nn.predict(Xte_rows) <span class="comment">#predict label on the test images</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"accuracy:&#123;:.2f&#125;"</span>.format(np.mean(Yte_predict == Yte)))</span><br></pre></td></tr></table></figure>
+<p>下面是L1距离的Nearest Neighbor分类器的实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NearestNeighbor</span><span class="params">(object)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#memorize training data</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">(self, X, y)</span>:</span></span><br><span class="line">    <span class="string">""" X is N x D where each row is an example. Y is 1-dimension of size N """</span></span><br><span class="line">    <span class="comment"># the nearest neighbor classifier simply remembers all the training data</span></span><br><span class="line">    self.Xtr = X</span><br><span class="line">    self.ytr = y</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, X)</span>:</span></span><br><span class="line">    <span class="string">""" X is N x D where each row is an example we wish to predict label for """</span></span><br><span class="line">    num_test = X.shape[<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># lets make sure that the output type matches the input type</span></span><br><span class="line">    Ypred = np.zeros(num_test, dtype = self.ytr.dtype)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#for each test iimage :find closest train image,predict lavel of nearest image</span></span><br><span class="line">    <span class="comment"># loop over all test rows</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> xrange(num_test):</span><br><span class="line">      <span class="comment"># find the nearest training image to the i'th test image</span></span><br><span class="line">      <span class="comment"># using the L1 distance (sum of absolute value differences)</span></span><br><span class="line">      distances = np.sum(np.abs(self.Xtr - X[i,:]), axis = <span class="number">1</span>)</span><br><span class="line">      min_index = np.argmin(distances) <span class="comment"># get the index with smallest distance</span></span><br><span class="line">      Ypred[i] = self.ytr[min_index] <span class="comment"># predict the label of the nearest example</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> Ypred</span><br></pre></td></tr></table></figure>
+<p>用这个方法的准确率远不如CNN(卷积神经网络)，所以也是极少用的原因。</p>
+<p>当然距离不止是曼哈顿距离一个，还有欧式距离($L_2$距离)，公式如下：<br>$$<br>d_2(I_1,I_2)=\sqrt{\sum_p(I_1^p-I^p_2)^2}<br>$$<br>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">distances = np.sqrt(np.sum(np.square(self.Xtr-X[i,;], axis = <span class="number">1</span>)))</span><br></pre></td></tr></table></figure>
+<p>注意在这里使用了<strong>np.sqrt</strong>，但是在实际中可能不用。因为求平方根函数是一个<em>单调函数</em>，它对不同距离的绝对值求平方根虽然改变了数值大小，但依然保持了不同距离大小的顺序。所以用不用它，都能够对像素差异的大小进行正确比较。</p>
+<p><strong>L1和L2比较</strong>。比较这两个度量方式是挺有意思的。在面对两个向量之间的差异时，L2比L1更加不能容忍这些差异。也就是说，相对于1个巨大的差异，L2距离更倾向于接受多个中等程度的差异。</p>
+<p>具体可参考：<a href="https://huxuzhe.github.io/2018/07/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E4%B8%80/">机器学习数学基础（一）</a>，里面讲解了具体的P-norm。</p>
+<h2 id="K-Nearest-Neighbor-分类器"><a href="#K-Nearest-Neighbor-分类器" class="headerlink" title="K-Nearest Neighbor 分类器"></a>K-Nearest Neighbor 分类器</h2><p>原理：</p>
+<p>与其只找最近的那一个图片的标签，不如找相似的K个图片的标签，然后进行投票，票数最多的标签得胜，作为该预测图片的标签。这样就让分类的效果更平滑，对异常值更有抵抗力。</p>
+<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/cv-14.png">
+<p>从上面的示例可以看出，不同颜色的区域代表的是使用L1距离的分类器的决策边界。白色区域表示不同类别投票数相同时的预测模糊区域(图像与两个以上的分类标签绑定)。需要注意的就是异常数据点，比如3-NN分类器中，红色区域中有紫色的点，导致在紫色区域内有一个红色凸起预测区域，这也表示出现了过拟合现象，即使是训练数据的噪声也进行了很好地学习。但是在5-NN中，整个区域边界就变得非常的平滑，这说明对测试数据的泛化能力更好。</p>
+<p>下一章，就讲解K-NN算法，如何确定K值，请关注<a href="">CS231n笔记(2)</a>—KNN算法。</p>
 
       
     </div>
@@ -545,7 +569,7 @@
   <p><span>本文标题:</span><a href="/2018/11/06/CS231n笔记-1/">CS231n笔记(1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月06日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月06日 - 23:11</p>
+  <p><span>最后更新:</span>2018年11月07日 - 12:11</p>
   <p><span>原始链接:</span><a href="/2018/11/06/CS231n笔记-1/" title="CS231n笔记(1)">https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/"  aria-label="复制成功！"></i></span>
   </p>
@@ -656,6 +680,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/11/07/时间管理-实用工具-3/" rel="prev" title="时间管理---实用工具(3)">
+                时间管理---实用工具(3) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -742,7 +770,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -883,7 +911,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#图像分类"><span class="nav-number">2.1.</span> <span class="nav-text">图像分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据驱动方法"><span class="nav-number">2.2.</span> <span class="nav-text">数据驱动方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nearest-Neighbor-分类器"><span class="nav-number">2.3.</span> <span class="nav-text">Nearest Neighbor 分类器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#图像分类"><span class="nav-number">2.1.</span> <span class="nav-text">图像分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据驱动方法"><span class="nav-number">2.2.</span> <span class="nav-text">数据驱动方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nearest-Neighbor-分类器"><span class="nav-number">2.3.</span> <span class="nav-text">Nearest Neighbor 分类器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-Nearest-Neighbor-分类器"><span class="nav-number">2.4.</span> <span class="nav-text">K-Nearest Neighbor 分类器</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -920,7 +948,7 @@ show_date_time();
     
       <span class="post-meta-item-text">全站字数统计&#58;</span> 
     
-    <span title="全站字数统计">72.8k</span> 字
+    <span title="全站字数统计">74.4k</span> 字
   
 </div>
 

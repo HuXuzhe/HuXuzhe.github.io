@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-11-06T15:39:45.435Z</updated>
+  <updated>2018-11-07T04:56:07.643Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CS231n笔记(2)</title>
+    <link href="https://huxuzhe.github.io/2018/11/07/CS231n%E7%AC%94%E8%AE%B0-2/"/>
+    <id>https://huxuzhe.github.io/2018/11/07/CS231n笔记-2/</id>
+    <published>2018-11-07T05:54:42.000Z</published>
+    <updated>2018-11-07T04:56:07.643Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CV" scheme="https://huxuzhe.github.io/categories/CV/"/>
+    
+    
+      <category term="CS231n笔记" scheme="https://huxuzhe.github.io/tags/CS231n%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间管理---实用工具(3)</title>
+    <link href="https://huxuzhe.github.io/2018/11/07/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7-3/"/>
+    <id>https://huxuzhe.github.io/2018/11/07/时间管理-实用工具-3/</id>
+    <published>2018-11-07T02:40:58.000Z</published>
+    <updated>2018-11-07T01:53:58.685Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;接下来我们继续介绍3个实用工具，来提高我们时间管理的效率。&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;h2 id=&quot;工具7—–要事优先&quot;&gt;&lt;a href=&quot;#工具7—–要事优先&quot; class=&quot;headerlink&quot; title=&quot;工具7—–要事优先&quot;&gt;&lt;/a&gt;工具7—–要事优先&lt;/h2&gt;&lt;p&gt;要事分为两种，一种是重要的事情，另一种是要做的事情，不管重不重要。&lt;/p&gt;
+&lt;p&gt;如果真的知道自己的要事是什么，先做后座都不重要。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CS231n笔记(1)</title>
     <link href="https://huxuzhe.github.io/2018/11/06/CS231n%E7%AC%94%E8%AE%B0-1/"/>
     <id>https://huxuzhe.github.io/2018/11/06/CS231n笔记-1/</id>
     <published>2018-11-06T10:24:46.000Z</published>
-    <updated>2018-11-06T15:39:45.435Z</updated>
+    <updated>2018-11-07T04:54:47.137Z</updated>
     
     <summary type="html">
     
@@ -397,47 +437,6 @@
       &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;之前我们都是讲如何养成好习惯，如何做计划，但是如果存在坏习惯，也会让我们的效率大打折扣，所以今天我们在这里可以学习到如何戒掉一个坏习惯，主要是我们管不住自己。&lt;/p&gt;
 &lt;p&gt;其实身边很多人都有坏习惯，还有各种上瘾停不下来，尤其是手机瘾，看剧瘾，游戏瘾等，一旦开始就整小时正小时的消磨时间，兴奋过后，自己又觉得荒废，闭门思过几日，就又重蹈覆辙。&lt;/p&gt;
 &lt;p&gt;时间要是被大量的被娱乐，坏习惯和各种不良的思维消耗掉，我们就很难腾出更多时间来处理我们清单的任务，所以，戒掉坏习惯对我们时间管理也是非常重要的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-    
-      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间管理(9)</title>
-    <link href="https://huxuzhe.github.io/2018/10/17/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-9/"/>
-    <id>https://huxuzhe.github.io/2018/10/17/时间管理-9/</id>
-    <published>2018-10-17T09:54:21.000Z</published>
-    <updated>2018-10-18T10:14:50.746Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;一提到时间管理，我们都会想到去做计划，而一提到计划，就会去谈年计划，月计划再分解到周计划，日计划。&lt;/p&gt;
-&lt;p&gt;我们普遍以为自己知道什么是计划，并且向当然的就认为自己会做计划，只是计划做的好坏不同。但是事实上，几乎所有人的认识都是错误的。我们将在这节课告诉我们&lt;b&gt;什么才是真正的计划，并聚焦于短期任务的计划给我们讲解具体的操作方法&lt;/b&gt;，而后面我们还将会讲解如何对长期的任务做计划。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-    
-      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间管理(8)</title>
-    <link href="https://huxuzhe.github.io/2018/10/16/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-8/"/>
-    <id>https://huxuzhe.github.io/2018/10/16/时间管理-8/</id>
-    <published>2018-10-16T04:07:46.000Z</published>
-    <updated>2018-10-16T10:15:21.469Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;前面我们学习如何管理任务和习惯，并且化为了一个个行动记入了待清理清单。经常有人说，每天都很忙，但一天到头缺又不知道自己都忙了什么，就好像在说：“抽屉里东西很多，却不知道都有什么。”这一小节，我们将学习到如何安排日程的相关要领，帮助我们过上井井有条的每一天，并从中获得成就感。&lt;/p&gt;
     
     </summary>
     
