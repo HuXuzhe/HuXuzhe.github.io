@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2018-11-07T04:56:07.643Z</updated>
+  <updated>2018-11-12T02:16:52.624Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间管理-实用工具(4)</title>
+    <link href="https://huxuzhe.github.io/2018/11/12/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7-4/"/>
+    <id>https://huxuzhe.github.io/2018/11/12/时间管理-实用工具-4/</id>
+    <published>2018-11-12T02:30:00.000Z</published>
+    <updated>2018-11-12T02:16:52.624Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;继续来分享实用工具，大概3~4个&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;h2 id=&quot;工具11—–沐浴自控法&quot;&gt;&lt;a href=&quot;#工具11—–沐浴自控法&quot; class=&quot;headerlink&quot; title=&quot;工具11—–沐浴自控法&quot;&gt;&lt;/a&gt;工具11—–沐浴自控法&lt;/h2&gt;&lt;p&gt;为什么是沐浴呢，意思呢就是通过洗澡这个方法来实现自己对自己的控制力。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>CS231n笔记(2)</title>
@@ -39,7 +60,7 @@
     <link href="https://huxuzhe.github.io/2018/11/07/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7-3/"/>
     <id>https://huxuzhe.github.io/2018/11/07/时间管理-实用工具-3/</id>
     <published>2018-11-07T02:40:58.000Z</published>
-    <updated>2018-11-10T07:57:22.413Z</updated>
+    <updated>2018-11-10T16:16:24.002Z</updated>
     
     <summary type="html">
     
@@ -415,28 +436,6 @@
     
       &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;我们学习了那么多的方法，都是为了 提高做事的效率，能够专注和轻松的执行任务，但是很多人都觉得自己容易分心、执行力差，但事实上，多数人都是&lt;b&gt;计划能力弱&lt;/b&gt;。&lt;/p&gt;
 &lt;p&gt;做事时候要想专注于行动，那么前期的准备工作是必不可少的。那么，我们应该如何提高效率呢，乃至用20的精力完成80的任务呢？我们在这节将要讲&lt;b&gt;环境创设法和帕金森法&lt;/b&gt;，帮我们在做事之前消灭所有的分心因素，进而达到心无旁骛的状态，提高做事效率。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-    
-      <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间管理(10)</title>
-    <link href="https://huxuzhe.github.io/2018/10/18/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86-10/"/>
-    <id>https://huxuzhe.github.io/2018/10/18/时间管理-10/</id>
-    <published>2018-10-18T01:28:23.000Z</published>
-    <updated>2018-10-18T10:13:56.674Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;之前我们都是讲如何养成好习惯，如何做计划，但是如果存在坏习惯，也会让我们的效率大打折扣，所以今天我们在这里可以学习到如何戒掉一个坏习惯，主要是我们管不住自己。&lt;/p&gt;
-&lt;p&gt;其实身边很多人都有坏习惯，还有各种上瘾停不下来，尤其是手机瘾，看剧瘾，游戏瘾等，一旦开始就整小时正小时的消磨时间，兴奋过后，自己又觉得荒废，闭门思过几日，就又重蹈覆辙。&lt;/p&gt;
-&lt;p&gt;时间要是被大量的被娱乐，坏习惯和各种不良的思维消耗掉，我们就很难腾出更多时间来处理我们清单的任务，所以，戒掉坏习惯对我们时间管理也是非常重要的。&lt;/p&gt;
     
     </summary>
     
