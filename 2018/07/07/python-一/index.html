@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/常用数据类型转换语句.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符.png">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/运算符优先级.png">
-<meta property="og:updated_time" content="2018-10-16T10:16:01.307Z">
+<meta property="og:updated_time" content="2018-11-16T17:37:30.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python(一)">
 <meta name="twitter:description" content="Python概述 一种面向对象的解释型计算机程序设计语言 具有丰富且强大的内置库和第三方库 语法简洁灵活 开源、跨平台  应用场景： 数据分析 人工智能 网络爬虫 自动化运维 ·······">
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-16T19:16:01+09:00">
-                2018-10-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-17T02:37:30+09:00">
+                2018-11-17
               </time>
             
           </span>
@@ -581,13 +581,13 @@
 <li>标识符区分大小写</li>
 </ul>
 <p>实例15：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#不能以数字开头</span></span><br><span class="line"><span class="number">2</span>student = <span class="string">'zhangsan'</span></span><br><span class="line">print(<span class="number">2</span>student)</span><br><span class="line"><span class="comment">#报错语法错误</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#不能以数字开头</span></span><br><span class="line"><span class="number">2</span>student = <span class="string">'wangwang'</span></span><br><span class="line">print(<span class="number">2</span>student)</span><br><span class="line"><span class="comment">#报错语法错误</span></span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">"&lt;ipython-input-15-978c7772c00c&gt;"</span>, line <span class="number">2</span></span><br><span class="line">    <span class="number">2</span>student = <span class="string">'zhangsan'</span></span><br><span class="line">           ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">"&lt;ipython-input-15-978c7772c00c&gt;"</span>, line <span class="number">2</span></span><br><span class="line">    <span class="number">2</span>student = <span class="string">'wangwang'</span></span><br><span class="line">           ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
 <p>实例16：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python解释器是可以区分大小写的</span></span><br><span class="line">student_name = <span class="string">'zhangsan'</span></span><br><span class="line">Student_name = <span class="string">'lisi'</span></span><br><span class="line">print(student_name)</span><br><span class="line">print(Student_name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python解释器是可以区分大小写的</span></span><br><span class="line">student_name = <span class="string">'wangwang'</span></span><br><span class="line">Student_name = <span class="string">'hanhan'</span></span><br><span class="line">print(student_name)</span><br><span class="line">print(Student_name)</span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zhangsan</span><br><span class="line">lisi</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wangwang</span><br><span class="line">hanhan</span><br></pre></td></tr></table></figure>
 <h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><ul>
 <li>见名如意，如name</li>
 <li>驼峰命名法，如类名(UserInfo)、异常名(ValueError)等</li>
@@ -649,7 +649,7 @@
   <p><span>本文标题:</span><a href="/2018/07/07/python-一/">Python(一)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年07月07日 - 11:07</p>
-  <p><span>最后更新:</span>2018年10月16日 - 18:10</p>
+  <p><span>最后更新:</span>2018年11月17日 - 01:11</p>
   <p><span>原始链接:</span><a href="/2018/07/07/python-一/" title="Python(一)">https://huxuzhe.github.io/2018/07/07/python-一/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/07/07/python-一/"  aria-label="复制成功！"></i></span>
   </p>
@@ -1028,7 +1028,7 @@ show_date_time();
     
       <span class="post-meta-item-text">全站字数统计&#58;</span> 
     
-    <span title="全站字数统计">76.4k</span> 字
+    <span title="全站字数统计">77.1k</span> 字
   
 </div>
 
