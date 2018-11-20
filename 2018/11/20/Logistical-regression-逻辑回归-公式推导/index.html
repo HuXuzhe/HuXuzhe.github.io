@@ -97,7 +97,7 @@
 <meta property="og:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/sigmodi.jpg">
-<meta property="og:updated_time" content="2018-11-20T15:59:28.692Z">
+<meta property="og:updated_time" content="2018-11-20T16:04:20.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic regression(逻辑回归)---算法推导">
 <meta name="twitter:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T00:59:28+09:00">
-                2018-11-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T01:04:20+09:00">
+                2018-11-21
               </time>
             
           </span>
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,551字
+                  1,555字
                 </span>
               
 
@@ -470,9 +470,9 @@
 <h3 id="梯度下降法求解-J-theta-的最小值"><a href="#梯度下降法求解-J-theta-的最小值" class="headerlink" title="梯度下降法求解$J(\theta)$的最小值"></a>梯度下降法求解$J(\theta)$的最小值</h3><p>根据梯度下降法可得$\theta$的更新过程：<br>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta) \qquad (j = 0,1,2,\dots n)<br>$$<br>$\alpha$为学习的步长，下面来求步长，对$\theta$求偏导：<br>$$<br>\begin{align}<br>\frac{\partial}{\partial\theta_j}J(\theta) &amp; = -\frac{1}{m}\sum_{i=1}^{m}(y^{(i)}\frac{1}{h_\theta(x^{(i)})}\frac{\partial}{\partial\theta_j}h_\theta(x^{(i)})-(1-y^{(i)})\frac{1}{1-h_\theta(x^{(i)})}\frac{\partial}{\partial\theta_j}h_\theta(x^{(i)}))  \</p>
 <p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}\frac{1}{h_\theta(x^{(i)})}-(1-y^{(i)})\frac{1}{1-h_\theta(x^{(i)})})\underline{\frac{\partial}{\partial\theta}g(\theta^Tx^{(i)})}] \</p>
 <p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}\frac{1}{g(\theta^Tx^{(i)})}-(1-y^{(i)})\frac{1}{1-g(\theta^Tx^{(i)})})g(\theta^Tx^{(i)})\cdot(1-g(\theta^Tx^{(i)})\cdot\frac{\partial}{\partial\theta_j}\theta^Tx^{(i)})]\</p>
-<p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}(1-g(\theta^Tx^{(i)}))-(1-y^{(i)})g(\theta^Tx^{(i)}))x^{(i)})]\</p>
-<p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}-g(\theta^Tx^{(i)}))x^{(i)}]\</p>
-<p>&amp; = -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}-h_\theta(x^{(i)}))x^{(i)}]\<br>&amp; = \frac{1}{m}\sum_{i=1}^m[(h_\theta(x^{(i)})-y^{(i)})x^{(i)}]\</p>
+<p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}(1-g(\theta^Tx^{(i)}))-(1-y^{(i)})g(\theta^Tx^{(i)}))x^{(i)}_j)]\</p>
+<p>&amp;= -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}-g(\theta^Tx^{(i)}))x^{(i)}_j]\</p>
+<p>&amp; = -\frac{1}{m}\sum_{i=1}^m[(y^{(i)}-h_\theta(x^{(i)}))x^{(i)}<em>j]\<br>&amp; = \frac{1}{m}\sum</em>{i=1}^m[(h_\theta(x^{(i)})-y^{(i)})x^{(i)}_j]\</p>
 <p>\end{align}<br>$$<br>所有更新：<br>$$<br>\theta_j : \theta_j - \alpha\sum_{i=1}^{m}[(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}]<br>$$</p>
 <h3 id="向量化梯度下降"><a href="#向量化梯度下降" class="headerlink" title="向量化梯度下降"></a>向量化梯度下降</h3>
       
@@ -517,7 +517,7 @@
   <p><span>本文标题:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/">Logistic regression(逻辑回归)---算法推导</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月20日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月20日 - 23:11</p>
+  <p><span>最后更新:</span>2018年11月21日 - 00:11</p>
   <p><span>原始链接:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/" title="Logistic regression(逻辑回归)---算法推导">https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/"  aria-label="复制成功！"></i></span>
   </p>
