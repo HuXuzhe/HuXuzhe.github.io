@@ -96,17 +96,17 @@
 <meta property="og:site_name" content="Haley_Hu&#39;s Blog">
 <meta property="og:description" content="写在前面：第二章主要让我们了解经验误差与拟合，评估方法，比较检验以及偏差与方法，重点主要是评估方法，理解过拟合与欠拟合，roc曲线。 知识点归纳经验误差与过拟合【错误率(error rate)】：分类错误的样本占样本总数的比例 例：m个样本中有a个样本分类错误，则错误率$E = a / m$ 【精度(accuracy)】：分类正确的样本数占样本总数的比例 例：m个样本中有m-a个分类正确，则精度$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/2-1.png">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-2.jpg">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-3.jpg">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-4.jpg">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-6.png">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-5.png">
-<meta property="og:updated_time" content="2018-09-20T08:02:28.942Z">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791929/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/2-1.png">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791941/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-2.jpg">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-3.jpg">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-4.jpg">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-6.png">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-5.png">
+<meta property="og:updated_time" content="2018-11-21T09:20:19.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="精读西瓜书(二)">
 <meta name="twitter:description" content="写在前面：第二章主要让我们了解经验误差与拟合，评估方法，比较检验以及偏差与方法，重点主要是评估方法，理解过拟合与欠拟合，roc曲线。 知识点归纳经验误差与过拟合【错误率(error rate)】：分类错误的样本占样本总数的比例 例：m个样本中有a个样本分类错误，则错误率$E = a / m$ 【精度(accuracy)】：分类正确的样本数占样本总数的比例 例：m个样本中有m-a个分类正确，则精度$">
-<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/2-1.png">
+<meta name="twitter:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791929/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/2-1.png">
 
 
 
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T17:02:28+09:00">
-                2018-09-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T18:20:19+09:00">
+                2018-11-21
               </time>
             
           </span>
@@ -481,7 +481,7 @@
 <p><b>【欠拟合(underfitting)】</b>：学习能力低下，指对训练样本的一般性质尚未学好。</p>
 <p>例：比如形状是判断是否好瓜的重要标准，但经过训练得到的决策树没有对形状进行判断的步骤。</p>
 <p>我们实际能做的：努力使经验误差最小化，是指在“过拟合”与“欠拟合”之间寻找一种平衡，并且尽可能的使学习器在不太过拟合的情况下使得训练集的分类更准确，泛化能力更强。</p>
-<img title="过拟合与欠拟合直观对比" src="http://pbhfphh1b.bkt.clouddn.com/static/images/2-1.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791929/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/2-1.png" alt=""></p>
 <p>**注意：任何学习算法都有针对过拟合的措施，但是过拟合是无法完全避免的，只能缓解或减小其风险，欠拟合是比较容易克服的。</p>
 <p><b>【多项式时间(polynomial time)】</b>：在计算复杂度理论中，指的是一个问题的计算时间m不大于问题大小n的多项式倍数。任何抽象机器都拥有一复杂度类，此类包括可用于此以多项式时间求解的问题。</p>
 <p><a href="http://www.matrix67.com/blog/archives/105" target="_blank" rel="noopener">关于p问题，NP问题和NPC问题的链接</a></p>
@@ -504,19 +504,19 @@
 <h3 id="留出法"><a href="#留出法" class="headerlink" title="留出法"></a>留出法</h3><p><b>【留出法(hold-out)】</b>：直接将数据集$D$划分为两个互斥的集合，其中一个集合作为训练集$S$，另一个作为测试集$T$，即$D = S \cup T$，$S \cup T = \oslash  $,在$S$上训练出模型后，用$T$ 来评估其测试误差，作为对泛化误差的估计。</p>
 <p>需要注意的是，训练/测试集的划分要尽可能<b>保持数据分布的一致性</b>，避免因数据划分过程引入额外的偏差而对最终结果产生影响。通常使用<b>分层采样</b>。<br>不同的划分会导致不同的训练/测试集，相应的模型评估的结果也会有差别。故单次使用留出法的估计结果往往不可靠，使用留出法一般要若干次随机划分，重复进行实验评估后取平均值作为留出法的评估结果。<br>问题：<br>我们评估的是用训练出的模型的性能，但留出法划分了数据集，使得实际上训练的数据集小了，若比例较大，训练的模型较为接近训练的模型，但是由于较小，评估结果可能就不太稳定准确。若令比重较大，则与差别就更大了。<br>建议：<br>训练集/测试集：2/3~4/5</p>
 <p>例：</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-2.jpg">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791941/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-2.jpg" alt=""></p>
 <p>如上，可以看到是两个同心圆。其中红色的内圆是训练集，绿色的部分是测试集，两部分是互不包含的。</p>
 <p>因为要保持数据分布的一致性，所以一般采用分层采样，所以如下图所示。（注：用圆心角来体现数据分布的一致性，无论是训练集还是测试集，均在360度范围内分布。）</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-3.jpg">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-3.jpg" alt=""></p>
 <p>单次使用留出法得到的估计结果往往不够稳定可靠，所以在使用留出法的时候，一般采用若干次随机划分，重复进行实验评估后取平均值作为留出法的评估结果。(例如进行100次划分，每次会产生一个评估结果，共得出100个评估结果，最后留出法返回的是这100个评估结果的平均值)</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-4.jpg">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-4.jpg" alt=""></p>
 <p>如上图，每次测试集取的是绿色的部分，所有得出的结果再取平均值，即时留出法的评估结果。</p>
 <p>###交叉验证法(重要)</p>
 <p><b>【交叉验证法(cross validation)】：</b>先将数据集$D$ 划分为$k$个大小相似的互斥子集，即$D = D_1  \cup D_2 \cup \dots \cup D_k$；$D_i  \cap D_j =  \emptyset( i \not= j)$ .但每个子集$D_i$ 都尽可能保持数据分布的一致性。</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-6.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-6.png" alt=""></p>
 <p>如上图所示，每个子集仍然要分层采样。每次用$k-1$子集作为训练集，余下的子集作为测试集。这样就可以获得$k$个测试结果，进行$k$次训练和测试，最终返回的是这$k$个测试结果的均值。</p>
 <p>交叉验证法评估结果的稳定性和保真性在很大程度上取决于$k$的取值，所以通过把交叉验证法称为<b>“k折交叉验证法(k-fold corss validation)”</b>，k的常用值为10，下图为10折交叉验证法的图示。</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/m2-5.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542791942/myblog/ML/%E8%A5%BF%E7%93%9C%E4%B9%A6/m2-5.png" alt=""></p>
 <p>与留出法相似，为了减小因样本划分不同而引入的差别，交叉验证法也需要进行多次试验，用不同的划分方法重复$p$次试验，最终的结果是是这$p$次$k$折交叉验证结果的均值。</p>
 <p>总结：</p>
 <p>交叉验证法得到的结果是均值的均值，即p个“k个结果的均值”的均值，因此交叉验证法又可以叫做<b>p次k折交叉验证</b>。</p>
@@ -581,7 +581,7 @@
   <p><span>本文标题:</span><a href="/2018/09/03/精读西瓜书-二/">精读西瓜书(二)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年09月03日 - 20:09</p>
-  <p><span>最后更新:</span>2018年09月20日 - 16:09</p>
+  <p><span>最后更新:</span>2018年11月21日 - 17:11</p>
   <p><span>原始链接:</span><a href="/2018/09/03/精读西瓜书-二/" title="精读西瓜书(二)">https://huxuzhe.github.io/2018/09/03/精读西瓜书-二/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/09/03/精读西瓜书-二/"  aria-label="复制成功！"></i></span>
   </p>

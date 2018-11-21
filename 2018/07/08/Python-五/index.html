@@ -96,15 +96,15 @@
 <meta property="og:site_name" content="Haley_Hu&#39;s Blog">
 <meta property="og:description" content="日期和时间链接：日期与时间的教程 time模块 time()函数获取当前时间戳 localtime([seconds])格式化时间戳为本地时间，返回时间元组  链接：time模块  tm_isdst：是否为夏令默认为-1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-2.png">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-3.png">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-4.png">
-<meta property="og:updated_time" content="2018-07-08T04:10:46.061Z">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786087/myblog/python/L5-1.png">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786088/myblog/python/L5-2.png">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786088/myblog/python/L5-3.png">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786087/myblog/python/L5-4.png">
+<meta property="og:updated_time" content="2018-11-21T07:43:02.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python(五)">
 <meta name="twitter:description" content="日期和时间链接：日期与时间的教程 time模块 time()函数获取当前时间戳 localtime([seconds])格式化时间戳为本地时间，返回时间元组  链接：time模块  tm_isdst：是否为夏令默认为-1">
-<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
+<meta name="twitter:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786087/myblog/python/L5-1.png">
 
 
 
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-08T13:10:46+09:00">
-                2018-07-08
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T16:43:02+09:00">
+                2018-11-21
               </time>
             
           </span>
@@ -455,7 +455,7 @@
 <li>localtime([seconds])格式化时间戳为本地时间，返回时间元组</li>
 </ul>
 <p>链接：<a href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener">time模块</a></p>
-<img title="日期和时间" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-1.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786087/myblog/python/L5-1.png" alt=""></p>
 <p>tm_isdst：是否为夏令默认为-1</p>
 <a id="more"></a>
 <p>实例1：</p>
@@ -473,7 +473,7 @@
 <ul>
 <li>time.strftime(format[,time_tuple])格式化日期函数</li>
 </ul>
-<img title="格式化符号" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-2.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786088/myblog/python/L5-2.png" alt=""></p>
 <ul>
 <li>time.strptime(string, format)将日期时间字符串转换为时间元组</li>
 <li>time.mktime(time_tuple)将时间元组转换成时间戳</li>
@@ -527,7 +527,7 @@
 <li>close()方法关闭已打开的文件</li>
 </ul>
 <p>下表为access_mode不同参数打开文件的完全列表，取自菜鸟课程，点击上述链接可以获得。</p>
-<img title="文件操作" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-3.png">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786088/myblog/python/L5-3.png" alt=""></p>
 <font color="red">实例10：</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="comment">#文件不存在报错</span></span><br><span class="line"><span class="comment"># f = open("test.txt","r")</span></span><br><span class="line"><span class="comment"># f.close() #切结要关闭</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#文件不存在则创建</span></span><br><span class="line"><span class="comment">#覆盖已存在的内容,encoding="utf-8"解决中文乱码</span></span><br><span class="line">f = open(<span class="string">"test.txt"</span>,<span class="string">"w"</span>,encoding=<span class="string">"utf-8"</span>)</span><br><span class="line">f.write(<span class="string">"你好"</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
@@ -598,8 +598,7 @@
 <ul>
 <li>dump(python_data,file):将python数据转换为JSON编码的字符串，并写入文件</li>
 <li>load(json_file):从JSON数据文件中读取数据，并将json编码的字符串转换为python的数据结构</li>
-<li>python数据类型与JSON类型对比<img title="Python" src="http://pbhfphh1b.bkt.clouddn.com/static/images/L5-4.png">
-</li>
+<li>python数据类型与JSON类型对比<br><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542786087/myblog/python/L5-4.png" alt=""></li>
 </ul>
 <p>实例18：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dump和load</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info.json"</span>,<span class="string">"w"</span>) <span class="keyword">as</span> f: <span class="comment">#文件操作完自动调用close方法关闭</span></span><br><span class="line"></span><br><span class="line">    json.dump(json_dict,f)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"d://user_info.json"</span>,<span class="string">"r"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    user_info_data = json.load(f)</span><br><span class="line">    print(user_info_data)</span><br><span class="line">    print(type(user_info_data))</span><br></pre></td></tr></table></figure>
@@ -697,7 +696,7 @@
   <p><span>本文标题:</span><a href="/2018/07/08/Python-五/">Python(五)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年07月08日 - 11:07</p>
-  <p><span>最后更新:</span>2018年07月08日 - 12:07</p>
+  <p><span>最后更新:</span>2018年11月21日 - 15:11</p>
   <p><span>原始链接:</span><a href="/2018/07/08/Python-五/" title="Python(五)">https://huxuzhe.github.io/2018/07/08/Python-五/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/07/08/Python-五/"  aria-label="复制成功！"></i></span>
   </p>

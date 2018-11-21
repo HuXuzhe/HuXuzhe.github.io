@@ -96,12 +96,12 @@
 <meta property="og:site_name" content="Haley_Hu&#39;s Blog">
 <meta property="og:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/sigmoid.jpg">
-<meta property="og:updated_time" content="2018-11-20T16:12:17.016Z">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg">
+<meta property="og:updated_time" content="2018-11-21T09:29:54.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic regression(逻辑回归)---算法推导">
 <meta name="twitter:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。">
-<meta name="twitter:image" content="http://pbhfphh1b.bkt.clouddn.com/static/images/sigmoid.jpg">
+<meta name="twitter:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg">
 
 
 
@@ -353,7 +353,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T01:12:17+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T18:29:54+09:00">
                 2018-11-21
               </time>
             
@@ -462,7 +462,7 @@
 <p>似然函数(likelihood function)：联合概率密度函数$P(D|\theta)$称为相对于$D={x_1,x_2\dots,x_N}$的$\theta$的似然函数。<br>$$<br>l(\theta)=P(D|\theta)=P(x_1,x_2,\dots,x_N|\theta) = \prod_{i=1}^NP(x_i|\theta)<br>$$<br>如果$\hat\theta$是参数空间中能使似然函数最大的值，则该$\hat\theta$就是$\theta$的极大似然估计量。而$\hat{\theta}(x_1,x_2,\dots,x_N)$称作极大似然函数的估计值。</p>
 <h3 id="求解极大似然估计"><a href="#求解极大似然估计" class="headerlink" title="求解极大似然估计"></a>求解极大似然估计</h3><p>$$<br>\hat{\theta}={argmax}h(\theta) = argmaxln(\theta) = argmax\sum_{i=1}^NlnP(x_i|\theta)<br>$$</p>
 <h3 id="构造预测函数"><a href="#构造预测函数" class="headerlink" title="构造预测函数"></a>构造预测函数</h3><p>我们需要找到一个预测函数$h_\theta$，显然该函数的输出必须有两个值，分别代表两个类别。所以我们使用了Sigmoid函数，以下为公式：<br>$$<br>g(z) = \frac{1}{1+e^{-z}}<br>$$<br>下面是该函数的图像。</p>
-<img src="http://pbhfphh1b.bkt.clouddn.com/static/images/sigmoid.jpg">
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg" alt=""></p>
 <p>根据NG所讲的机器学习中，接下来需要确定数据划分的边界类型，下面我们讨论线性边界的情况。</p>
 <p>对于线性边界的情况，有以下形式：<br>$$<br>\theta_0+\theta_1x_1+\dots+\theta_nx_n = \sum_{i=0}^n\theta_ix_i = \theta^Tx<br>$$<br>构造预测函数：<br>$$<br>h_\theta(x) = g(\theta^Tx) = \frac{1}{1+e^{-\theta^Tx}}<br>$$<br>因此对于输入x分类结果为类别1和类别0的概率分别为：<br>$$<br>\begin{align}<br>&amp;P(y=1|x;\theta) = h_\theta(x)\<br>&amp;P(y=0|x;\theta) = 1-h_\theta(x)<br>\end{align}<br>$$</p>
 <h3 id="构造Cost函数-代价函数"><a href="#构造Cost函数-代价函数" class="headerlink" title="构造Cost函数(代价函数)"></a>构造Cost函数(代价函数)</h3><p>将上述的方程组综合：<br>$$<br>P(y|x;\theta)=(h_\theta(x)^y)((1-h_\theta(x))^{1-y})<br>$$<br>通过似然函数变为：<br>$$<br>L(\theta) = \prod_{i=1}^mP(y^{(i)}|x^{(i)};\theta)<br>$$<br>$i$为样本数为，共有m个样本。</p>
@@ -517,7 +517,7 @@
   <p><span>本文标题:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/">Logistic regression(逻辑回归)---算法推导</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月20日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月21日 - 00:11</p>
+  <p><span>最后更新:</span>2018年11月21日 - 17:11</p>
   <p><span>原始链接:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/" title="Logistic regression(逻辑回归)---算法推导">https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/"  aria-label="复制成功！"></i></span>
   </p>
