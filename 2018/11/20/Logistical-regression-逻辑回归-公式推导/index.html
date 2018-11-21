@@ -98,7 +98,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg">
 <meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png">
-<meta property="og:updated_time" content="2018-11-21T12:14:02.218Z">
+<meta property="og:updated_time" content="2018-11-21T12:19:41.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic regression(逻辑回归)---算法推导">
 <meta name="twitter:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。举个栗子：写程序就像开一辆车，当你不懂太多数据结构跟算法的时候，凭借丰富的实践经验你也可以将这辆车开好；但是，当有一天这辆车出问题跑不起来的时候呢？你不懂它内部的运行机制，你要怎么排除和解决问题？">
@@ -354,7 +354,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T21:14:02+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T21:19:41+09:00">
                 2018-11-21
               </time>
             
@@ -484,7 +484,9 @@
 <h3 id="梯度下降法求解-J-theta-的最小值"><a href="#梯度下降法求解-J-theta-的最小值" class="headerlink" title="梯度下降法求解$J(\theta)$的最小值"></a>梯度下降法求解$J(\theta)$的最小值</h3><p>根据梯度下降法可得$\theta$的更新过程：<br>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta) \qquad (j = 0,1,2,\dots n)<br>$$<br>$\alpha$为学习的步长，下面来求步长，对$\theta$求偏导：</p>
 <p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png" alt=""></p>
 <p>所有更新：<br>$$<br>\theta_j : = \theta_j - \alpha\sum_{i=1}^{m}[(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}]<br>$$</p>
-<p>这里写一下红色框框的步骤：<br>$$<br>\begin{align}<br>\frac{\partial}{\partial x}h_\theta(x) &amp; = \frac{\partial}{\partial x}(\frac{1}{1+e^{-g(x)}}) \\<br>&amp; = \frac{-e^{-g(x)}}{[1+e^{-g(x)}]^2}\cdot(-\frac{\partial}{\partial x}g(x))\\</p>
+<p>这里写一下红色框框的步骤：<br>$$<br>\begin{align}<br>\frac{\partial}{\partial x}h_\theta(x)</p>
+<p>&amp; = \frac{\partial}{\partial x}(\frac{1}{1+e^{-g(x)}}) \\</p>
+<p>&amp; = \frac{-e^{-g(x)}}{[1+e^{-g(x)}]^2}\cdot(-\frac{\partial}{\partial x}g(x))\\</p>
 <p>&amp; = \frac{1}{1+e^{-g(x)}}\cdot\frac{e^{-g(x)}}{1+e^{-g(x)}}\cdot\frac{\partial}{\partial x}g(x)\\</p>
 <p>&amp; = h_\theta\cdot(1-h_\theta)\cdot\frac{\partial}{\partial x}g(x)</p>
 <p>\end{align}<br>$$</p>
