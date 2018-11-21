@@ -97,8 +97,8 @@
 <meta property="og:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。举个栗子：写程序就像开一辆车，当你不懂太多数据结构跟算法的时候，凭借丰富的实践经验你也可以将这辆车开好；但是，当有一天这辆车出问题跑不起来的时候呢？你不懂它内部的运行机制，你要怎么排除和解决问题？">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg">
-<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542799266/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png">
-<meta property="og:updated_time" content="2018-11-21T11:28:56.573Z">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png">
+<meta property="og:updated_time" content="2018-11-21T12:14:02.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic regression(逻辑回归)---算法推导">
 <meta name="twitter:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。举个栗子：写程序就像开一辆车，当你不懂太多数据结构跟算法的时候，凭借丰富的实践经验你也可以将这辆车开好；但是，当有一天这辆车出问题跑不起来的时候呢？你不懂它内部的运行机制，你要怎么排除和解决问题？">
@@ -354,7 +354,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T20:28:56+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T21:14:02+09:00">
                 2018-11-21
               </time>
             
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,681字
+                  1,808字
                 </span>
               
 
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -482,10 +482,15 @@
 <h3 id="构造Cost函数-代价函数"><a href="#构造Cost函数-代价函数" class="headerlink" title="构造Cost函数(代价函数)"></a>构造Cost函数(代价函数)</h3><p>将上述的方程组综合：<br>$$<br>P(y|x;\theta)=(h_\theta(x)^y)((1-h_\theta(x))^{1-y})<br>$$<br>通过似然函数变为：<br>$$<br>L(\theta) = \prod_{i=1}^mP(y^{(i)}|x^{(i)};\theta)<br>$$<br>$i$为样本数为，共有m个样本。</p>
 <p>然后对$L(\theta)$取负对数，可得：<br>$$<br>\begin{align}<br>l(\theta) &amp; = -logL(\theta)\\<br>&amp; = -\sum_{i=1}^m(y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)})))<br>\end{align}<br>$$<br>令$J(\theta)=cos(h_\theta(x);y)$构造代价函数：<br>$$<br>J(\theta)= -\frac{1}{m}\sum_{i=1}^m(y^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)})))<br>$$<br>所以需要求解$\hat{\theta}$为最佳参数，所以只要求$J(\theta)$的最小值</p>
 <h3 id="梯度下降法求解-J-theta-的最小值"><a href="#梯度下降法求解-J-theta-的最小值" class="headerlink" title="梯度下降法求解$J(\theta)$的最小值"></a>梯度下降法求解$J(\theta)$的最小值</h3><p>根据梯度下降法可得$\theta$的更新过程：<br>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta) \qquad (j = 0,1,2,\dots n)<br>$$<br>$\alpha$为学习的步长，下面来求步长，对$\theta$求偏导：</p>
-<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542799266/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png" alt=""></p>
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png" alt=""></p>
 <p>所有更新：<br>$$<br>\theta_j : = \theta_j - \alpha\sum_{i=1}^{m}[(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}]<br>$$</p>
-<p>备注：这里写一下红色框框的步骤：</p>
-<h3 id="向量化梯度下降"><a href="#向量化梯度下降" class="headerlink" title="向量化梯度下降"></a>向量化梯度下降</h3><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Logistic 回归的目的就是寻找一个非线性函数Sigmoid的最佳拟合参数，求解过程可以由最优化算法来完成。</p>
+<p>这里写一下红色框框的步骤：<br>$$<br>\begin{align}<br>\frac{\partial}{\partial x}h_\theta(x) &amp; = \frac{\partial}{\partial x}(\frac{1}{1+e^{-g(x)}}) \\<br>&amp; = \frac{-e^{-g(x)}}{[1+e^{-g(x)}]^2}\cdot(-\frac{\partial}{\partial x}g(x))\\</p>
+<p>&amp; = \frac{1}{1+e^{-g(x)}}\cdot\frac{e^{-g(x)}}{1+e^{-g(x)}}\cdot\frac{\partial}{\partial x}g(x)\\</p>
+<p>&amp; = h_\theta\cdot(1-h_\theta)\cdot\frac{\partial}{\partial x}g(x)</p>
+<p>\end{align}<br>$$</p>
+<h3 id="向量化梯度下降"><a href="#向量化梯度下降" class="headerlink" title="向量化梯度下降"></a>向量化梯度下降</h3><p>可观察上面的更新过程，是有求和符号$\sum$，所以并没有向量化，下面我们通过矩阵的方式对梯度下降进行推导。</p>
+<p>$X =  \begin{bmatrix} x^{(1)} \\ x^{(2)} \\ \vdots \\ x^{(m)}\end{bmatrix}$</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Logistic 回归的目的就是寻找一个非线性函数Sigmoid的最佳拟合参数，求解过程可以由最优化算法来完成。</p>
 
       
     </div>
@@ -529,7 +534,7 @@
   <p><span>本文标题:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/">Logistic regression(逻辑回归)---算法推导</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月20日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月21日 - 19:11</p>
+  <p><span>最后更新:</span>2018年11月21日 - 20:11</p>
   <p><span>原始链接:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/" title="Logistic regression(逻辑回归)---算法推导">https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/"  aria-label="复制成功！"></i></span>
   </p>
@@ -930,7 +935,7 @@ show_date_time();
     
       <span class="post-meta-item-text">全站字数统计&#58;</span> 
     
-    <span title="全站字数统计">79.4k</span> 字
+    <span title="全站字数统计">79.5k</span> 字
   
 </div>
 
