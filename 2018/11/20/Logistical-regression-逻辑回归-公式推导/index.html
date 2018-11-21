@@ -98,7 +98,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542792583/myblog/ML/algorithm/logistic%20regression/sigmoid.jpg">
 <meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png">
-<meta property="og:updated_time" content="2018-11-21T12:19:41.139Z">
+<meta property="og:image" content="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542803170/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%83%A8%E5%88%86%E6%96%B9%E7%A8%8B.png">
+<meta property="og:updated_time" content="2018-11-21T13:42:50.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic regression(逻辑回归)---算法推导">
 <meta name="twitter:description" content="写在前面机器学习是以算法为核心，理解算法也为了帮助我们更好的理解程序。举个栗子：写程序就像开一辆车，当你不懂太多数据结构跟算法的时候，凭借丰富的实践经验你也可以将这辆车开好；但是，当有一天这辆车出问题跑不起来的时候呢？你不懂它内部的运行机制，你要怎么排除和解决问题？">
@@ -354,7 +355,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T21:19:41+09:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T22:42:50+09:00">
                 2018-11-21
               </time>
             
@@ -410,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,808字
+                  2,161字
                 </span>
               
 
@@ -426,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  9 分钟
                 </span>
               
             </div>
@@ -484,15 +485,20 @@
 <h3 id="梯度下降法求解-J-theta-的最小值"><a href="#梯度下降法求解-J-theta-的最小值" class="headerlink" title="梯度下降法求解$J(\theta)$的最小值"></a>梯度下降法求解$J(\theta)$的最小值</h3><p>根据梯度下降法可得$\theta$的更新过程：<br>$$<br>\theta_j := \theta_j - \alpha\frac{\partial}{\partial\theta_j}J(\theta) \qquad (j = 0,1,2,\dots n)<br>$$<br>$\alpha$为学习的步长，下面来求步长，对$\theta$求偏导：</p>
 <p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542801252/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%AD%A5%E9%95%BF.png" alt=""></p>
 <p>所有更新：<br>$$<br>\theta_j : = \theta_j - \alpha\sum_{i=1}^{m}[(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}]<br>$$</p>
-<p>这里写一下红色框框的步骤：<br>$$<br>\begin{align}<br>\frac{\partial}{\partial x}h_\theta(x)</p>
-<p>&amp; = \frac{\partial}{\partial x}(\frac{1}{1+e^{-g(x)}}) \\</p>
-<p>&amp; = \frac{-e^{-g(x)}}{[1+e^{-g(x)}]^2}\cdot(-\frac{\partial}{\partial x}g(x))\\</p>
-<p>&amp; = \frac{1}{1+e^{-g(x)}}\cdot\frac{e^{-g(x)}}{1+e^{-g(x)}}\cdot\frac{\partial}{\partial x}g(x)\\</p>
-<p>&amp; = h_\theta\cdot(1-h_\theta)\cdot\frac{\partial}{\partial x}g(x)</p>
-<p>\end{align}<br>$$</p>
-<h3 id="向量化梯度下降"><a href="#向量化梯度下降" class="headerlink" title="向量化梯度下降"></a>向量化梯度下降</h3><p>可观察上面的更新过程，是有求和符号$\sum$，所以并没有向量化，下面我们通过矩阵的方式对梯度下降进行推导。</p>
-<p>$X =  \begin{bmatrix} x^{(1)} \\ x^{(2)} \\ \vdots \\ x^{(m)}\end{bmatrix}$</p>
+<p>这里写一下红色框框的步骤：</p>
+<p><img src="https://res.cloudinary.com/dnvnsjfxv/image/upload/v1542803170/myblog/ML/algorithm/logistic%20regression/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E9%83%A8%E5%88%86%E6%96%B9%E7%A8%8B.png" alt=""></p>
+<h3 id="向量化梯度下降"><a href="#向量化梯度下降" class="headerlink" title="向量化梯度下降"></a>向量化梯度下降</h3><p>可观察上面的更新过程，是有求和符号$\sum$，所以并没有向量化，下面我们通过矩阵的方式对梯度下降进行推导。<br>$$<br>X =  \begin{bmatrix} x^{(1)} \\ x^{(2)} \\ \vdots \\ x^{(m)}\end{bmatrix} = \begin{bmatrix} x_0^{(1)} &amp; x_1^{(1)} &amp;x_2^{(1)}&amp; \cdots x_n^{(1)} \\ \vdots &amp;&amp;&amp;\vdots \\  \vdots&amp;&amp;&amp;\vdots\\ x_0^{(m)}&amp;\cdots&amp;\cdots&amp;x_n^{(m)}\end{bmatrix}<br>$$<br>从上面可以看出，这是一个$m\times(n+1)$的矩阵， 定义有m个样本，和(n+1)个特征。</p>
+<p>待求参数$\theta$(权重：weights)的矩阵为：<br>$$<br>\Theta =<br>\begin{bmatrix}<br>\theta_0\\<br>\theta_1\\<br>\vdots\\<br>\theta_n<br>\end{bmatrix}<br>$$</p>
+<p>求$X\cdot\Theta$记作A：<br>$$<br>A = \begin{bmatrix} x_0^{(1)} &amp; x_1^{(1)} &amp;x_2^{(1)}&amp; \cdots x_n^{(1)} \\ \vdots &amp;&amp;&amp;\vdots \\  \vdots&amp;&amp;&amp;\vdots\\ x_0^{(m)}&amp;\cdots&amp;\cdots&amp;x_n^{(m)}\end{bmatrix} \cdot \begin{bmatrix}<br>\theta_0\\<br>\vdots\\<br>\vdots\\<br>\theta_n<br>\end{bmatrix} = \begin{bmatrix} x_0^{(1)}\theta_0+x_1^{(1)}\theta_1+\cdots+x_n{(1)}\theta_n \\<br>x_0^{(2)}\theta_0+x_1^{(2)}\theta_1+\cdots+x_n{(2)}\theta_n  \\<br>\vdots \\<br>\vdots \\<br>x_0^{(m)}\theta_0+x_1^{(m)}\theta_1+\cdots+x_n{(m)}\theta_n<br>\end{bmatrix}<br>$$<br>标签y为：<br>$$<br>Y =<br>\begin{bmatrix}<br>y^{(1)}\\<br>y^{(2)}\\<br>\vdots\\<br>y^{(n)}<br>\end{bmatrix}<br>$$</p>
+<p>设$E= h_\theta(\theta\cdot X) - Y$，即可计算得：<br>$$<br>E =<br>\begin{bmatrix}<br>g(A^{(1)})-y(1) \\<br>\vdots\\<br>\vdots\\<br>g(A^{(m)})-y^{(m)}<br>\end{bmatrix}<br>= \begin{bmatrix}<br>e^{(1)}\\<br>e^{(2)}\\<br>\vdots\\<br>e^{(m)}<br>\end{bmatrix}</p>
+<p>= g(A) - Y<br>$$<br>当$j=0时候$，只有一个特征的时候，可得：<br>$$<br>\begin{align} \theta_0:<br>&amp; = \theta_0 - \alpha \sum_{i=1}^m[h_\theta(x^{(i)})-y(i)]x_0^{(i)} \\<br>&amp; = \theta_0 - \alpha\sum_{i=1}^me^{(i)}\cdot x_0^{(i)}\\<br>&amp; = \theta_0 - \alpha(x_0^{(1)}, x_0^{(2)},\dots,x_0^{(m)})\cdot E<br>\end{align}<br>$$<br>进而可以推断出当$j = n$的时候的情况：<br>$$<br>\theta_j : \theta_j = \alpha(x_j^{(1)}, x_j^{(2)},\dots,x_j^{(m)})<br>$$<br>最后可以写成：<br>$$<br>\begin{bmatrix}<br>\theta_0\\<br>\theta_1\\<br>\vdots\\<br>\theta_n<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\theta_0\\<br>\theta_1\\<br>\vdots\\<br>\theta_n<br>\end{bmatrix}</p>
+<ul>
+<li>\alpha\cdot<br>\begin{bmatrix}<br>x_0^{(1)} &amp; x_0^{(2)} &amp;x_0^{(3)}&amp; \cdots x_0^{(m)} \\<br>x_1^{(1)} &amp; x_1^{(2)}&amp; \cdots&amp;\vdots \\<br>\vdots&amp;&amp;&amp;\vdots\\<br>x_n^{(1)}&amp;\cdots&amp;\cdots&amp;x_n^{(m)}<br>\end{bmatrix} \cdot<br>E<br>$$<br>可以简写成：<br>$$<br>\begin{align}<br>&amp;= \Theta - \alpha \cdot X^T \cdot E \\<br>&amp;= \Theta - \alpha\cdot X^T \cdot(g(\theta^TX)-Y)<br>\end{align}<br>$$</li>
+</ul>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Logistic 回归的目的就是寻找一个非线性函数Sigmoid的最佳拟合参数，求解过程可以由最优化算法来完成。</p>
+<p>以上就是Logistic Regression的算法总结，如有错误，希望指出。</p>
+<p>打个广告，欢迎关注自家公众号：AI数据算法分析  </p>
+<p>有更多的分享资料和交流小伙伴。</p>
 
       
     </div>
@@ -536,7 +542,7 @@
   <p><span>本文标题:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/">Logistic regression(逻辑回归)---算法推导</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 HuXuzhe 的个人博客">HuXuzhe</a></p>
   <p><span>发布时间:</span>2018年11月20日 - 18:11</p>
-  <p><span>最后更新:</span>2018年11月21日 - 20:11</p>
+  <p><span>最后更新:</span>2018年11月21日 - 21:11</p>
   <p><span>原始链接:</span><a href="/2018/11/20/Logistical-regression-逻辑回归-公式推导/" title="Logistic regression(逻辑回归)---算法推导">https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://huxuzhe.github.io/2018/11/20/Logistical-regression-逻辑回归-公式推导/"  aria-label="复制成功！"></i></span>
   </p>
@@ -937,7 +943,7 @@ show_date_time();
     
       <span class="post-meta-item-text">全站字数统计&#58;</span> 
     
-    <span title="全站字数统计">79.5k</span> 字
+    <span title="全站字数统计">79.9k</span> 字
   
 </div>
 
