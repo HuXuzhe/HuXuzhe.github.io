@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2019-02-23T15:09:46.710Z</updated>
+  <updated>2019-02-24T05:57:21.431Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自控力(四)</title>
+    <link href="https://huxuzhe.github.io/2019/02/24/%E8%87%AA%E6%8E%A7%E5%8A%9B-%E5%9B%9B/"/>
+    <id>https://huxuzhe.github.io/2019/02/24/自控力-四/</id>
+    <published>2019-02-24T04:38:54.000Z</published>
+    <updated>2019-02-24T05:57:21.431Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;《21天训练营第四天》，自控的平衡点，如何既让自己既长期受益，又短期过得爽？&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h1&gt;&lt;h2 id=&quot;本课主旨&quot;&gt;&lt;a href=&quot;#本课主旨&quot; class=&quot;headerlink&quot; title=&quot;本课主旨&quot;&gt;&lt;/a&gt;本课主旨&lt;/h2&gt;&lt;p&gt;为什么大家觉得需要自控，却又觉得苦得很？&lt;/p&gt;
+&lt;p&gt;既然天生放浪不羁爱自由，那么自控真的是反人性吗？&lt;/p&gt;
+&lt;p&gt;如何顺着人性走，既让自己长期受益，又能短期爽快呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="自控力" scheme="https://huxuzhe.github.io/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自控力(三)</title>
     <link href="https://huxuzhe.github.io/2019/02/23/%E8%87%AA%E6%8E%A7%E5%8A%9B-%E4%B8%89/"/>
     <id>https://huxuzhe.github.io/2019/02/23/自控力-三/</id>
     <published>2019-02-23T12:39:49.000Z</published>
-    <updated>2019-02-23T15:09:46.710Z</updated>
+    <updated>2019-02-23T16:15:04.588Z</updated>
     
     <summary type="html">
     
@@ -45,7 +68,7 @@
     <link href="https://huxuzhe.github.io/2019/02/22/%E8%87%AA%E6%8E%A7%E5%8A%9B-%E4%BA%8C/"/>
     <id>https://huxuzhe.github.io/2019/02/22/自控力-二/</id>
     <published>2019-02-22T08:16:42.000Z</published>
-    <updated>2019-02-22T07:39:21.920Z</updated>
+    <updated>2019-02-23T16:14:45.311Z</updated>
     
     <summary type="html">
     
@@ -442,26 +465,6 @@
     
     
       <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初学者Python入门以及环境搭建</title>
-    <link href="https://huxuzhe.github.io/2018/10/23/%E5%88%9D%E5%AD%A6%E8%80%85Python%E5%85%A5%E9%97%A8%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>https://huxuzhe.github.io/2018/10/23/初学者Python入门以及环境搭建/</id>
-    <published>2018-10-23T08:57:40.000Z</published>
-    <updated>2018-11-21T08:44:50.681Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;本章写的是适用于准备进入AI领域，开始着手准备学习Python的同学。希望能帮助到大家，欢迎关注&lt;b&gt;“AI数据分析算法”&lt;/b&gt;公众号，加入我们的“AI Legends”—-AI 联盟。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python基础" scheme="https://huxuzhe.github.io/categories/Python%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="机器学习" scheme="https://huxuzhe.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
