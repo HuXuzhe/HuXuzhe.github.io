@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huxuzhe.github.io/"/>
-  <updated>2019-03-07T14:34:46.684Z</updated>
+  <updated>2019-03-08T07:22:45.815Z</updated>
   <id>https://huxuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自控力(十六)</title>
+    <link href="https://huxuzhe.github.io/2019/03/08/%E8%87%AA%E6%8E%A7%E5%8A%9B-%E5%8D%81%E5%85%AD/"/>
+    <id>https://huxuzhe.github.io/2019/03/08/自控力-十六/</id>
+    <published>2019-03-08T07:18:23.000Z</published>
+    <updated>2019-03-08T07:22:45.815Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;《21天自控训练营第十六天》—–群体，自控力会“传染”，选择好环境会事半功倍。&lt;/p&gt;
+&lt;h2 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; title=&quot;内容&quot;&gt;&lt;/a&gt;内容&lt;/h2&gt;&lt;p&gt;##本课主旨&lt;/p&gt;
+&lt;p&gt;从周边的环境获取一个简单而行之有效的方法——选择一个自控力强的圈子或环境。&lt;/p&gt;
+&lt;p&gt;人们在一起回不由自主地互相模仿，找到一个自律的群体环境会帮助你实现事半功倍的自控，轻松快乐地生活。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="自我提升" scheme="https://huxuzhe.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    
+      <category term="自控力" scheme="https://huxuzhe.github.io/tags/%E8%87%AA%E6%8E%A7%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自控力(十五)</title>
     <link href="https://huxuzhe.github.io/2019/03/08/%E8%87%AA%E6%8E%A7%E5%8A%9B-%E5%8D%81%E4%BA%94/"/>
     <id>https://huxuzhe.github.io/2019/03/08/自控力-十五/</id>
     <published>2019-03-07T15:00:47.000Z</published>
-    <updated>2019-03-07T14:34:46.684Z</updated>
+    <updated>2019-03-07T15:01:14.785Z</updated>
     
     <summary type="html">
     
@@ -464,24 +487,6 @@
     
     
       <category term="时间管理" scheme="https://huxuzhe.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS231n笔记(2)</title>
-    <link href="https://huxuzhe.github.io/2018/11/07/CS231n%E7%AC%94%E8%AE%B0-2/"/>
-    <id>https://huxuzhe.github.io/2018/11/07/CS231n笔记-2/</id>
-    <published>2018-11-07T05:54:42.000Z</published>
-    <updated>2018-11-07T04:56:07.643Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="CV" scheme="https://huxuzhe.github.io/categories/CV/"/>
-    
-    
-      <category term="CS231n笔记" scheme="https://huxuzhe.github.io/tags/CS231n%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
